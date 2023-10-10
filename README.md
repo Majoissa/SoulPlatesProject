@@ -2,14 +2,14 @@
 
 Web page fullstack - social project
 
-# Hi team, you are amazing, nice to work with you
+## Things done in this project:
 
-# this comes from the remote repository
- 
- #Hello it is Nurcan changes!
+### React installation:
 
- #Hello again this is 3th try! 
+#### npx create-react-app react-app
 
-# This comes from Amina's branch.
+### Node and Nodemon instllation:
 
-# this line is whitten by majo
+#### npm init
+
+#### npm install --save-dev nodemon
