@@ -1,0 +1,145 @@
+.main-cards-box{
+  
+    background-color :#F7F5D2;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  
+  }
+  
+  .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 auto; /* Center the container */
+      max-width: 900px; /* Adjust the maximum width as needed */
+      margin-top: 40px;
+      gap:40px;
+    }
+    
+    
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
+    @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+    .snip1567 {
+      background-color: #000000;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+      color: #ffffff;
+      display: inline-block;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6em;
+      margin: 10px;
+      max-width: 400px;
+      min-width: 330px;
+      overflow: hidden;
+      position: relative;
+      text-align: left;
+      width: 100%;
+    }
+    
+    .snip1567 * {
+      flex-basis: calc(50% - 20px); /* Each card takes 50% of the container width with some spacing */
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all 0.25s ease;
+      transition: all 0.25s ease;
+    }
+    
+    .snip1567 img {
+      max-width: 100%;
+      height: 250px;
+      opacity: 0.75;
+      position: relative;
+      vertical-align: top;
+    }
+    
+    .snip1567 figcaption {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+    
+    .snip1567 h3 {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+      background-color: #000000;
+      top: 0;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      margin: 0;
+      padding: 10px 20px;
+      position: absolute;
+      width: 100%;
+    }
+    
+    .snip1567 p {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      padding: 0px 20px;
+      opacity: 0;
+      text-align: right;
+      -webkit-transition-delay: 0.15s;
+      transition-delay: 0.15s;
+      font-size: 1rem;
+    }
+    
+    .snip1567 i {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 54px;
+      -webkit-transform: translate(-50%, -50%) scale(1);
+      transform: translate(-50%, -50%) scale(1);
+    }
+    
+    .snip1567 .hover {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      align-items: center;
+      background-color: rgba(43, 33, 3, 0.794);
+      display: flex;
+      font-size: 65px;
+      justify-content: center;
+      opacity: 0;
+    }
+    
+    .snip1567 a {
+      left: 0;
+      bottom: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+    
+    .snip1567:hover .hover,
+    .snip1567.hover .hover {
+      opacity: 1;
+    }
+    
+    .snip1567:hover p,
+    .snip1567.hover p {
+      opacity: 1;
+    }
+    
+    .snip1567:hover h3,
+    .snip1567.hover h3 {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+    
+    .snip1567:hover i,
+    .snip1567.hover i {
+      -webkit-transform: translate(-50%, -50%) scale(0.1);
+      transform: translate(-50%, -50%) scale(0.1);
+      opacity: 0;
+    }
+    
+    /* CSS for Home-cards END */
