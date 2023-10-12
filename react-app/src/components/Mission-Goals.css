@@ -1,0 +1,124 @@
+.Mission-and-Goals {
+
+    display: flex;
+    width: 100%;
+    color: #38387A;
+    padding-bottom: 30px;
+    
+
+}
+.Mission {
+     background-color :#F7F5D2;
+     padding-left: 25px;
+     padding-right: 25px;
+     padding-top: 10px;
+     margin-top: 30px;
+     margin-left: 250px;
+     margin-right: 20px;
+     width: 450px;
+     transition: transform 0.3s;
+     
+}
+
+.mission-image img {
+
+     margin-top: 35px;
+     margin-left: 20px;
+     width: 450px;
+     height: 400px;
+     margin-right: 40px;
+     transition: transform 0.3s;
+
+}
+
+.Mission:hover {
+    transform: scale(1.1); 
+  }
+
+.mission-image img:hover{
+
+    transform: scale(1.1); 
+
+}
+
+
+.Mission h2{
+    display: inline;
+    border-bottom: solid 1px;
+    padding-bottom: 5px;
+  
+}
+
+.main-goal-box {
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.goals-image img {
+
+     margin-top: 35px;
+     margin-left: 200px;
+     width: 500px;
+     height: 400px;
+     transition: transform 0.3s;
+
+}
+
+.goals-image-2 img {
+
+    margin-top: 35px;
+    width: 500px;
+    height: 400px;
+    transition: transform 0.3s;
+
+}
+
+.goals-image img:hover {
+
+    transform: scale(1.1);
+
+}
+
+.goals-image-2 img:hover {
+
+    transform: scale(1.1);
+
+}
+
+
+.Goals {
+     background-color :#F7F5D2;
+     text-align: center;
+     padding-top: 10px;
+     margin-top: 30px;
+     width: 100%;
+     border: solid 1px;
+
+}
+
+.Goals-div {
+    color: #38387A;
+    margin-bottom: 50px;  
+
+}
+
+.Goals h2{
+
+    display: inline;
+    border-bottom: solid 1px;
+    padding-bottom: 5px;
+
+}
+
+.Goals p {
+text-align: center;
+margin-right: 20px;
+margin-left: 20px;
+}
+
+.goal-image-box {
+
+   display: flex;
+   gap:50px;
+
+}
