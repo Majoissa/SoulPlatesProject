@@ -1,0 +1,31 @@
+.carousel-inner {
+    max-height: 700px;
+}
+
+.carousel-caption h1{
+    margin-top: -50% !important;
+    font-size: 4vw;
+    font-family:'AR One Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 3vw;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.carousel-inner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+}
+
+.carousel-caption{
+    padding: 10px; 
+    z-index: 2;
+}

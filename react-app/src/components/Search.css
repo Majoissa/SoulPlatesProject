@@ -1,0 +1,16 @@
+.input-group{
+    width: 200px;
+    margin-top: 15px;
+}
+
+.icon{
+    color: #F7F5D2;
+}
+
+@media (max-width: 991px) {
+    .input-group {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+  
