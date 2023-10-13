@@ -50,30 +50,65 @@ const Footer = () => {
           </div>
 
           <div className="sb__footer-links_div">
-            
             <h4> Coming Soon</h4>
             <div className="socialmedia">
-              <p><img src="https://i.postimg.cc/DmksBdCJ/facebook.png" alt="facebook"/></p>
-              <p><img src="https://i.postimg.cc/Wbgfj9cy/Instagram.png" alt="Instagram"/></p>
-              <p><img src="https://i.postimg.cc/c1V5Vp2Y/linkdn.png" alt="linkdn"/></p>
-              <p><img src="https://i.postimg.cc/PfLRVX3T/twitter.png" alt="twitter"/></p>
-
-            </div> 
-            
+              <p>
+                <img
+                  src="https://i.postimg.cc/DmksBdCJ/facebook.png"
+                  alt="facebook"
+                />
+              </p>
+              <p>
+                <img
+                  src="https://i.postimg.cc/Wbgfj9cy/Instagram.png"
+                  alt="Instagram"
+                />
+              </p>
+              <p>
+                <img
+                  src="https://i.postimg.cc/c1V5Vp2Y/linkdn.png"
+                  alt="linkdn"
+                />
+              </p>
+              <p>
+                <img
+                  src="https://i.postimg.cc/PfLRVX3T/twitter.png"
+                  alt="twitter"
+                />
+              </p>
+            </div>
           </div>
         </div>
       </div>
       <hr></hr>
       <div className="sb__footer-below">
         <div className="sb__footer-copyright">
-          <p>Copyright @{new Date().getFullYear()} Soul Plates. All rights reserved.</p>
+          <p>
+            Copyright @{new Date().getFullYear()} Soul Plates. All rights
+            reserved.
+          </p>
         </div>
         <div className="sb__footer-below-links">
-          <a href="/terms"><div><p>Terms & Conditions</p></div></a>
-          <a href="/privacy"><div><p>Privacy</p></div></a>
-          <a href="/security"><div><p>Security</p></div></a>
-          <a href="/cookies"><div><p>Cookies</p></div></a>
-
+          <a href="/terms">
+            <div>
+              <p>Terms & Conditions</p>
+            </div>
+          </a>
+          <a href="/privacy">
+            <div>
+              <p>Privacy</p>
+            </div>
+          </a>
+          <a href="/security">
+            <div>
+              <p>Security</p>
+            </div>
+          </a>
+          <a href="/cookies">
+            <div>
+              <p>Cookies</p>
+            </div>
+          </a>
         </div>
       </div>
     </div>

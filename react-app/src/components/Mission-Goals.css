@@ -1,0 +1,159 @@
+h2{
+    font-family:'AR One Sans', sans-serif;
+}
+
+.Mission-and-Goals {
+
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #38387A;
+    padding:12vw;
+    
+}
+.Mission {
+     background-color :#F7F5D2;
+     padding:43px;
+     max-width: 50%;
+     transition: transform 0.3s;
+     box-shadow: black 5px 5px 10px;
+     
+}
+
+.mission-image img{
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+    box-shadow: black 5px 5px 10px;
+}
+.Mission:hover {
+    transform: scale(1.1); 
+  }
+
+.mission-image img:hover{
+
+    transform: scale(1.1); 
+
+}
+
+
+.Mission h2{
+    display: inline;
+    border-bottom: solid 1px;
+    padding-bottom: 5px;
+    text-shadow: black 1px 1px 4px;
+}
+
+.main-goal-box {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5), 0px -5px 10px rgba(0, 0, 0, 0.5);
+    background-color: #38387A;
+    padding: 12vw;
+}
+
+
+.goals-image img:hover {
+
+    transform: scale(1.1);
+
+}
+
+.goals-image-2 img:hover {
+
+    transform: scale(1.1);
+
+}
+
+
+.Goals {
+     background-color :#F7F5D2;
+     text-align: justify;
+     padding: 43px;
+     max-width: 78%;
+     margin: auto;
+     border: solid 1px;
+    
+     box-shadow: black 5px 5px 10px;
+     transition: transform 0.3s;
+}
+
+.Goals:hover{
+    
+    transform: scale(1.1);
+}
+.Goals-div {
+    color: #38387A;
+    margin-bottom: 50px;  
+
+}
+
+.Goals h2{
+
+    display: inline;
+    border-bottom: solid 1px;
+    padding-bottom: 5px;
+    text-shadow: black 1px 1px 4px;
+}
+
+.Goals p {
+text-align: justify;
+margin-right: 20px;
+margin-left: 20px;
+}
+
+.goal-image-box {
+
+   display: flex;
+   justify-content: center;
+   gap:50px;
+   max-width: 100%;
+   margin: auto;
+
+}
+.goals-image img {
+    width: 500px;
+    height: auto;
+    transition: transform 0.3s;
+    box-shadow: black 5px 5px 10px;
+
+}
+
+.goals-image-2 img {
+   width: 500px;
+   height: auto;
+   transition: transform 0.3s;
+   
+   box-shadow: black 5px 5px 10px;
+
+}
+
+@media (max-width: 1287px) {
+    .Mission-and-Goals {
+        flex-direction: column;
+    }
+    .Mission {
+        max-width: 100%;
+   }
+
+   .Goals{
+    max-width: 100%;
+   }
+
+   .Goals p, .Mission p{
+    font-size: 0.9rem !important;
+   }
+   
+   .mission-image img{
+       width: 100%;
+   }
+
+   .goal-image-box {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+  }
+}
