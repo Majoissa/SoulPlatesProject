@@ -13,3 +13,7 @@ Web page fullstack - social project
 #### npm init
 
 #### npm install --save-dev nodemon
+
+#### router instalattion:
+
+#### npm install react-router-dom
