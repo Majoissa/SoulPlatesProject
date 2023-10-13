@@ -1,10 +1,19 @@
+h2{
+  font-family:'AR One Sans', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 6vw;
+  font-size: 2.2rem;
+  text-shadow: 2px 2px 5px;
+}
+
+
 .main-form{
 
     text-align: center;
-    background-color:  #F7F5D2;
-    font-size: 1.5rem; 
-    padding-bottom: 40px;
-    padding-top: 40px;
+    background-color: #F7F5D2;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5), 0px -5px 10px rgba(0, 0, 0, 0.5);
+    padding: 12vw;
+    padding-top: 6vw;
   
     }
   
@@ -58,6 +67,8 @@
     font-size: 1.2rem;
     color: 8387A;
     text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
   
   }
   
