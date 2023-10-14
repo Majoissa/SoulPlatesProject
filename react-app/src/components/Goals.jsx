@@ -37,6 +37,7 @@ function Goals() {
             src="https://media.istockphoto.com/id/484793580/es/foto/voluntarios-profesor-ayudando-a-clase-de-preescolar-ni%C3%B1os-de-dibujo.jpg?s=612x612&w=0&k=20&c=FbXRUZR47zgns4MAhsAA_9dOjzxYdPdmhCYjealaR8I="
             alt="description component img"
           />
+          <p>In this mission, all together!</p>
         </div>
 
         <div className="goals-image-2">
@@ -44,6 +45,7 @@ function Goals() {
             src="https://media.istockphoto.com/id/531557794/es/foto/lengua-de-capacitaci%C3%B3n-para-los-refugiados-en-un-campamento-alem%C3%A1n.jpg?s=612x612&w=0&k=20&c=K4aw_bPjHDS6GBNIH6Ei3O9G5P-CDLRGibSWTGrbBkE="
             alt="description component img"
           />
+          <p>We believe there is a better future!</p>
         </div>
       </div>
     </div>

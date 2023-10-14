@@ -32,7 +32,7 @@ function Search(props) {
         id="button-addon2"
         onClick={handleButtonClick}
       >
-        <FontAwesomeIcon className="icon" icon={faMagnifyingGlass} />
+        <FontAwesomeIcon className="iconGlass" icon={faMagnifyingGlass} />
       </button>
     </div>
   );
