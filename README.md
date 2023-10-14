@@ -13,8 +13,6 @@ Web page fullstack - social project
 #### npm init
 
 #### npm install --save-dev nodemon
-<<<<<<< Updated upstream
-=======
 
 #### Routes are added
 
@@ -27,4 +25,11 @@ Web page fullstack - social project
 ##### WHEN YOU WANT TO ADD A NEW ROUTE YOU HAVE TO ADD THE PATH AND TO WHICH COMPONENT IT WILL LINK YOU. THEN IN THE PAGE YOU USE THE ROUTE, YOU HAS TO IMPORT 'LINK' FROM REACT.. AS IN THE FOLLOWING PHOTO
 
 ![Alt text](image-1.png)
->>>>>>> Stashed changes
+
+> > > > > > > # Stashed changes
+
+#### router instalattion:
+
+#### npm install react-router-dom
+
+> > > > > > > main

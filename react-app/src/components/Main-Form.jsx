@@ -91,7 +91,7 @@ function MainForm() {
           </div>
         </div>
 
-        <div style={{ marginLeft: "355px" }}>
+        <div style={{ marginLeft: "45%" }}>
           <button type="submit">submit</button>
         </div>
       </form>

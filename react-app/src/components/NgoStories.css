@@ -1,0 +1,32 @@
+.container {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2rem;
+} 
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.card {
+  border: 1px solid #ccc;
+  margin: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}

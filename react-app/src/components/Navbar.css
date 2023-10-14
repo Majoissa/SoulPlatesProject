@@ -5,19 +5,20 @@
 
 .nav{
     background-color: #38387A !important;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5), 0px -5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .nav-link{
     color:#F7F5D2;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inclusive Sans', sans-serif;
     font-weight: bold;
     border-bottom: transparent solid 3px;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 .nav-link:hover{
     color:#F7F5D2;
-    text-shadow: 2px 1px 2px #F5FD93;
+    text-shadow: 1px 1px 1px #F5FD93;
     transition: ease 0.2s;
     border-bottom: #F7F5D2 solid 3px;
     border-radius: 1px;
