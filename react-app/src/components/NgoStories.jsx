@@ -7,7 +7,7 @@ function NgoStories(props) {
     <div>
       <h1>NGO Stories</h1>
       <div className="row">
-        <div className="card">
+        <div className="card" style={{padding:'10px'}}>
           <img
             src={props.imageStory}
             className="card-img-top"

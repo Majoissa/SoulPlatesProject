@@ -1,10 +1,13 @@
 import Navbar from "./Navbar";
 import Footer from "./footer";
+import BeneficiaryVideo from "./Beneficiary-video";
+import TextCards from "./Beneficiary-text-cards";
 function Beneficiaries() {
   return (
     <div>
       <Navbar />
-      <h1>This is the beneficiaries page</h1>;
+      <BeneficiaryVideo/>
+      <TextCards />
       <Footer />
     </div>
   );
