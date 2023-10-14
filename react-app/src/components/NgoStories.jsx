@@ -14,8 +14,8 @@ function NgoStories(props) {
             alt="Description of the story"
           />
           <div className="card-body">
-            <h5 className="card-title">{props.titleStory}</h5>
-            <p className="card-text">{props.descriptionStory}</p>
+            <h5 className="card-title"   style={{fontSize:'18px', fontWeight:'bold'}}>{props.titleStory}</h5>
+            <p className="card-text"  style={{fontSize:'16px', color:' #666'}}>{props.descriptionStory}</p>
             <a href="www.google.com" className="btn btn-primary">
               Read More
             </a>
