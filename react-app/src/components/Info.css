@@ -12,10 +12,12 @@
     text-shadow: black 2px 2px 2px;
 }
 
-p {
+.carousel-caption p {
     font-size: 3vw;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    text-shadow: black 2px 2px 2px;
+    color: white;
 }
 
 .carousel-inner::before {
@@ -25,7 +27,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.2); 
     z-index: 1; 
 }
 

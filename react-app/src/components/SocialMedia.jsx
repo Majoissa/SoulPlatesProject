@@ -3,6 +3,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 import { faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
 import "./SocialMedia.css";
+
 function SocialMedia(){
     return(
         <div className="socialMedias">
@@ -12,4 +13,5 @@ function SocialMedia(){
         </div>
     )
 }
- export default SocialMedia;
+
+export default SocialMedia;
