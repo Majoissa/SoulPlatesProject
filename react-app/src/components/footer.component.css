@@ -47,7 +47,7 @@ a{
 }
 
 .sb__footer-links_div h4{
-    font-size: 14px;
+    font-size: 18px;
     line-height: 17px;
     margin-bottom: 0.9rem;
 
@@ -55,7 +55,7 @@ a{
 
 /*Partners*/
 .sb__footer-links_div p {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 15px;
     margin: 0.5rem 0;
     cursor: pointer;
@@ -74,7 +74,7 @@ a{
 }
 
 .sb__footer-below-links p{
-    font-size: 13px;
+    font-size: 17px;
     line-height: 15px;
     margin-left: 2rem;
     color: #F7F5D2;
@@ -93,7 +93,7 @@ hr{
 }
 
 .sb__footer-copyright p{
-    font-size: 13px;
+    font-size: 17px;
     line-height: 15px;
     color:#F7F5D2 ;
     font-weight: 600;
@@ -102,14 +102,14 @@ hr{
 
 @media screen and (max-width: 850px){
     .sb__footer-heading h1{
-        font-size: 44px;
+        font-size: 48px;
         line-height: 42px;
     }
 }
 
 @media screen and (max-width: 550px){
     .sb__footer-heading h1{
-        font-size: 34px;
+        font-size: 38px;
         line-height: 42px;
     }
     .sb_footer-links div{
@@ -117,7 +117,7 @@ hr{
     }
 
     .sb__footer-btn p{
-        font-size: 14px;
+        font-size: 18px;
         line-height: 20px;
     }
 
@@ -137,7 +137,7 @@ hr{
 
 @media screen and (max-width: 400px){
     .sb__footer-heading h1{
-        font-size: 27px;
+        font-size: 31px;
         line-height: 34px;
     }
 }
