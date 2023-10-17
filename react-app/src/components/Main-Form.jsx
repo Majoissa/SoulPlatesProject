@@ -6,7 +6,9 @@ function MainForm() {
   const [lastname, setlastName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNum, setPhoneNum] = useState("");
-  const [password, setPassword] = useState("");
+  const [registeredAs, setRegisteredAs] = useState(""); 
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -75,21 +77,25 @@ function MainForm() {
           </div>
         </div>
 
+        
         <div className="form-field">
-          <label htmlFor="password" style={{ marginRight: "370px" }}>
-            {" "}
-            Password{" "}
-          </label>
+          <label htmlFor="registeredAs" style={{ marginRight: '335px'}}>Registered as </label>
           <div className="labels-input">
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
+          <select
+            id="registeredAs"
+            value={registeredAs}
+            onChange={(e) => setRegisteredAs(e.target.value)}
+            required
+            style={{width:'30%'}}
+          >
+            <option value="" > Select an option</option>
+            <option value="Donor">Donor</option>
+            <option value="Volunteer">Volunteer</option>
+            <option value="Beneficiary">Beneficiary</option>
+          </select>
           </div>
         </div>
+
 
         <div style={{ marginLeft: "45%" }}>
           <button type="submit">submit</button>
