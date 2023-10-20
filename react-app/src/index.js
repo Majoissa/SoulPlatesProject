@@ -5,6 +5,7 @@ import App from "./App";
 import Beneficiaries from "./components/Beneficiaries";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Donation from "./components/Donation";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
     path: "/beneficiaries",
     element: <Beneficiaries />,
   },
+  {
+    path: "/donation",
+    element: <Donation />,
+  }
   //here goes the other routes
 ]);
 

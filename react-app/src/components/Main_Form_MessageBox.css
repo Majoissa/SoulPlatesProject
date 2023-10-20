@@ -1,3 +1,4 @@
+/*
 h2{
   font-family:'AR One Sans', sans-serif;
   text-transform: uppercase;
@@ -43,8 +44,7 @@ h2{
     border-color:  rgba(8, 2, 2, 0.524);
     outline: none;
   }
-  
-  
+
   .labels-input{
   
     margin-top: 10px;
@@ -63,7 +63,6 @@ h2{
   
   
   label {
-   
     font-size: 1.2rem;
     color: 8387A;
     text-align: left;
@@ -80,7 +79,6 @@ h2{
   
 
   
-   /* CSS for Form END */
-   
-  
-  
+!*CSS for Form END
+   *!
+*/

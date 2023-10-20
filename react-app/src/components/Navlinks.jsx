@@ -25,7 +25,7 @@ function NavLinks() {
         </Link>
       </li>
       <li className="nav-item">
-        <Link to="/" className="nav-link">
+        <Link to="/donation" className="nav-link">
           DONORS
         </Link>
       </li>
