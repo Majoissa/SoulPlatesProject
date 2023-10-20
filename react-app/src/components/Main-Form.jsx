@@ -13,6 +13,7 @@ function MainForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+  
   return (
     <div className="main-form">
       <h2>Registration Form</h2>

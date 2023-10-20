@@ -1,18 +1,138 @@
-.job-post-heading {
+.job-post-pic {
 
-    width: 100%;
-    height: 100px;
-    color: #F7F5D2;
-    background-color:  #3A3A45 ;
-    text-align: center;
-    font-size: 4rem;
-    transition: background-color 0.3s, color 0.3s, font-size 0.3s;
+   display: flex;
+   background-color:   #F4F3EE;
+
 }
 
 
-.job-post-heading:hover {
-    background-color: #F7F5D2;
-    color: #3A3A45;
-    font-size: 4.2rem; /* Slightly increase font size on hover */
+/* Style the image slider container */
+.image-slider {
+  width: 450px; /* Set the desired width */
+  height: 300px; 
+  margin-left: 250px;
+  margin-top: 50px;/* Set the desired height */
+  overflow: hidden;
+  position: relative;
 }
 
+/* Apply some styles to the images to make them fit within the container */
+.image-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or object-fit: contain; depending on how you want the images to fit */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  /* transition: opacity 2s ease-in-out; */
+}
+
+/* Define a CSS animation to change images */
+@keyframes image-slider-animation {
+  0%, 100% {
+    opacity: 1;
+  }
+  16.66%, 33.33% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0; /* Add an extra keyframe to ensure continuous looping */
+  }
+  66.66%, 83.33% {
+    opacity: 0;
+  }
+}
+/* Apply the animation to the images in the slider */
+.image-slider img:nth-child(1) {
+  animation: image-slider-animation 18s linear infinite 0s; /* Adjust the duration and start time */
+}
+
+.image-slider img:nth-child(2) {
+  animation: image-slider-animation 18s linear infinite 6s; /* Adjust the duration and start time */
+}
+
+.image-slider img:nth-child(3) {
+  animation: image-slider-animation 18s linear infinite 12s; /* Adjust the duration and start time */
+}
+
+
+
+.hiring {
+
+    width:500px;
+    height: 350px;
+    margin-left:120px;
+    padding-left: 100px;
+    padding-right: 50px;
+    padding-bottom: 70px;
+    padding-top:150px
+
+}
+
+.reveal {
+
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+ }
+
+ .reveal.active {
+
+    transform: translateY(0px);
+    opacity: 2;
+
+ } 
+
+
+ 
+/* styles.css  for marquee */
+
+
+@keyframes scroll {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  .scrolling-text {
+    animation: scroll 10s linear infinite;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+
+
+   @media (max-width: 768px) {
+      .job-post-pic {
+       display: block; 
+     
+      }
+
+      .image-slider {
+       width: 100%; 
+       max-width: none; 
+   
+        margin: 0;
+        position: relative;
+   
+  
+       }
+
+      .image-slider img {
+       width: 100%; 
+       padding-left:100px;
+       padding-right: 100px;
+       }
+
+      .hiring {
+       width: 100%; 
+       margin: 0; 
+       padding-left: 180px; 
+       padding-right:180px;
+     }
+   }
