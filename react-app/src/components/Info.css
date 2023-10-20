@@ -1,20 +1,17 @@
 .carousel-inner {
-    max-height: 700px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    max-height: 35rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.carousel-caption h1{
-    margin-top: -50% !important;
-    font-size: 4vw;
-    font-family:'AR One Sans', sans-serif;
-    text-transform: uppercase;
-    text-shadow: black 2px 2px 2px;
-}
 
-p {
-    font-size: 3vw;
+.carousel-caption p {
+    margin-bottom: 68% !important;
+    font-size: 2rem;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     text-align: center;
+    text-shadow: black 1px 1px 1px;
+    color: white;
 }
 
 .carousel-inner::before {
@@ -24,7 +21,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.2); 
     z-index: 1; 
 }
 
@@ -34,8 +31,17 @@ p {
 }
 
 @media (min-width: 1600px) {
-    .carousel-caption h1{
-        margin-top: -63% !important;
+    .carousel-caption p{
+        margin-bottom: 72% !important;
     }
   }
   
+@media (max-width: 1000px){
+    .carousel-caption p{
+        font-size: 1.3rem;
+
+    }
+    .carousel-caption p {
+        margin-bottom: 40% !important;
+    }
+}

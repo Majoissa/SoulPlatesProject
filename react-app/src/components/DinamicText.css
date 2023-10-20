@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.marquee {
+    background-color:#2B2B2B;
+    height: 50px;
+    overflow: hidden;
+    overflow-x: hidden;
+    white-space: nowrap;
+    width: 100%;
+    padding-right: 0;
+    margin-right: 0;
+  }
+  
+  .marquee__text {
+    margin-right: 0;
+  padding-right: 0;
+    color: white;
+    margin-top: 12px;
+    display: inline-block;
+    padding-right: 20px;
+    animation: marquee 40s linear infinite;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: #FFFBC2 1px 1px 5px;
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media (max-width:1000px){
+    .marquee__text{
+      font-size: 0.9rem;
+      margin-top: 14px;
+    }
+  }

@@ -1,0 +1,125 @@
+.main-job-box{
+  
+    
+    background-color:  white ;
+    height: 1900px;
+    padding-top:100px;
+    
+}
+
+.job-post h1, .job-post p{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.job-box-1 {
+
+     padding-bottom: 50px;
+     padding-left: 650px;
+     padding-top: 50px;
+
+}
+
+
+.job-box-2 {
+
+    padding-bottom: 50px;
+    padding-right: 400px;
+    padding-left:100px;
+    padding-top: 50px;
+
+}
+
+
+.job-box-3 {
+
+    padding-bottom: 50px;
+    padding-left: 650px;
+    padding-top: 50px;
+
+}
+
+
+.job-box-4 {
+
+    padding-bottom: 50px;
+    padding-right: 400px;
+    padding-left:100px;
+    padding-top: 50px;
+
+}
+
+.job-post h1 {
+
+    padding-top: 50px;
+    text-align: center;
+   }
+  
+
+
+.job-post {
+    width: 600px;
+    height: 300px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #F4F3EE;
+    margin-left: 50px;
+    transition: opacity 0.4s, box-shadow 0.5s ease-in-out, transform 3s;
+    box-shadow: 0px 0px 10px #b6b8b1;
+    animation: job-post-animation 4s linear infinite alternate;
+  }
+  
+  /* Define the keyframes animation */
+@keyframes job-post-animation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  } 
+  
+
+
+  .reveal {
+
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+ }
+
+ .reveal.active {
+
+    transform: translateY(0px);
+    opacity: 2;
+
+ } 
+
+ /* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .main-job-box {
+    height: auto; /* Remove the fixed height for responsiveness */
+    padding-top: 20px; /* Adjust the top padding for spacing */
+  }
+
+  .job-box-1, .job-box-2, .job-box-3, .job-box-4 {
+    padding-left: 200px; 
+    padding-right: 50px; 
+    padding-top: 20px;
+    padding-bottom: 50px; 
+  }
+
+  .job-post {
+    width: 400px; 
+    height: auto; 
+    padding: 20px; 
+    margin: 0; 
+  }
+
+  .job-box-1, .job-box-3 {
+    text-align: center; /* Center-align text on odd job boxes */
+  }
+}

@@ -11,7 +11,6 @@ function InfoCarousel(props) {
         <div class="carousel-item active">
           <img src={props.img1} class="d-block w-100" alt="first img" />
           <div class="carousel-caption">
-            <h1>{props.caption1}</h1>
             <p>{props.text1}</p>
           </div>
         </div>
@@ -22,14 +21,12 @@ function InfoCarousel(props) {
             alt="second helping img"
           />
           <div class="carousel-caption">
-            <h1>{props.caption2}</h1>
             <p>{props.text2}</p>
           </div>
         </div>
         <div class="carousel-item">
           <img src={props.img3} class="d-block w-100" alt="third helping img" />
           <div class="carousel-caption">
-            <h1>{props.caption3}</h1>
             <p>{props.text3}</p>
           </div>
         </div>

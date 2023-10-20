@@ -1,20 +1,20 @@
-/*
-h2{
-  font-family:'AR One Sans', sans-serif;
-  text-transform: uppercase;
+.formTittle{
+  font-family: 'Cedarville Cursive', cursive;
+  text-shadow: none;
+  max-width: 50%;
+  text-align: center;
+  margin: auto;
+  transition: ease-in-out 1s;
+  font-size: 3rem;
   margin-bottom: 6vw;
-  font-size: 2.2rem;
-  text-shadow: 2px 2px 5px;
 }
 
 
 .main-form{
 
     text-align: center;
-    background-color: #F7F5D2;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5), 0px -5px 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
     padding: 12vw;
-    padding-top: 6vw;
   
     }
   
@@ -24,10 +24,7 @@ h2{
   
     }
   
-    input[type="text"],
-    input[type="email"],
-    input[type="number"],
-    input[type="password"],
+    .inputForm,
     select {
     width: 30%; 
     padding: 10px; 
@@ -36,49 +33,65 @@ h2{
     font-size: 16px;
     }
   
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="number"]:focus,
-  input[type="password"]:focus,
+    .inputForm:focus,
   select:focus {
     border-color:  rgba(8, 2, 2, 0.524);
     outline: none;
   }
-
+  
+  
   .labels-input{
   
     margin-top: 10px;
   
   }
   
-  button[type="submit"] {
-    padding: 10px 20px; 
-    background-color: #3A3A45;
-    color: #fff;
-    border: none; 
-    border-radius: 5px; 
-    font-size: 16px; 
-    cursor: pointer; 
-  }
-  
   
   label {
-    font-size: 1.2rem;
-    color: 8387A;
-    text-align: left;
+   
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
   
   }
   
-  .submit-btn{
-    
+  .formBtn{
      margin-bottom: 10px;
-  
+    background-color: #E0AFA0 !important;
+    color: white !important;
+    font-weight: 600 !important;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px; 
+    border: none; 
+    border-radius: 8px; 
+    font-size: 1rem; 
+    cursor: pointer; 
   }
   
 
   
-!*CSS for Form END
-   *!
-*/
+@media (max-width: 1000px) {
+  
+  .formTittle {
+  max-width: 60%;
+  margin: auto;
+  margin-top: 12vw;
+  transition: ease-in-out 1s;
+  font-size: 2rem !important;
+  margin-bottom: 6vw;
+}
+.inputForm,
+    select {
+    width: 
+    70%; 
+    }
+
+    
+  label {
+   font-size: 0.9rem;
+   width: 100px;
+  }
+}
+   /* CSS for Form END */
+   
+  
+  

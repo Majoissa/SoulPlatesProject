@@ -1,0 +1,26 @@
+.socialMedias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F4F3EE;
+    padding: 10px;
+    border-radius: 0px 5px 5px 0px;
+    width: 2.2rem;
+    gap: 1rem;
+    position: fixed;
+    top: 40%;
+    left: 0px;
+    z-index: 9999;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.iconSocial{
+    color: #E0AFA0;
+    font-size: 1.3rem; 
+}
+
+.iconSocial:hover{
+    color: #84817c;
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+}

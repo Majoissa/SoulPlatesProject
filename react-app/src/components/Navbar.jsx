@@ -22,7 +22,7 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <NavLinks />
+          <NavLinks link1="home" link2="about us" link3="beneficiaries" link4="volunteers" link5="donors"/>
         </div>
         <Search text="Search" />
       </div>

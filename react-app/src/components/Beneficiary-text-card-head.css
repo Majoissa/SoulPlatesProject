@@ -1,0 +1,46 @@
+.text-cards-head {
+   height: 200px;
+   width:100%;
+}
+
+.text-cards-head h1 {
+
+   font-family: 'Cedarville Cursive', cursive !important;
+   text-transform: capitalize;
+   text-shadow: none;
+   max-width: 50%;
+   text-align: center;
+   margin: auto;
+   margin-top: 12vw;
+   transition: ease-in-out 1s;
+   font-size: 3rem;
+   
+}
+
+.reveal {
+
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+ }
+
+ .reveal.active {
+
+    transform: translateY(0px);
+    opacity: 2;
+
+ } 
+
+ @media (max-width: 768px) { 
+ 
+   .text-cards-head h1 {
+
+      font-size: 2rem;
+      width: 100%;
+      text-align: center;
+
+   }
+    
+   }
+ 

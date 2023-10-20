@@ -1,16 +1,32 @@
-.input-group{
+.search{
     width: 200px;
     margin-top: 15px;
 }
 
-.icon{
-    color: #F7F5D2;
+.form-control{
+  height: 30px !important;
 }
 
-@media (max-width: 991px) {
-    .input-group {
-      width: 100%;
-      margin-top: 15px;
-    }
-  }
+.iconGlass{
+    color: #F7F5D2;
+    margin-bottom: 3px;
+}
+
+.searchBtn{
+  height: 30px;
+}
+
+.searchBtn:hover{
+  background-color:black;
+}
   
+@media (max-width: 1000px){
+  .search{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.form-control{
+  height: 30px !important;
+}
+}
