@@ -49,9 +49,9 @@ function JobHeading() {
 
            <div className='hiring reveal'>
 
-          <h3 className='heading-careers' style={{fontSize:'2rem', fontWeight:'bold', textAlign:'center', borderBottom:'1px solid', display:'inline'}}> Jobs And Careers  </h3>
+          <h3 className='heading-careers' style={{fontSize:'2rem', fontWeight:'bold', textAlign:'center',  display:'inline'}}> Jobs And Careers  </h3>
            
-         <p className='scrolling text' style={{fontSize:'1.2rem', fontWeight:'bold', paddingTop:'20px', paddingRight:'20px'}}>
+         <p className='scrolling text' style={{fontSize:'1.1rem', fontWeight:'bold', paddingTop:'20px', paddingRight:'20px', fontFamily: 'Montserrat'}}>
           
          <marquee behavior='scroll' direction='up' scrollamount='2'>
          Discover endless opportunities in the world of careers. Join us and unlock your potential.

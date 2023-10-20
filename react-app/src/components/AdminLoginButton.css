@@ -10,7 +10,7 @@
     z-index: 9999;
     border-radius: 100%;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    background-color: white;
+    background-color: #f4f3ee;
     transition: ease-in-out 0.3s;
     border: none;
   }

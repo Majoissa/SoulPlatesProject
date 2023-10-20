@@ -1,8 +1,20 @@
 .job-post-pic {
 
    display: flex;
-   background-color:   #F4F3EE;
+   background-color: white;
 
+}
+
+.heading-careers{
+  font-family: 'Cedarville Cursive', cursive !important;
+   text-transform: capitalize;
+   text-shadow: none;
+   max-width: 50%;
+   text-align: center;
+   margin: auto;
+   margin-top: 12vw;
+   transition: ease-in-out 1s;
+   font-size: 3rem;
 }
 
 
@@ -103,6 +115,8 @@
     animation: scroll 10s linear infinite;
     white-space: nowrap;
     overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
   }
   
 

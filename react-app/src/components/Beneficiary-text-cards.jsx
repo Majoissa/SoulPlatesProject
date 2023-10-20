@@ -34,7 +34,7 @@ function  TextCards() {
 
 
 
-      <div classNameName='main-text-box' style={{backgroundColor: '  #F4F3EE ', paddingTop:'150px', paddingBottom:'50px', paddingLeft:'250px', paddingRight:'80px'}}>
+      <div classNameName='main-text-box' style={{backgroundColor: '  white ', paddingBottom:'50px', paddingLeft:'250px', paddingRight:'80px'}}>
 
      {/* FIRST COLUM */}
 

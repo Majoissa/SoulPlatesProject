@@ -1,10 +1,14 @@
 .main-job-box{
   
     
-    background-color:  #F4F3EE ;
+    background-color:  white ;
     height: 1900px;
     padding-top:100px;
     
+}
+
+.job-post h1, .job-post p{
+  font-family: 'Montserrat', sans-serif;
 }
 
 .job-box-1 {
@@ -60,7 +64,7 @@
     background-color: #F4F3EE;
     margin-left: 50px;
     transition: opacity 0.4s, box-shadow 0.5s ease-in-out, transform 3s;
-    box-shadow: 0px 0px 10px rgba(228, 176, 176, 0.941);
+    box-shadow: 0px 0px 10px #b6b8b1;
     animation: job-post-animation 4s linear infinite alternate;
   }
   
