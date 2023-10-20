@@ -1,24 +1,24 @@
 
 .adminBtn {
     position: fixed;
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     bottom: 20px;
     right: 2%;
     margin-right: 0;
     padding-right: 0;
     z-index: 9999;
     border-radius: 100%;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    border: 1px solid #347A2E;
-    background-color: #557C52;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    background-color: white;
     transition: ease-in-out 0.3s;
+    border: none;
   }
 
   .adminBtn:hover{
     transform: scale(1.1);
   }
   .iconAdmin{
-    font-size: 2.5rem;
-    color: #151540;
+    font-size: 2rem;
+    color: #E0AFA0;
   }

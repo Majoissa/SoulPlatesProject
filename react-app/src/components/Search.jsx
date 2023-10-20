@@ -16,7 +16,7 @@ function Search(props) {
   };
 
   return (
-    <div className="input-group mb-3">
+    <div className="search input-group mb-3">
       <input
         type="text"
         className="form-control"
@@ -27,7 +27,7 @@ function Search(props) {
         onChange={handleInputChange}
       />
       <button
-        className="btn btn-outline-secondary"
+        className="searchBtn btn btn-outline-secondary"
         type="button"
         id="button-addon2"
         onClick={handleButtonClick}

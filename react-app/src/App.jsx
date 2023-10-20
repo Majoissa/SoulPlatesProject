@@ -19,13 +19,9 @@ function App() {
       <SocialMedia/>
       <DinamicText text="Welcome to Soul Plates: an NGO in contact with people who want to help and people who need help"/>
       <Mission />
-      <DinamicText text="Are you interested in our work? Just join us! We need people like you!"/>
       <Goals />
-      <DinamicText text="Explore our page with total freedom and discover all the things you can help with! You'll be surprised"/>
       <HomeCards />
-      <DinamicText text="Are you interested in our work? Just join us! We need people like you!"/>
       <MainForm />
-      <DinamicText text="Explore our page with total freedom and discover all the things you can help with! You'll be surprised"/>
       <Footer />
       <AdminLoginButton/>
     </div>

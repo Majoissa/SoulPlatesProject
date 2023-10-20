@@ -1,28 +1,28 @@
 import React, { useState } from "react";
 import "./Main_Form_MessageBox.css";
+import { Fade } from "react-awesome-reveal";
 
 function MainForm() {
   const [firstname, setfirstName] = useState("");
   const [lastname, setlastName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNum, setPhoneNum] = useState("");
-  const [registeredAs, setRegisteredAs] = useState(""); 
-
-
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
   };
   return (
     <div className="main-form">
-      <h2>Registration Form</h2>
+      <Fade cascade damping={0.1}>
+      <h2 className="formTittle">Registration Form</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-field">
           <label htmlFor="First Name" style={{ marginRight: "355px" }}>
             First Name{" "}
           </label>
           <div className="labels-input">
-            <input
+            <input className="inputForm"
               type="text"
               id="firstname"
               value={firstname}
@@ -37,7 +37,7 @@ function MainForm() {
             Last Name{" "}
           </label>
           <div className="labels-input">
-            <input
+            <input className="inputForm"
               type="text"
               id="lastname"
               value={lastname}
@@ -52,7 +52,7 @@ function MainForm() {
             Email{" "}
           </label>
           <div className="labels-input">
-            <input
+            <input className="inputForm"
               type="email"
               id="email"
               value={email}
@@ -67,7 +67,7 @@ function MainForm() {
             Phone Number{" "}
           </label>
           <div className="labels-input">
-            <input
+            <input className="inputForm"
               type="number"
               id="phoneNum"
               value={phoneNum}
@@ -77,30 +77,27 @@ function MainForm() {
           </div>
         </div>
 
-        
         <div className="form-field">
-          <label htmlFor="registeredAs" style={{ marginRight: '335px'}}>Registered as </label>
+          <label htmlFor="password" style={{ marginRight: "370px" }}>
+            {" "}
+            Password{" "}
+          </label>
           <div className="labels-input">
-          <select
-            id="registeredAs"
-            value={registeredAs}
-            onChange={(e) => setRegisteredAs(e.target.value)}
-            required
-            style={{width:'30%'}}
-          >
-            <option value="" > Select an option</option>
-            <option value="Donor">Donor</option>
-            <option value="Volunteer">Volunteer</option>
-            <option value="Beneficiary">Beneficiary</option>
-          </select>
+            <input className="inputForm"
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
           </div>
         </div>
 
-
         <div style={{ marginLeft: "45%" }}>
-          <button type="submit">submit</button>
+          <button className="formBtn" type="submit">Submit</button>
         </div>
       </form>
+      </Fade>
     </div>
   );
 }

@@ -4,9 +4,8 @@
 }
 
 .marquee {
-    background-color: #151540;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5), 0px -5px 10px rgba(0, 0, 0, 0.5);
-    height: 70px;
+    background-color:#2B2B2B;
+    height: 50px;
     overflow: hidden;
     overflow-x: hidden;
     white-space: nowrap;
@@ -18,16 +17,14 @@
   .marquee__text {
     margin-right: 0;
   padding-right: 0;
-  overflow: hidden;
-    color:#F7F5D2;
-    text-transform: uppercase;
-    margin-top: 25px;
+    color: white;
+    margin-top: 12px;
     display: inline-block;
     padding-right: 20px;
     animation: marquee 40s linear infinite;
-    text-shadow: 1px 1px 1px #F5FD93;
-    font-family: 'Inclusive Sans', sans-serif;
-    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: #FFFBC2 1px 1px 5px;
+    font-size: 1rem;
     max-width: 100%;
   }
   
@@ -37,5 +34,12 @@
     }
     100% {
       transform: translateX(-100%);
+    }
+  }
+
+  @media (max-width:1000px){
+    .marquee__text{
+      font-size: 0.9rem;
+      margin-top: 14px;
     }
   }

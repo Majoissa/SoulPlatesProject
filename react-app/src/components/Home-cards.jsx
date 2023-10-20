@@ -1,9 +1,12 @@
 import React from "react";
 import "./Home-cards.css";
+import { Fade } from "react-awesome-reveal";
 
 function HomeCards() {
   return (
     <div className="main-cards-box">
+      <Fade cascade damping={0.3}>
+      <h2 className="cardsTitle">Know us more</h2>
       <div className="card-container">
         <figure class="snip1567">
           <img
@@ -82,6 +85,7 @@ function HomeCards() {
           <i class="ion-android-add"></i>
         </figure>
       </div>
+      </Fade>
     </div>
   );
 }

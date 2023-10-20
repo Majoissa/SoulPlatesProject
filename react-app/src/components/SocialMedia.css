@@ -2,24 +2,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #557C52;
+    background-color: #F4F3EE;
     padding: 10px;
     border-radius: 0px 5px 5px 0px;
-    width: 3rem;
+    width: 2.2rem;
     gap: 1rem;
     position: fixed;
     top: 40%;
     left: 0px;
     z-index: 9999;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .iconSocial{
-    color: #151540;
-    font-size: 2rem; 
+    color: #E0AFA0;
+    font-size: 1.3rem; 
 }
 
 .iconSocial:hover{
-    color: #525295;
+    color: #84817c;
     cursor: pointer;
     transition: ease-in-out 0.5s;
 }
