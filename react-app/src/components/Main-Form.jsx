@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Main_Form_MessageBox.css";
+import { Fade } from "react-awesome-reveal";
 
 function MainForm() {
   const [firstname, setfirstName] = useState("");
@@ -13,14 +14,15 @@ function MainForm() {
   };
   return (
     <div className="main-form">
-      <h2>Registration Form</h2>
+      <Fade cascade damping={0.1}>
+      <h2 className="formTittle">Registration Form</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-field">
           <label htmlFor="First Name" style={{ marginRight: "355px" }}>
             First Name{" "}
           </label>
           <div className="labels-input">
-            <input
+            <input className="inputForm"
               type="text"
               id="firstname"
               value={firstname}
@@ -35,7 +37,7 @@ function MainForm() {
             Last Name{" "}
           </label>
           <div className="labels-input">
-            <input
+            <input className="inputForm"
               type="text"
               id="lastname"
               value={lastname}
@@ -50,7 +52,7 @@ function MainForm() {
             Email{" "}
           </label>
           <div className="labels-input">
-            <input
+            <input className="inputForm"
               type="email"
               id="email"
               value={email}
@@ -65,7 +67,7 @@ function MainForm() {
             Phone Number{" "}
           </label>
           <div className="labels-input">
-            <input
+            <input className="inputForm"
               type="number"
               id="phoneNum"
               value={phoneNum}
@@ -81,7 +83,7 @@ function MainForm() {
             Password{" "}
           </label>
           <div className="labels-input">
-            <input
+            <input className="inputForm"
               type="password"
               id="password"
               value={password}
@@ -92,9 +94,10 @@ function MainForm() {
         </div>
 
         <div style={{ marginLeft: "45%" }}>
-          <button type="submit">submit</button>
+          <button className="formBtn" type="submit">Submit</button>
         </div>
       </form>
+      </Fade>
     </div>
   );
 }

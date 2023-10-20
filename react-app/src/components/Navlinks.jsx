@@ -1,32 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function NavLinks() {
+function NavLinks(props) {
   return (
     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       <li className="nav-item">
         <Link to="/" className="nav-link">
-          HOME
+          {props.link1}
         </Link>
       </li>
       <li className="nav-item">
         <Link to="/" className="nav-link">
-          ABOUT US
+          {props.link2}
         </Link>
       </li>
       <li className="nav-item">
         <Link to="/beneficiaries" className="nav-link">
-          BENEFICIARIES
+         {props.link3}
         </Link>
       </li>
       <li className="nav-item">
         <Link to="/" className="nav-link">
-          VOLUNTEERS
+          {props.link4}
         </Link>
       </li>
       <li className="nav-item">
         <Link to="/" className="nav-link">
-          DONORS
+          {props.link5}
         </Link>
       </li>
     </ul>

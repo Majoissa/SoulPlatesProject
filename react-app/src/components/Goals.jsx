@@ -1,54 +1,31 @@
 import React from "react";
 import "./Mission-Goals.css";
+import { Fade } from "react-awesome-reveal";
 
 function Goals() {
   return (
-    <div className="main-goal-box" style={{ backgroundColor: " #38387A" }}>
+    <div className="main-goal-box" style={{ backgroundColor: " white" }}>
+      <Fade cascade damping={0.1}>
       <div className="Goals-div">
+      <h2 className="goalsTitle">Our goals</h2>
         <div className="Goals">
-          <h2>Our Goals</h2>
-
+        <img
+            src="https://achev.ca/wp-content/uploads/2023/07/Volunteering-as-a-Newcomer.png"
+            alt="description component img"
+          />
           <p
-            style={{
-              marginTop: "30px",
-              fontSize: "1rem",
-              fontWeight: "bold",
-              color: "#323345",
-            }}
           >
             We aim to provide comprehensive, holistic support to all vulnerable
             persons, addressing not only their immediate needs for shelter and
             sustenance but also facilitating access to education and skills
             development, creating a foundation for a brighter future. Our
             primary goal is to empower all beneficiaries including immigrants
-            through education. We strive to ensure that every person has access
-            to quality education, equipping them with the knowledge and skills
-            needed to integrate into society, secure stable employment, and
-            achieve their aspirations. We work towards the sustainability and
-            growth of our organization, ensuring that we can continue to support
-            and help more each individuals and families in need.
+            through education.
           </p>
         </div>
       </div>
-
-      <div className="goal-image-box">
-        <div className="goals-image">
-          <img
-            src="https://media.istockphoto.com/id/484793580/es/foto/voluntarios-profesor-ayudando-a-clase-de-preescolar-ni%C3%B1os-de-dibujo.jpg?s=612x612&w=0&k=20&c=FbXRUZR47zgns4MAhsAA_9dOjzxYdPdmhCYjealaR8I="
-            alt="description component img"
-          />
-          <p>In this mission, all together!</p>
+      </Fade>
         </div>
-
-        <div className="goals-image-2">
-          <img
-            src="https://media.istockphoto.com/id/531557794/es/foto/lengua-de-capacitaci%C3%B3n-para-los-refugiados-en-un-campamento-alem%C3%A1n.jpg?s=612x612&w=0&k=20&c=K4aw_bPjHDS6GBNIH6Ei3O9G5P-CDLRGibSWTGrbBkE="
-            alt="description component img"
-          />
-          <p>We believe there is a better future!</p>
-        </div>
-      </div>
-    </div>
   );
 }
 export default Goals;
