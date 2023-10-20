@@ -12,7 +12,7 @@ function BeneficiaryVideo() {
 
           <div className='inner'>
 
-          <h1>HELP THE POOR IN NEED</h1>
+          <h1>Help the poor in need</h1>
           <p>
           This all means that giving is a much more important element of happiness than receiving. 
           </p>

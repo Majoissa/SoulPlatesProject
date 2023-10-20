@@ -4,14 +4,14 @@
   }
   
   .card-with-transition:hover {
-    background-color: #f8f9fa;
+    background-color: white;
     transform: scale(1.05);
     box-shadow: 0px 0px 10px rgba(31, 18, 18, 0.3);
 
   }
   
   .card {
-    transition: box-shadow 0.5s ease-in-out; /* Add a transition for smooth effect */
+    transition: box-shadow 0.5s ease-in-out; /* Add a transition or smooth effect */
   }
   
   .card:hover {
@@ -34,7 +34,19 @@
      opacity: 2;
 
   } 
+  .card-title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  }
   
+  .card-text{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  }
+
+  .card-body{
+    box-shadow: 2px 2px 5px #b6b8b1;
+  }
 
   @media (max-width: 768px) { 
 

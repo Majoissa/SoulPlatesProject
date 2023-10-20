@@ -1,18 +1,19 @@
 .text-cards-head {
-
-   background-color:  #F4F3EE;
    height: 200px;
    width:100%;
 }
 
 .text-cards-head h1 {
 
-    text-align: center;
-    padding-top: 100px;
-    color:  3A3A45;
-    font-size: 3.5rem;
-    font-family: URW Chancery L, cursive;
-    text-shadow: 2px 2px 4px rgba(85, 85, 145, 0.5);
+   font-family: 'Cedarville Cursive', cursive !important;
+   text-transform: capitalize;
+   text-shadow: none;
+   max-width: 50%;
+   text-align: center;
+   margin: auto;
+   margin-top: 12vw;
+   transition: ease-in-out 1s;
+   font-size: 3rem;
    
 }
 
@@ -35,7 +36,9 @@
  
    .text-cards-head h1 {
 
-      font-size: 2.5rem;
+      font-size: 2rem;
+      width: 100%;
+      text-align: center;
 
    }
     
