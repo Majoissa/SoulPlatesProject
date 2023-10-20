@@ -12,6 +12,7 @@ function MainForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+  
   return (
     <div className="main-form">
       <Fade cascade damping={0.1}>

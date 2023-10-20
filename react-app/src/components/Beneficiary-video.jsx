@@ -14,7 +14,7 @@ function BeneficiaryVideo() {
 
           <h1>HELP THE POOR IN NEED</h1>
           <p>
-          This all means that giving is a much more important element of happiness than receiving. Being able to give makes us feel like we're making a big impact on someone's life.
+          This all means that giving is a much more important element of happiness than receiving. 
           </p>
 
           </div>

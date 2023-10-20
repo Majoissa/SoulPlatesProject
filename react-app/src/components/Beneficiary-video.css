@@ -23,7 +23,8 @@
      bottom:0;
  
  }
- 
+
+
  .inner {
  
      margin-top: 300px;
@@ -33,16 +34,36 @@
  .inner h1{
     
      text-align: center;
-     font-size: 4rem;  
+     font-size: 4.5rem;  
      color:#F7F5D2;
+     font-family: URW Chancery L, cursive;
  }
- 
  .inner p{
     
-     text-align: center;
-     font-size: 1.6rem; 
-     margin-left: 35px;
-     margin-right: 35px;
+    text-align: center;
+    font-family: URW Chancery L, cursive;
+    font-size: 2rem; 
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-top: 50px;
+
+}
  
- }
- 
+
+ /* Media query for mobile screens */
+   @media (max-width: 768px) {
+
+    .inner {
+
+        margin-top: 100px;
+    }
+      .inner h1 {
+        font-size: 2rem;
+
+       /* Adjust the font size for mobile screens */
+     }
+
+      .inner p {
+        font-size: 1.5rem; /* Adjust the font size for mobile screens */
+    }
+}

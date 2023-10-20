@@ -6,14 +6,64 @@
   .card-with-transition:hover {
     background-color: #f8f9fa;
     transform: scale(1.05);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px rgba(31, 18, 18, 0.3);
 
   }
   
   .card {
-    transition: box-shadow 0.4s ease-in-out; /* Add a transition for smooth effect */
+    transition: box-shadow 0.5s ease-in-out; /* Add a transition for smooth effect */
   }
   
   .card:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1.0); /* Add a shadow on hover */
+    box-shadow: 0 0 10px rgb(3, 2, 2); /* Add a shadow on hover */
   }
+
+  /* STYLE FOR REVEAL  */
+  
+  .reveal {
+
+     position: relative;
+     transform: translateY(150px);
+     opacity: 0;
+     transition: all 1s ease;
+  }
+
+  .reveal.active {
+
+     transform: translateY(0px);
+     opacity: 2;
+
+  } 
+  
+
+  @media (max-width: 768px) { 
+
+
+    .main-text-box {
+
+     text-align: center;
+     padding-right: 100px;
+
+    }
+   
+    .row-cols-1 {
+      flex-direction: column;
+     
+      }
+  
+    .row-cols-1 .col {
+      width: 350px;
+      margin: auto; 
+      
+    }
+  
+    .card {
+      max-width: 100%;
+      margin-top:20px;
+    }
+
+
+  
+  }
+
+   
