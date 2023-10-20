@@ -1,0 +1,13 @@
+.hero-container {
+    max-width: 100%;
+    height: 20%;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: 50%;
+    opacity: 0.3;
+    padding: 0;
+    margin: 0;
+}
+
