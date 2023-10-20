@@ -9,8 +9,10 @@
     transition: background-color 0.3s, color 0.3s, font-size 0.3s;
 }
 
+
 .job-post-heading:hover {
     background-color: #F7F5D2;
     color: #3A3A45;
     font-size: 4.2rem; /* Slightly increase font size on hover */
 }
+
