@@ -55,10 +55,10 @@
    }
   
 
-
 .job-post {
     width: 600px;
-    height: 300px;
+    height: auto;
+    padding-bottom: 50px;
     padding-left: 50px;
     padding-right: 50px;
     background-color: #F4F3EE;
