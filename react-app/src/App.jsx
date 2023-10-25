@@ -23,7 +23,6 @@ function App() {
       <HomeCards />
       <MainForm />
       <Footer />
-      <AdminLoginButton/>
     </div>
   );
 }

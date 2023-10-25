@@ -72,7 +72,7 @@ function  TextCards() {
         style={{backgroundColor: '  #F4F3EE '}}
       >
         <h5 className="card-title" style={{fontSize:'1.8rem', paddingTop:'2px', textAlign:'center', color:'#3A3A45'}}  >Support Education</h5>
-         <p className="card-text" style={{fontSize:'1rem', color:'#3A3A45' , textAlign:'left' , fontWeight:'bold'}} >We are committed to providing quality education and educational resources to underprivileged individuals and communities. Our goal is to empower those in need with the knowledge and skills that can transform their lives.  </p>
+         <p className="card-text" style={{fontSize:'1rem', color:'#3A3A45' , textAlign:'left' , fontWeight:'bold'}} >We are committed to providing quality education and educational resources to underprivileged individuals and communities. Our goal is to empower those in need with the knowledge and skills that can transform their lives.  </p><br></br>
       
       </div>
       

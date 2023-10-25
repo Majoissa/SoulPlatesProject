@@ -1,5 +1,9 @@
 import React from "react";
 import "./footer.component.css";
+import facebook from "./img/Facebook Pink 1.png";
+import instagram from "./img/Instagram Pink 1.png";
+import linkedin from "./img/Social Pink 1.png";
+import twitter from "./img/Twitter Pink 1.png";
 
 const Footer = () => {
   return (
@@ -54,25 +58,25 @@ const Footer = () => {
             <div className="socialmedia">
               <p>
                 <img
-                  src="https://i.postimg.cc/DmksBdCJ/facebook.png"
+                  src={facebook}
                   alt="facebook"
                 />
               </p>
               <p>
                 <img
-                  src="https://i.postimg.cc/Wbgfj9cy/Instagram.png"
+                  src={instagram}
                   alt="Instagram"
                 />
               </p>
               <p>
                 <img
-                  src="https://i.postimg.cc/c1V5Vp2Y/linkdn.png"
+                  src={linkedin}
                   alt="linkdn"
                 />
               </p>
               <p>
                 <img
-                  src="https://i.postimg.cc/PfLRVX3T/twitter.png"
+                  src={twitter}
                   alt="twitter"
                 />
               </p>
