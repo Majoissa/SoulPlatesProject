@@ -3,7 +3,7 @@
     margin-top: 15px;
 }
 .searching{
-  height: 30px;
+  height: 30px !important;
 }
 .iconGlass{
     color: #F7F5D2;
@@ -25,6 +25,6 @@
 }
 
 .searching{
-  height: 30px;
+  height: 30px !important;
 }
 }

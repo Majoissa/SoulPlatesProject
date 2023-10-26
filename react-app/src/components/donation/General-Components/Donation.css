@@ -8,17 +8,20 @@
     background-color: #F7F5D2;
 }
 
-.subtitle, .title {
-    text-align: center;
-}
-
 .title {
     text-align: center;
-    font-size: 50px;
-    font-weight: 600;
+    font-family:'Cedarville Cursive', cursive;
+}
+.subtitle{
+    text-align: center;
+    font-family:'Montserrat', sans-serif;
+}
+.title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
     color: black;
-    margin-bottom: 50px;
-    margin-top: 20px;
+    padding: 12vw;
 
 }
 
