@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import Administrators from "./components/administrators/Administrators";
 import Beneficiaries from "./components/Beneficiaries";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -19,7 +20,11 @@ const router = createBrowserRouter([
   {
     path: "/donation",
     element: <Donation />,
-  }
+  },
+  {
+    path: "/admin",
+    element: <Administrators />,
+  },
   //here goes the other routes
 ]);
 

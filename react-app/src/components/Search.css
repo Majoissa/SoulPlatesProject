@@ -2,11 +2,9 @@
     width: 200px;
     margin-top: 15px;
 }
-
-.form-control{
+.searching{
   height: 30px !important;
 }
-
 .iconGlass{
     color: #F7F5D2;
     margin-bottom: 3px;
@@ -26,7 +24,7 @@
     margin-top: 15px;
 }
 
-.form-control{
+.searching{
   height: 30px !important;
 }
 }
