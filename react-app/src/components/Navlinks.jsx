@@ -20,7 +20,7 @@ function NavLinks(props) {
         </Link>
       </li>
       <li className="nav-item">
-        <Link to="/" className="nav-link">
+        <Link to="/volunteers" className="nav-link">
           {props.link4}
         </Link>
       </li>
