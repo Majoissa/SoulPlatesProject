@@ -4,6 +4,7 @@ import InputFiled from "../General-Components/InputFiled";
 import Button from "../General-Components/Button";
 import "./ContactForm.css"
 import Message from "../General-Components/Message";
+//this is just test
 
 
 function ContactForm() {
@@ -33,10 +34,8 @@ function ContactForm() {
                         <InputFiled type="email" id="email" myPlaceholder='Email Address' value={userEmail}
                                     handleChange={e => setEmail(e.target.value)} className='form-control'/>
                     </div>
-
                     <Message/>
                     <Button text='Submit' onClick={handleOnClick} className='form-control-submit'/>
-
                 </form>
             </div>
         </>
