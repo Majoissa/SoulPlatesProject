@@ -1,16 +1,37 @@
-
 import "../Main_Form_MessageBox.css";
 import { Fade } from "react-awesome-reveal";
 import { useState } from "react";
-
+import { useNavigate } from 'react-router-dom';
 function LoginAdmin(){
-    
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-
-  const handleSubmit = (e) => {
+  const navigate = useNavigate();
+  const handleSubmit = async (e) => {
     e.preventDefault();
-  };
+    const loginData = {
+        username: userName,
+        password: password
+    };
+    try {
+        const response = await fetch('http://localhost:5550/admin/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(loginData),
+            credentials: 'include'
+        });
+        const data = await response.json();
+        if (response.status === 200 && data.message === "Login successful") {
+          alert("Login exitoso!");
+          navigate("/admin/page");
+      }else {
+            alert(data.message || "Error durante el inicio de sesión.");
+        }
+    } catch (error) {
+        alert("Hubo un error al conectar con el servidor.");
+    }
+};
     return(
         <div>
             <div className="main-form">
@@ -18,7 +39,7 @@ function LoginAdmin(){
       <h2 className="formTittle">Login</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-field">
-          <label htmlFor="User Name" style={{ marginRight: "355px" }}>
+          <label htmlFor="username" style={{ marginRight: "355px" }}>
             Username{" "}
           </label>
           <div className="labels-input">
@@ -31,7 +52,6 @@ function LoginAdmin(){
             />
           </div>
         </div>
-
         <div className="form-field">
           <label htmlFor="password" style={{ marginRight: "370px" }}>
             {" "}
@@ -47,7 +67,6 @@ function LoginAdmin(){
             />
           </div>
         </div>
-
         <div style={{ marginLeft: "45%" }}>
           <button className="formBtn" type="submit">Submit</button>
         </div>
@@ -57,5 +76,4 @@ function LoginAdmin(){
         </div>
     )
 }
-
 export default LoginAdmin;
