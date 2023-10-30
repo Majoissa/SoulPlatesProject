@@ -1,4 +1,4 @@
-function DonationCampaign() {
+/*function DonationCampaign() {
     return (
         <div className='donation-campaign'>
             <label htmlFor="Campaign">Campaigns</label>
@@ -13,6 +13,6 @@ function DonationCampaign() {
     )
 }
 
-export default DonationCampaign
+export default DonationCampaign*/
 
 

@@ -10,29 +10,32 @@ function DonationForm() {
     const [donationAmount, setDonationAmount] = useState(0);
     const [userFullName, setFullName] = useState("");
     const [userEmail, setEmail] = useState("");
+    const [message, setMessage] = useState("");
 
     const handleOnClick = () => {
-       console.log(donationAmount,userFullName, userEmail, );
+        console.log(donationAmount, userFullName, userEmail,);
         //alert(JSON.stringify({userFullName,userEmail, donationAmount}))
     }
 
     return (
         <div className='general'>
-            <form className='donation-form'>
+            <form className='donation-form' aria-required="true">
                 <div className='donation-form-body'>
                     <DonationSelection donationAmount={donationAmount} setDonationAmount={setDonationAmount}/>
                     <div className='donor-details'>
                         <h5>Donor Details</h5>
                         <div className="donor-input">
-                            <InputFiled myPlaceholder ='Full name' value={userFullName}  handleChange={e => setFullName(e.target.value)}/>
-                            <InputFiled myPlaceholder='Email Address' value={userEmail}  handleChange={e => setEmail(e.target.value)}/>
+                            <InputFiled type="text" id="name" myPlaceholder='Full name' value={userFullName}
+                                        handleChange={e => setFullName(e.target.value)}/>
+                            <InputFiled type="email" id="email" myPlaceholder='Email Address' value={userEmail}
+                                        handleChange={e => setEmail(e.target.value)}/>
                         </div>
                     </div>
                 </div>
-                <div className='campaign'>
+              {/*  <div className='campaign'>
                     <PaymentOption/>
-                    <DonationCampaign/>
-                </div>
+                    { <DonationCampaign/>
+                </div>*/}
                 <Message/>
                 <Button text='DONATE NOW' onClick={handleOnClick}/>
             </form>

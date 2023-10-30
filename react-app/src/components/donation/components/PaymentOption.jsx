@@ -7,7 +7,7 @@ function PaymentOption() {
                 <h5>Payment Method</h5>
                 <div className={'payment-methode-option'}>
                     <div className="label">
-                        <input className='radio' type="radio" value={"online"}/>
+                        <input  className='radio' type="radio" value={"online"}/>
                         <label htmlFor="radio">Online Payment</label>
                     </div>
 
