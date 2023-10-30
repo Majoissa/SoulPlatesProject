@@ -1,4 +1,4 @@
-function Button({text, onClick}) {
+function Button({text, onClick,}) {
 
    /* function donateButton(){
      /!* This button supos to to send form to the server!
