@@ -1,0 +1,25 @@
+.users{
+    padding: 12vw;
+    padding-top: 6vw;
+}
+
+.beneficiariesTable, td{
+    border: 1px black solid;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+th{
+    background-color: #E0AFA0 !important;
+}
+
+.tableTitle{
+        font-family: 'Cedarville Cursive', cursive;
+        text-shadow: none;
+        max-width: 50%;
+        text-align: center;
+        margin: auto;
+        transition: ease-in-out 1s;
+        font-size: 3rem;
+        margin-bottom: 6vw;
+      }

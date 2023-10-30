@@ -8,7 +8,7 @@ import reportWebVitals from "./reportWebVitals";
 import RegisterAdmin from "./components/administrators/RegisterAdmin";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Donation from "./components/Donation";
-import Volunteers from "./components/Volunteers";
+import AdminPage from "./components/administrators/AdminPage";
 
 const router = createBrowserRouter([
   {
@@ -28,12 +28,12 @@ const router = createBrowserRouter([
     element: <Administrators />,
   },
   {
-    path: "volunteers",
-    element: <Volunteers/>,
-  },
-  {
     path: "/admin/register",
     element: <RegisterAdmin />,
+  },
+  {
+    path: "/admin/page",
+    element: <AdminPage />,
   },
 
   //here goes the other routes

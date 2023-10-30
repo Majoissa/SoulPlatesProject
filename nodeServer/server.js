@@ -5,7 +5,9 @@ const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 require("dotenv").config();
+
 const app = express();
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(
@@ -14,24 +16,29 @@ app.use(
     credentials: true,
   })
 );
+
 // Configuración de pg-pool
 const pool = new Pool({
   host: "127.0.0.1",
   user: "postgres",
-  password: "inter1989",
+  password: "150396+Majo",
   database: "soul_plates",
   max: 10, // número máximo de clientes en el pool
   idleTimeoutMillis: 30000, // tiempo máximo de inactividad antes de cerrar el cliente
 });
+
 app.post("/register", async (req, res) => {
   const { username, password, email } = req.body;
+
   if (!email.includes("@") || !email.includes(".")) {
     return res
       .status(400)
       .json({ error: "Dirección de correo electrónico no válida." });
   }
+
   const salt = await bcrypt.genSalt(10);
   const hashedPassword = await bcrypt.hash(password, salt);
+
   try {
     const client = await pool.connect();
     const result = await client.query(
@@ -39,6 +46,7 @@ app.post("/register", async (req, res) => {
       [username, email, hashedPassword]
     );
     client.release();
+
     res.json({ success: true });
   } catch (err) {
     if (err.code === "23505") {
@@ -49,9 +57,11 @@ app.post("/register", async (req, res) => {
     res.status(500).json({ error: "Error al registrar el usuario." });
   }
 });
+
 //Login
 app.post("/admin/login", async (req, res) => {
   const { username, password } = req.body;
+
   try {
     const client = await pool.connect();
     const result = await client.query(
@@ -59,15 +69,19 @@ app.post("/admin/login", async (req, res) => {
       [username]
     );
     client.release();
+
     if (result.rows.length === 0) {
       return res.status(401).json({ message: "User not found" });
     }
+
     const user = result.rows[0];
     const hashedPassword = user.password;
+
     bcrypt.compare(password, hashedPassword, (err, result) => {
       if (err) {
         return res.status(500).json({ message: "Password comparison error" });
       }
+
       if (result) {
         const token = jwt.sign({ userId: user.id }, process.env.SECRET_KEY, {
           expiresIn: "1h",
@@ -86,6 +100,18 @@ app.post("/admin/login", async (req, res) => {
     res.status(500).json({ message: "Error during login" });
   }
 });
+
+//get information from beneficiaries table
+app.get("/beneficiaries", (req, res) => {
+  pool.query("SELECT * FROM beneficiaries", (error, result) => {
+    if (error) {
+      console.error("Error querying the database:", error);
+      return res.status(500).json({ error: "Error querying the database" });
+    }
+    res.json(result.rows);
+  });
+});
+
 const PORT = 5550;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
