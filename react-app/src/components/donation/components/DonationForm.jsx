@@ -1,16 +1,15 @@
-import PaymentOption from "./PaymentOption";
+//import PaymentOption from "./PaymentOption";
 import {useState} from "react";
 import Button from "../General-Components/Button";
 import Message from "../General-Components/Message";
-import DonationCampaign from "./DonationCampain";
 import InputFiled from "../General-Components/InputFiled";
 import DonationSelection from "./DonationSelection";
 
 function DonationForm() {
     const [donationAmount, setDonationAmount] = useState(0);
-    const [userFullName, setFullName] = useState("");
-    const [userEmail, setEmail] = useState("");
-    const [message, setMessage] = useState("");
+    const [userFullName, setUserFullName] = useState("");
+    const [userEmail, setUserEmail] = useState("");
+    //const [message, setMessage] = useState("");
 
     const handleOnClick = () => {
         console.log(donationAmount, userFullName, userEmail,);
@@ -25,17 +24,14 @@ function DonationForm() {
                     <div className='donor-details'>
                         <h5>Donor Details</h5>
                         <div className="donor-input">
-                            <InputFiled type="text" id="name" myPlaceholder='Full name' value={userFullName}
-                                        handleChange={e => setFullName(e.target.value)}/>
-                            <InputFiled type="email" id="email" myPlaceholder='Email Address' value={userEmail}
-                                        handleChange={e => setEmail(e.target.value)}/>
+                            <InputFiled type="text" id="name" placeholder='Full name' value={userFullName}
+                                        handleChange={e => setUserFullName(e.target.value)}/>
+                            <InputFiled type="email" id="email" placeholder='Email Address' value={userEmail}
+                                        handleChange={e => setUserEmail(e.target.value)}/>
                         </div>
                     </div>
                 </div>
-              {/*  <div className='campaign'>
-                    <PaymentOption/>
-                    { <DonationCampaign/>
-                </div>*/}
+
                 <Message/>
                 <Button text='DONATE NOW' onClick={handleOnClick}/>
             </form>
