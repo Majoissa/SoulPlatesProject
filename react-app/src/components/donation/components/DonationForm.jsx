@@ -1,20 +1,34 @@
-import PaymentOption from "./PaymentOption";
+//import PaymentOption from "./PaymentOption";
 import {useState} from "react";
 import Button from "../General-Components/Button";
 import Message from "../General-Components/Message";
-import DonationCampaign from "./DonationCampain";
 import InputFiled from "../General-Components/InputFiled";
 import DonationSelection from "./DonationSelection";
 
 function DonationForm() {
     const [donationAmount, setDonationAmount] = useState(0);
-    const [userFullName, setFullName] = useState("");
-    const [userEmail, setEmail] = useState("");
-    const [message, setMessage] = useState("");
+    const [userFullName, setUserFullName] = useState("");
+    const [userEmail, setUserEmail] = useState("");
+    const [userMessage, setUserMessage] = useState("");
 
-    const handleOnClick = () => {
-        console.log(donationAmount, userFullName, userEmail,);
-        //alert(JSON.stringify({userFullName,userEmail, donationAmount}))
+    const handleOnClick = (event) => {
+        event.preventDefault();
+        console.log(donationAmount, userFullName, userEmail, userMessage);
+        //alert(JSON.stringify({userFullName, userEmail, donationAmount}));
+    }
+
+
+    const handleOnChange = (event, name,) => {
+        if (name === "email") {
+            setUserEmail(event.target.value)
+        }
+        if (name === "name") {
+            setUserFullName(event.target.value)
+        }
+        if (name === "message") {
+            setUserMessage(event.target.value)
+        }
+
     }
 
     return (
@@ -25,19 +39,17 @@ function DonationForm() {
                     <div className='donor-details'>
                         <h5>Donor Details</h5>
                         <div className="donor-input">
-                            <InputFiled type="text" id="name" myPlaceholder='Full name' value={userFullName}
-                                        handleChange={e => setFullName(e.target.value)}/>
-                            <InputFiled type="email" id="email" myPlaceholder='Email Address' value={userEmail}
-                                        handleChange={e => setEmail(e.target.value)}/>
+                            <InputFiled type="text" placeholder='Full name' value={userFullName}
+                                        onChange={(e) => handleOnChange(e, "name")}/>
+                            <InputFiled type="email" placeholder='Email Address' value={userEmail}
+                                        onChange={(e) => handleOnChange(e, "email")}/>
                         </div>
                     </div>
                 </div>
-              {/*  <div className='campaign'>
-                    <PaymentOption/>
-                    { <DonationCampaign/>
-                </div>*/}
-                <Message/>
-                <Button text='DONATE NOW' onClick={handleOnClick}/>
+                <Message value={userMessage}
+                         onChange={(e) => handleOnChange(e, "message")} />
+
+                <Button type="submit" text='DONATE NOW' onClick={handleOnClick}/>
             </form>
         </div>
     )

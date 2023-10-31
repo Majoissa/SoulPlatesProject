@@ -2,7 +2,7 @@
     display: grid;
     max-width: 750px;
     max-height: 100%;
-    background-color: #F7F5D2;
+    background-color: lightgray;
     margin:50px auto;
 }
 
@@ -16,7 +16,10 @@
 }
 
 .textarea.form-control {
-    height: auto;
+    height: 120px;
+}
+.textarea {
+    margin-bottom: 20px;
 }
 
 .textarea.form-control {
