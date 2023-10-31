@@ -4,8 +4,6 @@ import InputFiled from "../General-Components/InputFiled";
 import Button from "../General-Components/Button";
 import "./ContactForm.css"
 import Message from "../General-Components/Message";
-//this is just test
-
 
 function ContactForm() {
     const [userFullName, setUserFullName] = useState("");
@@ -13,11 +11,12 @@ function ContactForm() {
     const [userMessage, setUserMessage] = useState("");
     const [userPhoneNumber, setUserPhoneNumber] = useState("");
 
-    const handleOnClick = () => {
-        console.log(userFullName, userEmail, userPhoneNumber, userMessage);
-        //alert(JSON.stringify({userFullName,userEmail, donationAmount}))
-    }
 
+    const handleOnClick = (event) => {
+        event.preventDefault();
+        console.log(userFullName, userEmail, userMessage, userPhoneNumber);
+        //alert(JSON.stringify({userFullName, userEmail, donationAmount}));
+    }
 
     const handleOnChange = (event, name,) => {
         if (name === "email") {
@@ -58,10 +57,10 @@ function ContactForm() {
                                     onChange={(e) => handleOnChange(e, "tel")}/>
                     </div>
 
-                    <Message value={userMessage}
-                              onChange={(e) => handleOnChange(e, "message")} />
+                    <Message type="message" value={userMessage}
+                             onChange={(e) => handleOnChange(e, "message")} />
 
-                    <Button text='Submit' onClick={handleOnClick} className='form-control-submit-now'/>
+                    <Button type="submit" text='Submit' onClick={handleOnClick} className='form-control-submit-now'/>
                 </form>
             </div>
         </>
