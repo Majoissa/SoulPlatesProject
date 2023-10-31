@@ -21,9 +21,14 @@ const router = createBrowserRouter([
     element: <Beneficiaries />,
   },
   {
+    path: "/volunteers",
+    element: <Volunteers />,
+  },
+  {
     path: "/donation",
     element: <Donation />,
   },
+
   {
     path: "/admin",
     element: <Administrators />,

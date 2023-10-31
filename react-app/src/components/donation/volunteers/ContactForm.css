@@ -2,7 +2,7 @@
     display: grid;
     max-width: 750px;
     max-height: 100%;
-    background-color: #cdcccc;
+    background-color: lightgray;
     margin:50px auto;
 }
 
@@ -10,18 +10,20 @@
     padding: 70px;
 }
 
-/*.form-control-submit {
+.form-control-submit {
     font-size: 16px;
     margin-top: 30px;
-}*/
+}
 
 .textarea.form-control {
     height: 120px;
 }
+.textarea {
+    margin-bottom: 20px;
+}
 
 .textarea.form-control {
     min-height: calc(1.5em + (0.75rem + 2px));
-
 }
 
 .contact-form-message{
@@ -31,6 +33,5 @@
     margin:20px 0;
 }
 
-.cal-12 {
-    margin-bottom: 30px;
-}
+
+
