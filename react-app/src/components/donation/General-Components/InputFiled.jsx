@@ -18,8 +18,3 @@ function InputFiled({type, name = "", id = "", placeholder = "", value = "", onC
 }
 
 export default InputFiled
-
-
-
-
-

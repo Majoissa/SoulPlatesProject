@@ -17,4 +17,3 @@ function Message({value='', onChange}) {
 }
 
 export default Message;
-
