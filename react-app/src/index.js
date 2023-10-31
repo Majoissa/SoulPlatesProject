@@ -9,6 +9,7 @@ import RegisterAdmin from "./components/administrators/RegisterAdmin";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Donation from "./components/Donation";
 import AdminPage from "./components/administrators/AdminPage";
+import Volunteers from "./components/Volunteers";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,10 @@ const router = createBrowserRouter([
     path: "/admin/page",
     element: <AdminPage />,
   },
-
+  {
+    path: "/volunteers",
+    element: <Volunteers />,
+  },
   //here goes the other routes
 ]);
 

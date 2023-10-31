@@ -2,7 +2,7 @@
     width: 200px;
     margin-top: 15px;
 }
-.searching{
+.searchForm{
   height: 60px !important;
 }
 .iconGlass{
@@ -18,14 +18,14 @@
   background-color:black;
 }
   
-/*
+
 @media (max-width: 1000px){
   .search{
     width: 100%;
     margin-top: 15px;
 }
 
-.searching{
+.searchForm{
   height: 30px !important;
 }
-}*/
+}

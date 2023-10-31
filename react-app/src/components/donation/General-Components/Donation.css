@@ -59,7 +59,7 @@
 }
 
 .form-control {
-    height: 60px;
+    height: 60px !important;
     padding: 8px 15px;
     border-radius: 0;
     border: 2px solid #efefef;
@@ -72,7 +72,7 @@
 }
 
 .form-control-donat-naw {
-    height: 60px;
+    height: 60px !important;
     padding: 8px 15px;
     border: 2px solid #efefef;
     width: 20%;
@@ -143,12 +143,6 @@
     display: flex;
     justify-content: space-between;
     /*text-align: center;*/
-}
-.campaign-input {
-    width: 189px;
-    height: 60px;
-    border: none;
-    margin: auto;
 }
 .donation-option-title {
     text-align: center;

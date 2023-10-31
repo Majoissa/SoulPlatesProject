@@ -19,7 +19,7 @@ function Search(props) {
     <div className="search input-group mb-3">
       <input
         type="text"
-        className="form-control searching"
+        className="form-control searchForm"
         placeholder={props.text}
         aria-label="Recipient's username"
         aria-describedby="button-addon2"
