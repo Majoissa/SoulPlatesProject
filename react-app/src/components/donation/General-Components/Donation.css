@@ -58,7 +58,7 @@
     margin-bottom: 30px;
 }
 
-.form-control {
+.donations {
     height: 60px !important;
     padding: 8px 15px;
     border-radius: 0;
@@ -71,7 +71,7 @@
     appearance: auto;
 }
 
-.form-control-donat-naw {
+.donationsBtn{
     height: 60px !important;
     padding: 8px 15px;
     border: 2px solid #efefef;

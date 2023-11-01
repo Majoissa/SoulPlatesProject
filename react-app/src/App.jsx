@@ -7,7 +7,6 @@ import HomeCards from "./components/Home-cards";
 import Goals from "./components/Goals";
 //import NgoStory from "./components/NgoStory";
 import DinamicText from "./components/DinamicText";
-import Volunteers from "./components/Volunteers";
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
       <Mission />
       <Goals />
       <HomeCards />
-        <Volunteers/>
       <Footer />
     </div>
   );

@@ -8,7 +8,7 @@ function Message({value='', onChange}) {
                         value={value}
                         name='message'
                         placeholder="Enter your message"
-                        className='form-control textarea'
+                        className='form-control donations textarea'
                         onChange={onChange} />
                 </div>
             </div>
