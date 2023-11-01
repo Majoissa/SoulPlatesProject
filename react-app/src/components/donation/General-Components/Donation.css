@@ -58,8 +58,8 @@
     margin-bottom: 30px;
 }
 
-.form-control {
-    height: 60px;
+.donations {
+    height: 60px !important;
     padding: 8px 15px;
     border-radius: 0;
     border: 2px solid #efefef;
@@ -69,20 +69,27 @@
     letter-spacing: 0.1px;
     font-size: 14px;
     appearance: auto;
+    
 }
 
-.form-control-donat-naw {
-    height: 60px;
-    padding: 8px 15px;
-    border: 2px solid #efefef;
+.donationsBtn{
+    margin-bottom: 10px;
+    background-color: #E0AFA0 !important;
+    color: white !important;
+    font-weight: 600 !important;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px; 
+    border: none; 
+    border-radius: 8px; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    transition: ease-in-out 0.5s;
     width: 20%;
-    color: #6e6e6e;
-    background-color: #fff;
-    letter-spacing: 0.1px;
-    font-size: 14px;
-    margin-bottom: 30px;
-}
+  }
 
+  .donationsBtn:hover{
+    background-color:  #B08A7E !important;
+}
 .payment-method-align-items-center {
     /*display: grid;*/
     /*width: 50%;*/
@@ -144,12 +151,6 @@
     justify-content: space-between;
     /*text-align: center;*/
 }
-.campaign-input {
-    width: 189px;
-    height: 60px;
-    border: none;
-    margin: auto;
-}
 .donation-option-title {
     text-align: center;
 }
@@ -203,5 +204,3 @@
     background-color: #F7F5D2;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
-

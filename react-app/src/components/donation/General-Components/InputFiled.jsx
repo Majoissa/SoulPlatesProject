@@ -1,4 +1,4 @@
-function InputFiled({type, name = "", id = "", placeholder = "", value = "", onChange, className = "form-control",}) {
+function InputFiled({type, name = "", id = "", placeholder = "", value = "", onChange, className = "form-control donations",}) {
     //mandatory properties has to written, props is generic we need to defend
     return (
         <>
