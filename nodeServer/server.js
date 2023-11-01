@@ -101,6 +101,62 @@ app.post("/admin/login", async (req, res) => {
   }
 });
 
+//beneficiaries insertion
+app.post("/contact/beneficiaries", async (req, res) => {
+  const { full_name, email, address, phone, message } = req.body;
+
+  // no empty fields
+  if (!full_name || !email || !address || !phone || !message) {
+    return res.status(400).json({ error: "All fields are required." });
+  }
+
+  // email only once in database
+  let client;
+  try {
+    client = await pool.connect();
+    const emailResult = await client.query(
+      "SELECT * FROM beneficiaries WHERE email = $1",
+      [email]
+    );
+    if (emailResult.rows.length > 0) {
+      return res.status(400).json({ error: "Email already exists." });
+    }
+  } catch (err) {
+    console.error(err);
+    if (client) client.release();
+    return res.status(500).json({ error: "Error checking email." });
+  }
+
+  //phone only once in database
+  try {
+    const phoneResult = await client.query(
+      "SELECT * FROM beneficiaries WHERE phone = $1",
+      [phone]
+    );
+    if (phoneResult.rows.length > 0) {
+      return res.status(400).json({ error: "Phone number already exists." });
+    }
+  } catch (err) {
+    console.error(err);
+    if (client) client.release();
+    return res.status(500).json({ error: "Error checking phone number." });
+  }
+
+  // insertion in database
+  try {
+    await client.query(
+      "INSERT INTO beneficiaries (full_name, email, address, phone, message) VALUES ($1, $2, $3, $4, $5)",
+      [full_name, email, address, phone, message]
+    );
+    client.release();
+    res.json({ success: true, message: "Data inserted successfully." });
+  } catch (err) {
+    console.error(err);
+    if (client) client.release();
+    res.status(500).json({ error: "Error inserting data." });
+  }
+});
+
 //get information from beneficiaries table
 app.get("/beneficiaries", (req, res) => {
   pool.query("SELECT * FROM beneficiaries", (error, result) => {

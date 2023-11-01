@@ -3,7 +3,7 @@ function Message({value='', onChange}) {
         <>
             <div className='cal-12'>
                 <div>
-                    <h5>Message</h5>
+                    <h5 style={{fontWeight: "700"}}>Message</h5>
                     <textarea
                         value={value}
                         name='message'
