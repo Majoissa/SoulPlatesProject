@@ -12,7 +12,7 @@ function DonationSelection({donationAmount, setDonationAmount}) {
             <div className='payment-method-align-items-center'>
                 <h5 className='donation-amount-title'>Donation Amount</h5>
                 <div className='donation-amount'>
-                    <input min={0} type={'number'} placeholder='100$' className='form-control' value={donationAmount} onChange={(e) => setDonationAmount(e.target.value)}/>
+                    <input min={0} type={'number'} placeholder='100$' className='form-control donations' value={donationAmount} onChange={(e) => setDonationAmount(e.target.value)}/>
                 </div>
                 <ul className='unOrderList'>
                     {getDonationButtons()}

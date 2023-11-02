@@ -6,11 +6,12 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-function LoginAdmin(){
+function LoginAdmin({ setIsAuthenticated }){
     
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,12 +30,15 @@ function LoginAdmin(){
             body: JSON.stringify(loginData),
             credentials: 'include'
         });
-
+       
         const data = await response.json();
+       
 
         if (response.status === 200 && data.message === "Login successful") {
           alert("Login exitoso!");
           navigate("/admin/page");
+        
+       
 
       }else {
             alert(data.message || "Error durante el inicio de sesión.");
@@ -42,7 +46,9 @@ function LoginAdmin(){
     } catch (error) {
         alert("Hubo un error al conectar con el servidor.");
     }
+    
 };
+
 
     return(
         <div>
