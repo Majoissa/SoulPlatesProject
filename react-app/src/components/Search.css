@@ -1,32 +1,31 @@
 .search{
-    width: 200px;
-    margin-top: 15px;
+  width: 200px;
+  margin-top: 15px;
 }
-
-.form-control{
-  height: 30px !important;
+.searching{
+height: 30px !important;
 }
-
 .iconGlass{
-    color: #F7F5D2;
-    margin-bottom: 3px;
+  color: #F7F5D2;
+  margin-bottom: 3px;
 }
 
 .searchBtn{
-  height: 30px;
+height: 30px;
 }
 
 .searchBtn:hover{
-  background-color:black;
-}
-  
-@media (max-width: 1000px){
-  .search{
-    width: 100%;
-    margin-top: 15px;
+background-color:black;
 }
 
-.form-control{
-  height: 30px !important;
+
+@media (max-width: 1000px){
+.search{
+  width: 100%;
+  margin-top: 15px;
+}
+
+.searching{
+height: 30px !important;
 }
 }

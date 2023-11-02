@@ -1,3 +1,4 @@
+
 .formTittle{
   font-family: 'Cedarville Cursive', cursive;
   text-shadow: none;
@@ -65,8 +66,11 @@
     border-radius: 8px; 
     font-size: 1rem; 
     cursor: pointer; 
+    transition: ease-in-out 0.5s;
   }
-  
+.formBtn:hover{
+  background-color:  #B08A7E !important;
+}
 
   
 @media (max-width: 1000px) {
@@ -91,7 +95,3 @@
    width: 100px;
   }
 }
-   /* CSS for Form END */
-   
-  
-  

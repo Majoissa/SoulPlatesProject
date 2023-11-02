@@ -2,9 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import Administrators from "./components/administrators/Administrators";
 import Beneficiaries from "./components/Beneficiaries";
 import reportWebVitals from "./reportWebVitals";
+import RegisterAdmin from "./components/administrators/RegisterAdmin";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Donation from "./components/Donation";
+import AdminPage from "./components/administrators/AdminPage";
+import Volunteers from "./components/Volunteers";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +19,31 @@ const router = createBrowserRouter([
   {
     path: "/beneficiaries",
     element: <Beneficiaries />,
+  },
+  {
+    path: "/volunteers",
+    element: <Volunteers />,
+  },
+  {
+    path: "/donation",
+    element: <Donation />,
+  },
+
+  {
+    path: "/admin",
+    element: <Administrators />,
+  },
+  {
+    path: "/admin/register",
+    element: <RegisterAdmin />,
+  },
+  {
+    path: "/admin/page",
+    element: <AdminPage />,
+  },
+  {
+    path: "/volunteers",
+    element: <Volunteers />,
   },
   //here goes the other routes
 ]);

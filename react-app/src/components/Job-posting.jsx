@@ -56,7 +56,8 @@ function JobPosts() {
               <h1 style={{fontSize:'2rem'}}>Fundraiser/Development Officer</h1>
               
                <p style={{fontSize:'1rem',textAlign:'left', paddingLeft:'20px',fontWeight:'bold', paddingTop:'20px', }}>
-               Focuses on fundraising activities, donor relations, and grant writing to secure funding for the organization. This role involves to focused on securing the financial resources necessary to support the soul Plates's mission, activities and expanding the NGO's efforts to make a positive impact on the community or cause they serve.
+               Focuses on fundraising activities, donor relations, and grant writing to secure funding for the organization. This role involves to focused on securing the financial resources necessary to support the soul Plates's mission, activities and expanding the NGO's efforts to make a positive impact on the community or cause they serve. 
+               
                </p>
 
           </div>
