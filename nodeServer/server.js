@@ -168,6 +168,18 @@ app.get("/beneficiaries", (req, res) => {
   });
 });
 
+// Endpoint for obtain all the 'volunteering' information
+
+app.get("/volunteering", async (req, res) => {
+  try {
+    const { rows } = await pool.query("SELECT * FROM volunteering");
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
 const PORT = 5550;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
