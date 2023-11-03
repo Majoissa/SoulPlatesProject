@@ -4,6 +4,7 @@ import InputFiled from "../donation/General-Components/InputFiled";
 import Button from "../donation/General-Components/Button";
 import "../donation/volunteers/ContactForm.css"
 import Message from "../donation/General-Components/Message";
+import Country_Select from "../Country_Select";
 
 function ContactBeneficiaries() {
     const [userFullName, setUserFullName] = useState("");
@@ -75,6 +76,11 @@ function ContactBeneficiaries() {
 
             <div className="contact-form-main">
                 <form className="contact-form-control">
+                <div className="contact-input">
+                        <h5>Country</h5>
+                        <Country_Select type="text" placeholder='Country' value={userFullName}
+                                    onChange={(e) => handleOnChange(e, "name")}/>
+                    </div>
                     <div className="contact-input">
                         <h5>Full Name</h5>
                         <InputFiled type="text" placeholder='Full name' value={userFullName}
