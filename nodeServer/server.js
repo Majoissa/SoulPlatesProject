@@ -102,15 +102,12 @@ app.post("/admin/login", async (req, res) => {
   }
 });
 
-
 /// LOGOUT
 
 app.post("/admin/logout", (req, res) => {
   res.clearCookie("token"); 
   res.status(200).json({ message: "You have successfuly logged out" });
 });
-
-
 
 //beneficiaries insertion
 app.post("/contact/beneficiaries", async (req, res) => {
@@ -177,6 +174,18 @@ app.get("/beneficiaries", (req, res) => {
     }
     res.json(result.rows);
   });
+});
+
+// Endpoint for obtain all the 'volunteering' information
+
+app.get("/volunteering", async (req, res) => {
+  try {
+    const { rows } = await pool.query("SELECT * FROM volunteering");
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 });
 
 const PORT = 5550;
