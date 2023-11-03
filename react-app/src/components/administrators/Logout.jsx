@@ -2,6 +2,7 @@ import React from 'react';
 import "./Logout.css";
 import { useNavigate } from 'react-router-dom';
 
+
 function LogOut () {
 
     const navigate = useNavigate();
@@ -9,7 +10,7 @@ function LogOut () {
 
     function handleLogout() {
         
-        fetch('http://localhost:5550/admin/page', {
+        fetch('http://localhost:5550/admin/logout', {
           method: 'POST',
           credentials: 'include',
           headers: {

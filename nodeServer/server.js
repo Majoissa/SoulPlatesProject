@@ -21,7 +21,7 @@ app.use(
 const pool = new Pool({
   host: "127.0.0.1",
   user: "postgres",
-  password: " 150396+Majo",
+  password: "Change_password",
   database: "soul_plates",
   max: 10, // número máximo de clientes en el pool
   idleTimeoutMillis: 30000, // tiempo máximo de inactividad antes de cerrar el cliente
@@ -33,7 +33,7 @@ app.post("/register", async (req, res) => {
   if (!email.includes("@") || !email.includes(".")) {
     return res
       .status(400)
-      .json({ error: "Dirección de correo electrónico no válida." });
+      .json({ error: "Invalid email address." });
   }
 
   const salt = await bcrypt.genSalt(10);
@@ -48,14 +48,14 @@ app.post("/register", async (req, res) => {
     client.release();
 
     res.json({ success: true });
-    console.error("Database Error:", err); // Log the database error
+    //console.error("Database Error:", err); // Log the database error
   } catch (err) {
     if (err.code === "23505") {
       return res.status(400).json({
-        error: "El nombre de usuario o correo electrónico ya está en uso.",
+        error: "The username or email address is already in use.",
       });
     }
-    res.status(500).json({ error: "Error al registrar el usuario." });
+    res.status(500).json({ error: "Error when registering the user." });
   }
 });
 
@@ -105,9 +105,9 @@ app.post("/admin/login", async (req, res) => {
 
 /// LOGOUT
 
-app.post("/admin/page", (req, res) => {
+app.post("/admin/logout", (req, res) => {
   res.clearCookie("token"); 
-  res.status(200).json({ message: "If you see the msg it means you did it right Samuel" });
+  res.status(200).json({ message: "You have successfuly logged out" });
 });
 
 
