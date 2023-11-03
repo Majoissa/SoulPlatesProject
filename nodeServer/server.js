@@ -21,7 +21,7 @@ app.use(
 const pool = new Pool({
   host: "127.0.0.1",
   user: "postgres",
-  password: " 150396+Majo",
+  password: "150396+Majo",
   database: "soul_plates",
   max: 10, // número máximo de clientes en el pool
   idleTimeoutMillis: 30000, // tiempo máximo de inactividad antes de cerrar el cliente
@@ -48,7 +48,7 @@ app.post("/register", async (req, res) => {
     client.release();
 
     res.json({ success: true });
-    console.error("Database Error:", err); // Log the database error
+    //console.error("Database Error:", err); // Log the database error
   } catch (err) {
     if (err.code === "23505") {
       return res.status(400).json({
@@ -102,15 +102,14 @@ app.post("/admin/login", async (req, res) => {
   }
 });
 
-
 /// LOGOUT
 
-app.post("/admin/page", (req, res) => {
-  res.clearCookie("token"); 
-  res.status(200).json({ message: "If you see the msg it means you did it right Samuel" });
+app.post("/admin/logout", (req, res) => {
+  res.clearCookie("token");
+  res
+    .status(200)
+    .json({ message: "If you see the msg it means you did it right Samuel" });
 });
-
-
 
 //beneficiaries insertion
 app.post("/contact/beneficiaries", async (req, res) => {
@@ -177,6 +176,18 @@ app.get("/beneficiaries", (req, res) => {
     }
     res.json(result.rows);
   });
+});
+
+// Endpoint for obtain all the 'volunteering' information
+
+app.get("/volunteering", async (req, res) => {
+  try {
+    const { rows } = await pool.query("SELECT * FROM volunteering");
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 });
 
 const PORT = 5550;
