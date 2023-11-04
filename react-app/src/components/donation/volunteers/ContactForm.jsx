@@ -6,7 +6,8 @@ import "./ContactForm.css"
 import Message from "../General-Components/Message";
 
 function ContactForm() {
-    const [userFullName, setUserFullName] = useState("");
+    const [userFirstName, setUserFirstName] = useState("");
+    const [userLastName, setUseLastName] = useState("");
     const [userEmail, setUserEmail] = useState("");
     const [userMessage, setUserMessage] = useState("");
     const [userPhoneNumber, setUserPhoneNumber] = useState("");
@@ -14,7 +15,7 @@ function ContactForm() {
 
     const handleOnClick = (event) => {
         event.preventDefault();
-        console.log(userFullName, userEmail, userMessage, userPhoneNumber);
+        console.log(userFirstName, userLastName, userEmail, userMessage, userPhoneNumber);
         //alert(JSON.stringify({userFullName, userEmail, donationAmount}));
     }
 
@@ -23,7 +24,10 @@ function ContactForm() {
             setUserEmail(event.target.value)
         }
         if (name === "name") {
-            setUserFullName(event.target.value)
+            setUserFirstName(event.target.value)
+        }
+        if (name === "lastName") {
+            setUseLastName(event.target.value)
         }
         if (name === "message") {
             setUserMessage(event.target.value)
@@ -40,9 +44,15 @@ function ContactForm() {
             <div className="contact-form-main">
                 <form className="contact-form-control">
                     <div className="contact-input">
-                        <h5>Full Name</h5>
-                        <InputFiled type="text" placeholder='Full name' value={userFullName}
+                        <h5>First Name</h5>
+                        <InputFiled type="text" placeholder='First name' value={userFirstName}
                                     onChange={(e) => handleOnChange(e, "name")}/>
+                    </div>
+
+                    <div className="contact-input">
+                        <h5>Last Name</h5>
+                        <InputFiled type="text" placeholder='Last name' value={userLastName}
+                                    onChange={(e) => handleOnChange(e, "lastName")}/>
                     </div>
 
                     <div className="contact-input">
