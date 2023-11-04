@@ -41,7 +41,10 @@ const router = createBrowserRouter([
     path: "/admin/page",
     element: <AdminPage />,
   },
-
+  {
+    path: "/volunteers",
+    element: <Volunteers />,
+  },
   //here goes the other routes
 ]);
 

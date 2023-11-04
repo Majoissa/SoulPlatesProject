@@ -13,9 +13,6 @@
     
 }
 
-.MissionBackground{
- border-bottom: 2px #E0AFA0 solid;   
-}
 .Mission {
      background-color :white;
      padding:43px;
@@ -61,8 +58,6 @@
 
 .main-goal-box {
     padding: 12vw;
-    
- border-bottom: 2px #E0AFA0 solid;   
 }
 
 

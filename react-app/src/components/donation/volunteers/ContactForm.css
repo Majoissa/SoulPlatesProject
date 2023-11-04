@@ -4,11 +4,17 @@
     max-height: 100%;
     background-color: lightgray;
     margin:50px auto;
+    margin-bottom: 12vw;
+    font-family: 'Montserrat', sans-serif;
 }
 
+.contact-input h5{
+    font-weight: 700;
+}
 .contact-form-control {
     padding: 70px;
 }
+
 
 .form-control-submit {
     font-size: 16px;
@@ -32,6 +38,3 @@
 .contact-input{
     margin:20px 0;
 }
-
-
-
