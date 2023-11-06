@@ -31,13 +31,11 @@ function ContactForm() {
             alert("Full name should be between 1 and 20 character")
             return;
         }
-
         if (userLastName.length === 0 || userLastName.length > 20) {
             //back to the code again about equality
             alert("Last Name should be between 1 and 20 character")
             return;
         }
-
         if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(userEmail) === false) {
             alert("Email is not valid");
             return;
@@ -48,14 +46,14 @@ function ContactForm() {
         event.preventDefault();
         // form data
         const formData = {
-            first_name: userFirstName,
-            last_name: userLastName,
-            email: userEmail,
-            phone: userPhoneNumber,
-            message: userMessage
+            first_name: setUserFirstName,
+            last_name: setUseLastName,
+            email: setUserEmail,
+            phone: setUserPhoneNumber,
+            message: setUserMessage
         };
         // we call the server endpoint
-        fetch("http://localhost:5550/contactForm/volunteers", {
+        fetch("/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -66,9 +64,9 @@ function ContactForm() {
             .then(data => {
                 if (data.success) {
                     alert("Form send successfully!");
-                    setUserEmail("");
                     setUserFirstName("");
                     setUseLastName("");
+                    setUserEmail("");
                     setUserMessage("");
                     setUserPhoneNumber("");
 
