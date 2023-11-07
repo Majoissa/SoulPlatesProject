@@ -7,21 +7,31 @@ import Message from "../General-Components/Message";
 
 function ContactForm() {
     const [userFirstName, setUserFirstName] = useState("");
-    const [userLastName, setUseLastName] = useState("");
+    const [userLastName, setUserLastName] = useState("");
     const [userEmail, setUserEmail] = useState("");
     const [userMessage, setUserMessage] = useState("");
     const [userPhoneNumber, setUserPhoneNumber] = useState("");
 
+    async function createNewVolunteer(formData) {
+        try {
+            const response = await fetch("http://localhost:5550/volunteers", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            })
+            console.log(response)
+            return response.json()
+        } catch (error) {
+            alert('Could not create a new volunteer')
+            console.error(error);
+        }
 
-    /*
-        const handleOnClick = (event) => {
-            /!*event.preventDefault();
-            console.log(userFirstName, userLastName, userEmail, userMessage, userPhoneNumber);*!/
-            //alert(JSON.stringify({userFullName, userEmail, donationAmount}));
-    */
-
+    }
 
     const handleOnClick = (event) => {
+        //update validation form with z.form!
         if (!userFirstName || !userLastName || !userEmail || !userPhoneNumber) {
             alert("Please fill in all of the required fields.");
             return;
@@ -40,44 +50,23 @@ function ContactForm() {
             alert("Email is not valid");
             return;
         }
-
-        //conditional statement open box
+        /* if (!/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(userPhoneNumber)) {
+             alert("Phone number is not valid");
+             console.log(userPhoneNumber)
+             return;
+         }*/
 
         event.preventDefault();
         // form data
         const formData = {
-            first_name: setUserFirstName,
-            last_name: setUseLastName,
-            email: setUserEmail,
-            phone: setUserPhoneNumber,
-            message: setUserMessage
+            first_name: userFirstName,
+            last_name: userLastName,
+            email: userEmail,
+            phone: userPhoneNumber,
+            message: userMessage
         };
-        // we call the server endpoint
-        fetch("/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(formData)
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    alert("Form send successfully!");
-                    setUserFirstName("");
-                    setUseLastName("");
-                    setUserEmail("");
-                    setUserMessage("");
-                    setUserPhoneNumber("");
-
-                } else {
-                    alert(data.error || "An error occurred.");
-                }
-            })
-            .catch(err => {
-                console.error(err);
-                alert("An error occurred while submitting the form.");
-            });
+        console.log(formData)
+        createNewVolunteer(formData)
     }
 
 
@@ -89,7 +78,7 @@ function ContactForm() {
             setUserFirstName(event.target.value)
         }
         if (name === "lastName") {
-            setUseLastName(event.target.value)
+            setUserLastName(event.target.value)
         }
         if (name === "message") {
             setUserMessage(event.target.value)
