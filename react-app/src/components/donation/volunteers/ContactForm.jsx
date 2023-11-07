@@ -13,12 +13,23 @@ function ContactForm() {
     const [userPhoneNumber, setUserPhoneNumber] = useState("");
 
 
-    /*
-        const handleOnClick = (event) => {
-            /!*event.preventDefault();
-            console.log(userFirstName, userLastName, userEmail, userMessage, userPhoneNumber);*!/
-            //alert(JSON.stringify({userFullName, userEmail, donationAmount}));
-    */
+    async function createNewVolunteer(formData) {
+        try {
+            const response = await fetch("http://localhost:5550/volunteers", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            })
+            console.log(response)
+            return response.json()
+        } catch (error) {
+            console.error(error);
+            alert('request could not created')
+        }
+
+    }
 
 
     const handleOnClick = (event) => {
@@ -41,43 +52,7 @@ function ContactForm() {
             return;
         }
 
-        //conditional statement open box
-
-        event.preventDefault();
-        // form data
-        const formData = {
-            first_name: setUserFirstName,
-            last_name: setUseLastName,
-            email: setUserEmail,
-            phone: setUserPhoneNumber,
-            message: setUserMessage
-        };
-        // we call the server endpoint
-        fetch("/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(formData)
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    alert("Form send successfully!");
-                    setUserFirstName("");
-                    setUseLastName("");
-                    setUserEmail("");
-                    setUserMessage("");
-                    setUserPhoneNumber("");
-
-                } else {
-                    alert(data.error || "An error occurred.");
-                }
-            })
-            .catch(err => {
-                console.error(err);
-                alert("An error occurred while submitting the form.");
-            });
+         return createNewVolunteer()
     }
 
 
