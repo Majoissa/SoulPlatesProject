@@ -7,19 +7,23 @@ import HomeCards from "./components/Home-cards";
 import Goals from "./components/Goals";
 //import NgoStory from "./components/NgoStory";
 import DinamicText from "./components/DinamicText";
+import AnimatedCountUp from "./components/animatedCountComponent/AnimatedCountUp";
+
 
 function App() {
-  return (
-    <div>
-      <Navbar />
-      <Info />
-      <DinamicText text="Welcome to Soul Plates: an NGO in contact with people who want to help and people who need help"/>
-      <Mission />
-      <Goals />
-      <HomeCards />
-      <Footer />
-    </div>
-  );
+    return (
+        <div>
+            <Navbar/>
+            <Info/>
+            <DinamicText
+                text="Welcome to Soul Plates: an NGO in contact with people who want to help and people who need help"/>
+            <Mission/>
+            <Goals/>
+            <HomeCards/>
+            < AnimatedCountUp/>
+            <Footer/>
+        </div>
+    );
 }
 
 export default App;
