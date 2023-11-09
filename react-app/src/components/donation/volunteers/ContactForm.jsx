@@ -23,8 +23,11 @@ function ContactForm() {
                 },
                 body: JSON.stringify(formData)
             })
-            /* console.log(response)*/
-            return response.json()
+
+            const resp = await response.json()
+            // alert(JSON.stringify({resp}))
+            alert("success")
+            return resp
         } catch (error) {
             console.error(error);
             alert('request could not created');
@@ -60,7 +63,6 @@ function ContactForm() {
             "phone_number": userPhoneNumber,
             "message": userMessage
         })
-
     }
 
     const handleOnChange = (event, name,) => {
