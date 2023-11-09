@@ -178,10 +178,12 @@ app.get("/beneficiaries", (req, res) => {
 
 
 app.post("/volunteers", function (req, res) {
+    console.log("received request")
     const { first_name, last_name, email, phone_number, message } = req.body;
   console.log(req.body)
     const query = "INSERT INTO volunteers (first_name, last_name, email, phone_number, message) VALUES ($1, $2, $3, $4, $5)";
     const values = [first_name, last_name, email, phone_number, message];
+    console.log({values})
     console.log(query)
     pool.query({
         text: query,

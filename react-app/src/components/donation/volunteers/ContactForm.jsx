@@ -14,6 +14,7 @@ function ContactForm() {
 
 
     async function createNewVolunteer(formData) {
+  /*console.log(formData)*/
         try {
             const response = await fetch("http://localhost:5550/volunteers", {
                 method: "POST",
@@ -22,18 +23,21 @@ function ContactForm() {
                 },
                 body: JSON.stringify(formData)
             })
-            console.log(response)
-            return response.json()
+
+            const resp = await response.json()
+            // alert(JSON.stringify({resp}))
+            alert("success")
+            return resp
         } catch (error) {
             console.error(error);
-            alert('request could not created')
+            alert('request could not created');
         }
-
     }
 
-
     const handleOnClick = (event) => {
-        if (!userFirstName || !userLastName || !userEmail || !userPhoneNumber) {
+        event.preventDefault();
+
+        if (!userFirstName || !userLastName || !userEmail || !userPhoneNumber || !userMessage) {
             alert("Please fill in all of the required fields.");
             return;
         }
@@ -52,9 +56,14 @@ function ContactForm() {
             return;
         }
 
-         return createNewVolunteer()
+        return createNewVolunteer({
+            "first_name": userFirstName,
+            "last_name": userLastName,
+            "email": userEmail,
+            "phone_number": userPhoneNumber,
+            "message": userMessage
+        })
     }
-
 
     const handleOnChange = (event, name,) => {
         if (name === "email") {
@@ -72,6 +81,7 @@ function ContactForm() {
         if (name === "tel") {
             setUserPhoneNumber(event.target.value)
         }
+
     }
 
     return (
