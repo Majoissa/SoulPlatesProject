@@ -7,12 +7,14 @@ import Message from "../General-Components/Message";
 
 function ContactForm() {
     const [userFirstName, setUserFirstName] = useState("");
-    const [userLastName, setUserLastName] = useState("");
+    const [userLastName, setUseLastName] = useState("");
     const [userEmail, setUserEmail] = useState("");
     const [userMessage, setUserMessage] = useState("");
     const [userPhoneNumber, setUserPhoneNumber] = useState("");
 
+
     async function createNewVolunteer(formData) {
+        /*console.log(formData)*/
         try {
             const response = await fetch("http://localhost:5550/volunteers", {
                 method: "POST",
@@ -21,18 +23,21 @@ function ContactForm() {
                 },
                 body: JSON.stringify(formData)
             })
-            console.log(response)
-            return response.json()
-        } catch (error) {
-            alert('Could not create a new volunteer')
-            console.error(error);
-        }
 
+            const resp = await response.json()
+            // alert(JSON.stringify({resp}))
+            alert("success recorded")
+            return resp
+        } catch (error) {
+            console.error(error);
+            alert('request could not created');
+        }
     }
 
     const handleOnClick = (event) => {
-        //update validation form with z.form!
-        if (!userFirstName || !userLastName || !userEmail || !userPhoneNumber) {
+        event.preventDefault();
+
+        if (!userFirstName || !userLastName || !userEmail || !userPhoneNumber || !userMessage) {
             alert("Please fill in all of the required fields.");
             return;
         }
@@ -50,25 +55,15 @@ function ContactForm() {
             alert("Email is not valid");
             return;
         }
-        /* if (!/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(userPhoneNumber)) {
-             alert("Phone number is not valid");
-             console.log(userPhoneNumber)
-             return;
-         }*/
 
-        event.preventDefault();
-        // form data
-        const formData = {
-            first_name: userFirstName,
-            last_name: userLastName,
-            email: userEmail,
-            phone: userPhoneNumber,
-            message: userMessage
-        };
-        console.log(formData)
-        createNewVolunteer(formData)
+        return createNewVolunteer({
+            "first_name": userFirstName,
+            "last_name": userLastName,
+            "email": userEmail,
+            "phone_number": userPhoneNumber,
+            "message": userMessage
+        })
     }
-
 
     const handleOnChange = (event, name,) => {
         if (name === "email") {
@@ -78,7 +73,7 @@ function ContactForm() {
             setUserFirstName(event.target.value)
         }
         if (name === "lastName") {
-            setUserLastName(event.target.value)
+            setUseLastName(event.target.value)
         }
         if (name === "message") {
             setUserMessage(event.target.value)
@@ -86,6 +81,7 @@ function ContactForm() {
         if (name === "tel") {
             setUserPhoneNumber(event.target.value)
         }
+
     }
 
     return (
