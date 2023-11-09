@@ -10,6 +10,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Donation from "./components/Donation";
 import AdminPage from "./components/administrators/AdminPage";
 import Volunteers from "./components/Volunteers";
+import AboutUs from "./components/about-us/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
   {
     path: "/volunteers",
     element: <Volunteers />,
+  },
+  {
+    path: "/aboutus",
+    element: <AboutUs />,
   },
   //here goes the other routes
 ]);
