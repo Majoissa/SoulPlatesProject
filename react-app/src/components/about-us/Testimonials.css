@@ -1,0 +1,24 @@
+#testimonialsCarousel,
+#testimonialsCarousel .carousel-inner,
+#testimonialsCarousel .carousel-item {
+  background-color: white !important; /* Set the background color to white */
+}
+
+/* Additional styles to ensure text and controls are visible if your text is light */
+#testimonialsCarousel .carousel-control-prev-icon,
+#testimonialsCarousel .carousel-control-next-icon {
+  filter: invert(100%) !important; /* Makes the arrows dark if they are light */
+}
+
+#testimonialsCarousel .text-muted,
+#testimonialsCarousel .text-secondary {
+  color: #333 !important; /* Darker text for better readability on white background */
+}
+
+#testimonialsCarousel .carousel-inner {
+    padding: 12vw;
+  }
+  
+  .carousel-inner::before {
+    background: none;
+}

@@ -56,6 +56,49 @@ app.post("/register", async (req, res) => {
   }
 });
 
+//Login
+app.post("/admin/login", async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const client = await pool.connect();
+    const result = await client.query(
+      "SELECT * FROM admins WHERE username = $1",
+      [username]
+    );
+    client.release();
+
+    if (result.rows.length === 0) {
+      return res.status(401).json({ message: "User not found" });
+    }
+
+    const user = result.rows[0];
+    const hashedPassword = user.password;
+
+    bcrypt.compare(password, hashedPassword, (err, result) => {
+      if (err) {
+        return res.status(500).json({ message: "Password comparison error" });
+      }
+
+      if (result) {
+        const token = jwt.sign({ userId: user.id }, process.env.SECRET_KEY, {
+          expiresIn: "1h",
+        });
+        res.cookie("token", token, {
+          httpOnly: true,
+          sameSite: "none",
+          secure: true,
+        });
+        return res.status(200).json({ message: "Login successful" });
+      } else {
+        return res.status(401).json({ message: "Invalid password" });
+      }
+    });
+  } catch (err) {
+    res.status(500).json({ message: "Error during login" });
+  }
+});
+
 /// LOGOUT
 
 app.post("/admin/logout", (req, res) => {
@@ -158,6 +201,18 @@ app.post("/volunteers", function (req, res) {
 app.get("/volunteering", async (req, res) => {
   try {
     const { rows } = await pool.query("SELECT * FROM volunteering");
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+// Endpoint for obtain all the 'testimonials' information
+
+app.get("/testimonials", async (req, res) => {
+  try {
+    const { rows } = await pool.query("SELECT * FROM testimonials");
     res.json(rows);
   } catch (err) {
     console.error(err);
