@@ -9,12 +9,14 @@ function AboutUs(){
     return(
     <div>
         <Navbar/>
-
         <Personell />
         <AboutUsGrid />
         <Testimonials/>
         <AnimatedCountUp/>
-
+        <AnimatedCountUp/>
+        <Personell />
+        <AboutUsGrid />
+        <Testimonials/>
         <Footer/>
        
     </div>
