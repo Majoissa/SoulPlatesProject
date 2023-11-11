@@ -9,10 +9,10 @@ function AboutUs(){
     return(
     <div>
         <Navbar/>
+        <AnimatedCountUp/>
         <Personell />
         <AboutUsGrid />
         <Testimonials/>
-        <AnimatedCountUp/>
         <Footer/>
        
     </div>
