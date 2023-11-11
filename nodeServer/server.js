@@ -19,6 +19,7 @@ app.use(
 
 // Configuración de pg-pool
 const pool = new Pool({
+
     host: "localhost",
     user: "postgres",
     password: "occlaptop1",
@@ -221,11 +222,10 @@ app.get("/testimonials", async (req, res) => {
   }
 });
 
-
 // Endpoint for obtain all the 'about us personell database' information
 
-app.get("/aboutus", function(req, res) {
-  pool.query('SELECT * FROM personnel', (error, result) => {
+app.get("/aboutus", function (req, res) {
+  pool.query("SELECT * FROM personnel", (error, result) => {
     if (error) {
       console.error(error);
       res.status(500).json({ error: "Internal Server Error" });
@@ -234,7 +234,6 @@ app.get("/aboutus", function(req, res) {
     }
   });
 });
-
 
 const PORT = 5550;
 app.listen(PORT, () => {

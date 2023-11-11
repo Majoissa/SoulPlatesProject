@@ -20,15 +20,14 @@ function AboutUsGrid() {
   }, []);
 
   return (
-    <div className="container mt-4 aboutus-container " style={{backgroundColor:'white',paddingRight:'10vw',paddingLeft: '10vw', paddingTop: '5vw', paddingBottom: '10vw', marginBottom:'12vw'}}>
-      <div className="row row-cols-1 row-cols-md-3 g-2 aboutus-box">
+    <div className="container mt-4 aboutus-container "  >
+      <div className="row row-cols-sm-1 row-cols-md-3 g-2 aboutus-box">
         {aboutUs.map((aboutUsItem, index) => (
           <AboutUsCard
           key={aboutUsItem.id}
           image_src={aboutUsItem.image_src}
           profileimagesrc={aboutUsItem.profileimagesrc}
           fullname={aboutUsItem.fullname}
-          jobtitle={aboutUsItem.jobtitle}
           linkedinlink={aboutUsItem.linkedinlink}
           twitterlink={aboutUsItem.twitterlink}
           facebooklink={aboutUsItem.facebooklink}
