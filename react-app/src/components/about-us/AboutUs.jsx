@@ -13,10 +13,6 @@ function AboutUs(){
         <AboutUsGrid />
         <Testimonials/>
         <AnimatedCountUp/>
-        <AnimatedCountUp/>
-        <Personell />
-        <AboutUsGrid />
-        <Testimonials/>
         <Footer/>
        
     </div>
