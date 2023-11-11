@@ -12,7 +12,6 @@ function AboutUsCard(props) {
         <img src={props.profileimagesrc} className="profile-img-about"/>
         <div className="card-body aboutus-body">
           <h5 className="card-title aboutus-title" style={{ textAlign: 'center' }}>{props.fullname}</h5>
-          <p className="card-text aboutus-text" style={{ textAlign: 'center', fontSize: '1rem' }}>{props.jobtitle}</p>
           <div className="icon-block-personell">
             <a href={props.linkedinlink} target="_blank" rel="noreferrer"><i className="fa fa-linkedin"></i></a>
             <a href={props.twitterlink} target="_blank" rel="noreferrer"><i className="fa fa-twitter"></i></a>

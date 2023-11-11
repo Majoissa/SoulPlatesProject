@@ -19,12 +19,16 @@ app.use(
 
 // Configuración de pg-pool
 const pool = new Pool({
-  host: "127.0.0.1",
-  user: "postgres",
-  password: "150396+Majo",
-  database: "soul_plates",
-  max: 10, // número máximo de clientes en el pool
-  idleTimeoutMillis: 30000, // tiempo máximo de inactividad antes de cerrar el cliente
+
+
+    host: "localhost",
+    user: "postgres",
+    password: "occlaptop1",
+    database: "soul_plates",
+    max: 10, // número máximo de clientes en el pool
+    idleTimeoutMillis: 30000, // tiempo máximo de inactividad antes de cerrar el cliente
+    port: 5433,
+
 });
 
 app.post("/register", async (req, res) => {

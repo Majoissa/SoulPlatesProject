@@ -1,3 +1,14 @@
+.aboutus-container  {
+
+  background-color:white;
+  padding-left: 16vw;
+  padding-right:16vw;
+  padding-top: 5vw;
+  padding-bottom: 4vw;
+
+
+}
+
 .icon-block-personell {
 
    text-align: center;
@@ -5,7 +16,8 @@
 
 .aboutus-card {
 
-  height: 400px;
+  height: 350px;
+  width: 300px;
 
 }
 .col-md-4.aboutus {
@@ -29,8 +41,8 @@
     top: 30%; 
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     border: 3px solid #fff;
     border-radius: 50%;
     z-index: 1;
@@ -69,19 +81,61 @@
     color: #007bff; 
   }
   
-/* In your AboutUsCard.css file */
-.aboutus-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-    align-items: center;
-    height: 100vh; 
+  @media (max-width: 768px) {
+    
+    .aboutus-card {
+      height: 300px;
+      width: 240px;
+      background-color: #fff;
+      
+    }
+  
+    .background-img-about {
+      height: 250px; /* Adjust the height for smaller screens */
+    }
+  
+    .profile-img-about {
+      width: 100px; /* Further adjust the width for smaller screens */
+      height: 100px; /* Further adjust the height for smaller screens */
+      margin: 10px auto; /* Center the profile image */
+      top: 30%; 
+      left: 50%;
+    }
+  
+    .icon-block-personell {
+      margin-top: 20px;
+    }
+
+    .aboutus-container  {
+
+      margin:0px;
+      padding:0px;
+
+    }
+
+    .aboutus {
+
+      margin: 0px;
+      padding:0px;
+
+    }
+    
   }
-  
-  .aboutus-box .col-md-4 {
-    flex: 0 0 calc(33.33% - 8px); 
-    /* margin: 4px;  */
+
+  @media (max-width: 425px) {
+    
+    .aboutus-container{
+
+      padding-left: 90px;
+
+    }
   }
-  
-  
-  
+
+  @media (max-width: 375px) {
+    
+    .aboutus-container{
+
+      padding-left: 60px;
+
+    }
+  }
