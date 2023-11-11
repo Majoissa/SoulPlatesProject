@@ -19,12 +19,22 @@ app.use(
 
 // Configuración de pg-pool
 const pool = new Pool({
+<<<<<<< HEAD
+    host: "localhost",
+    user: "postgres",
+    password: "occlaptop1",
+    database: "soul_plates",
+    max: 10, // número máximo de clientes en el pool
+    idleTimeoutMillis: 30000, // tiempo máximo de inactividad antes de cerrar el cliente
+    port: 5433,
+=======
   host: "127.0.0.1",
   user: "postgres",
   password: "150396+Majo",
   database: "soul_plates",
   max: 10, // número máximo de clientes en el pool
   idleTimeoutMillis: 30000, // tiempo máximo de inactividad antes de cerrar el cliente
+>>>>>>> main
 });
 
 app.post("/register", async (req, res) => {
@@ -219,6 +229,21 @@ app.get("/testimonials", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
+
+
+// Endpoint for obtain all the 'about us personell database' information
+
+app.get("/aboutus", function(req, res) {
+  pool.query('SELECT * FROM personnel', (error, result) => {
+    if (error) {
+      console.error(error);
+      res.status(500).json({ error: "Internal Server Error" });
+    } else {
+      res.json(result.rows);
+    }
+  });
+});
+
 
 const PORT = 5550;
 app.listen(PORT, () => {
