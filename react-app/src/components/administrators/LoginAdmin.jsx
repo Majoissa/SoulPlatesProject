@@ -3,11 +3,13 @@ import "../Main_Form_MessageBox.css";
 import { Fade } from "react-awesome-reveal";
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from "./AuthContext";
 
 
 
-function LoginAdmin({ setIsAuthenticated }){
-    
+function LoginAdmin(){
+  
+  const {login} = useAuth();
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -36,6 +38,7 @@ function LoginAdmin({ setIsAuthenticated }){
 
         if (response.status === 200 && data.message === "Login successful") {
           alert("Login exitoso!");
+          login();
           navigate("/admin/page");
         
        

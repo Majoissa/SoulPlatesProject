@@ -1,3 +1,6 @@
+.tarjeta:hover{
+    cursor: pointer;
+}
 .contact-form-main {
     display: grid;
     max-width: 750px;

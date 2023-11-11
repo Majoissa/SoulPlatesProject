@@ -1,8 +1,9 @@
 import React from 'react';
+import "./ContactForm";
 
 function VolunteersCard(props) {
   return (
-    <div className="col">
+    <div className="col tarjeta">
       <div className="card h-100">
         <img src={props.imageSrc} className="card-img-top" alt={props.title} />
         <div className="card-body">

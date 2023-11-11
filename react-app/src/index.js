@@ -11,6 +11,8 @@ import Donation from "./components/Donation";
 import AdminPage from "./components/administrators/AdminPage";
 import Volunteers from "./components/Volunteers";
 import AboutUs from "./components/about-us/AboutUs";
+import AuthProvider from "./components/administrators/AuthContext";
+import PrivateRoute from "./components/administrators/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -20,10 +22,6 @@ const router = createBrowserRouter([
   {
     path: "/beneficiaries",
     element: <Beneficiaries />,
-  },
-  {
-    path: "/volunteers",
-    element: <Volunteers />,
   },
   {
     path: "/donation",
@@ -40,7 +38,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/admin/page",
-    element: <AdminPage />,
+    element: (
+      <PrivateRoute>
+        <AdminPage />
+      </PrivateRoute>
+    ),
   },
   {
     path: "/volunteers",
@@ -55,7 +57,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
 
