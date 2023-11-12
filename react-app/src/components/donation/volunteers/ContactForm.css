@@ -1,25 +1,103 @@
-.contact-form-main {
-    display: grid;
-    max-width: 750px;
+/*new form css*/
+.error {
+    color: red;
+    padding: 5px;
+    margin: 3px;
+}
+
+
+.form-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    align-items: center;
+    background-color: #2b2b2b;
+    margin: auto;
+    padding: 20px 50px
+}
+
+.form-box {
+    border-radius: 25px;
+    border: 1px solid #dcdbd9;
+    margin: 20px auto;
+    max-width: 700px;
     max-height: 100%;
-    background-color: lightgray;
-    margin:50px auto;
-    margin-bottom: 12vw;
-    font-family: 'Montserrat', sans-serif;
+    padding: 40px;
+    background-color: #2b2b2b;
+    align-items: center;
 }
 
-.contact-input h5{
-    font-weight: 700;
+.textarea.form-control {
+    min-height: calc(1.5em + (0.75rem + 2px));
 }
-.contact-form-control {
-    padding: 70px;
+
+.form-control {
+    width: 350px !important;
+    height: 60px;
+}
+
+label {
+    color: white;
 }
 
 
-.form-control-submit {
-    font-size: 16px;
-    margin-top: 30px;
+@media only screen and (max-width: 600px) {
+    .form-box {
+        border-radius: 25px;
+        border: 1px solid #dcdbd9;
+        margin: auto;
+        max-width: 600px;
+        max-height: 100%;
+        padding: 40px;
+        background-color: #2b2b2b;
+        align-items: center;
+    }
+
+    .form-body {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: start;
+        background-color: #2b2b2b;
+        margin: auto;
+        padding: 20px 50px
+    }
+
+    .form-control {
+        width: 350px;
+        height: 60px;
+        align-items: start;
+
+    }
+    .donor-detail{
+        flex-direction:  column;
+    }
+    .contact-form-control{
+        align-items: center;
+    }
 }
+
+
+@media only screen and (max-width: 400px) {
+    .form-box {
+        border-radius: 25px;
+        border: 1px solid #dcdbd9;
+        margin: auto;
+        max-width: 350px;
+        max-height: 100%;
+        padding: 20px;
+        background-color: #2b2b2b;
+        align-items: center;
+    }
+
+    .form-control {
+        width: 200px;
+        height: 60px;
+        align-items: center;
+    }
+
+}
+
 
 .textarea.form-control {
     height: 120px;
