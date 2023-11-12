@@ -1,12 +1,13 @@
 import React from 'react';
 import "./Logout.css";
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthContext';
 
 
 function LogOut () {
 
     const navigate = useNavigate();
-  
+    const {logout} = useAuth();
 
     function handleLogout() {
         
@@ -21,7 +22,7 @@ function LogOut () {
             if (response.status === 200) {
             
               alert('Logged out successfully');
-              
+              logout();
               navigate('/admin');
             } else {
               alert('Logout failed');
