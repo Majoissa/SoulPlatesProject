@@ -11,11 +11,41 @@ function DonationForm() {
     const [userEmail, setUserEmail] = useState("");
     const [userMessage, setUserMessage] = useState("");
 
+
+    async function createNewDonor(formData) {
+        /*console.log(formData)*/
+        try {
+            const response = await fetch("http://localhost:5550/donors", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            })
+            /* console.log(response)*/
+            return await response.json()
+        } catch (error) {
+            console.error(error);
+            alert('request could not created');
+        }
+    }
+
+
     const handleOnClick = (event) => {
         event.preventDefault();
-        console.log(donationAmount, userFullName, userEmail, userMessage);
-        //alert(JSON.stringify({userFullName, userEmail, donationAmount}));
+
+        const formData = {
+            full_name: userFullName,
+            email: userEmail,
+            message: userMessage,
+            donation_amount: donationAmount,
+        };
+        return createNewDonor(formData)
     }
+
+
+    /* console.log(donationAmount, userFullName, userEmail, userMessage);*/
+    //alert(JSON.stringify({userFullName, userEmail, donationAmount}));
 
 
     const handleOnChange = (event, name,) => {
@@ -47,12 +77,12 @@ function DonationForm() {
                     </div>
                 </div>
                 <Message value={userMessage}
-                         onChange={(e) => handleOnChange(e, "message")} />
+                         onChange={(e) => handleOnChange(e, "message")}/>
 
                 <Button type="submit" text='DONATE NOW' onClick={handleOnClick}/>
             </form>
         </div>
     )
 }
-//test
+
 export default DonationForm;
