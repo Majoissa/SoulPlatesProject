@@ -10,7 +10,7 @@ function NavLinks(props) {
         </Link>
       </li>
       <li className="nav-item">
-        <Link to="/" className="nav-link">
+        <Link to="/aboutus" className="nav-link">
           {props.link2}
         </Link>
       </li>
@@ -29,6 +29,7 @@ function NavLinks(props) {
           {props.link5}
         </Link>
       </li>
+     
     </ul>
   );
 }
