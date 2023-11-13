@@ -4,7 +4,6 @@ import "./ContactForm.css"
 import {useFormik} from "formik";
 import * as Yup from "yup"
 
-
 function ContactForm() {
 
     const formik = useFormik({
@@ -24,7 +23,7 @@ function ContactForm() {
             userLastName: Yup.string()
                 .max(20, "Must be 20 character or less")
                 .required(" * Last Name is Required"),
-            userAge: Yup.number().min(18).positive()
+            Age: Yup.number().min(18).positive()
                 .max(70, "Must be 20 character or less")
                 .required(" * Age Name is Required"),
             userEmail: Yup.string()
@@ -36,22 +35,35 @@ function ContactForm() {
                 .min(8)
                 .max(12, "Invalid Phone Number!"),
 
-
             userMessage: Yup.string()
                 .max(600, "Must be 600 character or less")
                 .required(" * Message is required"),
         }),
 
-        onSubmit: (values) => {
-            console.log(values)
+        onSubmit: async (values) => {
+            try {
+                const response = await fetch("http://localhost:5550/volunteers", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(values)
+                })
+                alert("Form created successfully")
+                return await response.json()
+            } catch (error) {
+                console.error(error);
+                alert('request could not created');
+            }
         }
     })
 
 
     return (
         <div className="form-box">
+
             <form className="contact-form-control" onSubmit={formik.handleSubmit}>
-                <h1 style={{color: "white", textAlign:"center"}}>Contact Us</h1>
+                <h1 style={{textAlign: "center"}}>Contact Us</h1>
                 <div className="form-body">
                     <label htmlFor="userFirstName">
                         First Name:
@@ -83,16 +95,16 @@ function ContactForm() {
                             <p className="error"> {formik.errors.userLastName} </p> : null}
                     </label>
 
-                    <label htmlFor="userAge">
+                    <label htmlFor="Age">
                         Age:
                         <InputFiled className="form-control"
-                                    id="userAge"
-                                    name="userAge"
+                                    id="Age"
+                                    name="Age"
                                     type="number"
                                     placeholder="Age"
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
-                                    value={formik.values.userAge}
+                                    value={formik.values.Age}
                         />
                         {formik.touched.Age && formik.errors.Age ?
                             <p className="error"> {formik.errors.Age} </p> : null}
@@ -112,7 +124,6 @@ function ContactForm() {
                         {formik.touched.userEmail && formik.errors.userEmail ?
                             <p className="error"> {formik.errors.userEmail} </p> : null}
                     </label>
-
 
                     <label htmlFor="PhoneNumber">
                         Phone Number:
@@ -152,6 +163,5 @@ function ContactForm() {
         </div>
     )
 }
-
 
 export default ContactForm
