@@ -20,14 +20,12 @@ app.use(
 // Configuración de pg-pool
 const pool = new Pool({
 
-
     host: "localhost",
-    user: "postgres",
-    password: "occlaptop1",
+    user: "nurcan",
+    password: "nurcan",
     database: "soul_plates",
     max: 10, // número máximo de clientes en el pool
     idleTimeoutMillis: 30000, // tiempo máximo de inactividad antes de cerrar el cliente
-    port: 5433,
 
 });
 
@@ -200,6 +198,31 @@ app.post("/volunteers", function (req, res) {
     });
 });
 
+//end point for donors table
+app.post("/donors", function (req, res) {
+  console.log("received request");
+  const { full_name, email,donation_amount, message } = req.body;
+  console.log(req.body);
+  const query =
+      "INSERT INTO donors (full_name, email,donation_amount,  message) VALUES ($1, $2, $3,$4)";
+  const values = [full_name, email, donation_amount, message];
+  /*console.log({ values });
+  console.log(query);*/
+  pool
+      .query({
+        text: query,
+        values: values,
+      })
+      .then(() => {
+        res.status(200).json({ success: true }); // Respond with JSON indicating success
+      })
+      .catch((e) => {
+        console.error(e);
+        res.status(500).json({ error: "Error querying the database" });
+      });
+});
+
+
 // Endpoint for obtain all the 'volunteering' information
 
 app.get("/volunteering", async (req, res) => {
@@ -211,6 +234,7 @@ app.get("/volunteering", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
+//test
 
 // Endpoint for obtain all the 'testimonials' information
 
