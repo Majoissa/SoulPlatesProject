@@ -56,14 +56,15 @@ function ContactForm() {
                 alert('request could not created');
             }
         }
+
     })
+
 
 
     return (
         <div className="form-box">
-
             <form className="contact-form-control" onSubmit={formik.handleSubmit}>
-                <h1 style={{textAlign: "center"}}>Contact Us</h1>
+                <h1 style={{ color:"white", textAlign: "center"}}>Contact Us</h1>
                 <div className="form-body">
                     <label htmlFor="userFirstName">
                         First Name:
