@@ -200,21 +200,17 @@ app.post("/volunteers", function (req, res) {
 
 //end point for donors table
 app.post("/donors", function (req, res) {
-  console.log("received request");
   const { full_name, email, message } = req.body;
-  console.log(req.body);
   const query =
       "INSERT INTO donors (full_name, email,  message) VALUES ($1, $2, $3)";
   const values = [full_name, email, message];
-  /*console.log({ values });
-  console.log(query);*/
   pool
       .query({
         text: query,
         values: values,
       })
       .then(() => {
-        res.status(200).json({ success: true }); // Respond with JSON indicating success
+        res.status(200).json({ success: true });
       })
       .catch((e) => {
         console.error(e);
