@@ -195,6 +195,27 @@ app.post("/volunteers", function (req, res) {
         });
 });
 
+//donors end-point for donors table
+app.post("/donors", function (req, res) {
+    const { full_name, email, message } = req.body;
+    const query =
+        "INSERT INTO donors (full_name, email,  message) VALUES ($1, $2, $3)";
+    const values = [full_name, email, message];
+    pool
+        .query({
+            text: query,
+            values: values,
+        })
+        .then(() => {
+            res.status(200).json({ success: true }); // Respond with JSON indicating success
+        })
+        .catch((e) => {
+            console.error(e);
+            res.status(500).json({ error: "Error querying the database" });
+        });
+});
+
+
 // Endpoint for obtain all the 'volunteering' information
 
 app.get("/volunteering", async (req, res) => {
