@@ -1,0 +1,19 @@
+.History-and-Place-sr {
+
+  display: flex;
+  width: 100%;
+  gap: 2px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  padding:1vw;
+  padding-top: 0;
+  
+}
+.History-sr {
+  font-family: 'Montserrat', sans-serif;
+  background-color :white;
+     padding:43px;
+     max-width: 70%;
+}
