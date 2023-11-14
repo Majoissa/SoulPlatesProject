@@ -1,6 +1,6 @@
 const express = require("express");
 const bcrypt = require("bcryptjs");
-const { Pool } = require("pg");
+const {Pool} = require("pg");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
@@ -11,94 +11,94 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(
-  cors({
-    origin: "http://localhost:3000", //React is running in port 3000
-    credentials: true,
-  })
+    cors({
+        origin: "http://localhost:3000", //React is running in port 3000
+        credentials: true,
+    })
 );
 
 // Configuración de pg-pool
 const pool = new Pool({
-
-    host: "localhost",
+    host: "127.0.0.1",
     user: "nurcan",
-    password: "nurcan",
+    password: "Change_password",
     database: "soul_plates",
     max: 10, // número máximo de clientes en el pool
     idleTimeoutMillis: 30000, // tiempo máximo de inactividad antes de cerrar el cliente
-
 });
 
 app.post("/register", async (req, res) => {
-  const { username, password, email } = req.body;
+    const {username, password, email} = req.body;
 
-  if (!email.includes("@") || !email.includes(".")) {
-    return res.status(400).json({ error: "Invalid email address." });
-  }
-
-  const salt = await bcrypt.genSalt(10);
-  const hashedPassword = await bcrypt.hash(password, salt);
-
-  try {
-    const client = await pool.connect();
-    const result = await client.query(
-      "INSERT INTO admins (username, email, password) VALUES ($1, $2, $3) RETURNING id",
-      [username, email, hashedPassword]
-    );
-    client.release();
-
-    res.json({ success: true });
-  } catch (err) {
-    if (err.code === "23505") {
-      return res.status(400).json({
-        error: "El nombre de usuario o correo electrónico ya está en uso.",
-      });
+    if (!email.includes("@") || !email.includes(".")) {
+        return res
+            .status(400)
+            .json({error: "Invalid email address."});
     }
-    res.status(500).json({ error: "Error al registrar el usuario." });
-  }
+
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    try {
+        const client = await pool.connect();
+        const result = await client.query(
+            "INSERT INTO admins (username, email, password) VALUES ($1, $2, $3) RETURNING id",
+            [username, email, hashedPassword]
+        );
+        client.release();
+
+        res.json({success: true});
+    } catch (err) {
+        if (err.code === "23505") {
+            return res.status(400).json({
+                error: "El nombre de usuario o correo electrónico ya está en uso.",
+            });
+        }
+        res.status(500).json({error: "Error al registrar el usuario."});
+    }
 });
 
 //Login
 app.post("/admin/login", async (req, res) => {
-  const { username, password } = req.body;
+    const {username, password} = req.body;
 
-  try {
-    const client = await pool.connect();
-    const result = await client.query(
-      "SELECT * FROM admins WHERE username = $1",
-      [username]
-    );
-    client.release();
+    try {
+        const client = await pool.connect();
+        const result = await client.query(
+            "SELECT * FROM admins WHERE username = $1",
+            [username]
+        );
+        client.release();
 
-    if (result.rows.length === 0) {
-      return res.status(401).json({ message: "User not found" });
+        if (result.rows.length === 0) {
+            return res.status(401).json({message: "User not found"});
+        }
+
+        const user = result.rows[0];
+        const hashedPassword = user.password;
+
+        bcrypt.compare(password, hashedPassword, (err, result) => {
+            if (err) {
+                return res.status(500).json({message: "Password comparison error"});
+            }
+
+            if (result) {
+                const token = jwt.sign({userId: user.id}, process.env.SECRET_KEY, {
+                    expiresIn: "1h",
+                });
+                res.cookie("token", token, {
+                    httpOnly: true,
+                    sameSite: "none",
+                    secure: true,
+                });
+                return res.status(200).json({message: "Login successful"});
+            } else {
+                return res.status(401).json({message: "Invalid password"});
+            }
+        });
+    } catch (err) {
+        res.status(500).json({message: "Error during login"});
     }
-
-    const user = result.rows[0];
-    const hashedPassword = user.password;
-
-    bcrypt.compare(password, hashedPassword, (err, result) => {
-      if (err) {
-        return res.status(500).json({ message: "Password comparison error" });
-      }
-
-      if (result) {
-        const token = jwt.sign({ userId: user.id }, process.env.SECRET_KEY, {
-          expiresIn: "1h",
-        });
-        res.cookie("token", token, {
-          httpOnly: true,
-          sameSite: "none",
-          secure: true,
-        });
-        return res.status(200).json({ message: "Login successful" });
-      } else {
-        return res.status(401).json({ message: "Invalid password" });
-      }
-    });
-  } catch (err) {
-    res.status(500).json({ message: "Error during login" });
-  }
 });
 
 /// LOGOUT
@@ -166,62 +166,34 @@ app.post("/contact/beneficiaries", async (req, res) => {
 
 //get information from beneficiaries table
 app.get("/beneficiaries", (req, res) => {
-  pool.query("SELECT * FROM beneficiaries", (error, result) => {
-    if (error) {
-      console.error("Error querying the database:", error);
-      return res.status(500).json({ error: "Error querying the database" });
-    }
-    res.json(result.rows);
-  });
-});
-
-app.post("/volunteers", function (req, res) {
-  console.log("received request");
-  const { first_name, last_name, email, phone_number, message } = req.body;
-  console.log(req.body);
-  const query =
-    "INSERT INTO volunteers (first_name, last_name, email, phone_number, message) VALUES ($1, $2, $3, $4, $5)";
-  const values = [first_name, last_name, email, phone_number, message];
-  console.log({ values });
-  console.log(query);
-  pool
-    .query({
-      text: query,
-      values: values,
-    })
-    .then(() => {
-      res.status(200).json({ success: true }); // Respond with JSON indicating success
-    })
-    .catch((e) => {
-      console.error(e);
-      res.status(500).json({ error: "Error querying the database" });
+    pool.query("SELECT * FROM beneficiaries", (error, result) => {
+        if (error) {
+            console.error("Error querying the database:", error);
+            return res.status(500).json({error: "Error querying the database"});
+        }
+        res.json(result.rows);
     });
 });
 
-//end point for donors table
-app.post("/donors", function (req, res) {
-  console.log("received request");
-  const { full_name, email, message } = req.body;
-  console.log(req.body);
-  const query =
-      "INSERT INTO donors (full_name, email,  message) VALUES ($1, $2, $3)";
-  const values = [full_name, email, message];
-  /*console.log({ values });
-  console.log(query);*/
-  pool
-      .query({
-        text: query,
-        values: values,
-      })
-      .then(() => {
-        res.status(200).json({ success: true }); // Respond with JSON indicating success
-      })
-      .catch((e) => {
-        console.error(e);
-        res.status(500).json({ error: "Error querying the database" });
-      });
-});
 
+
+app.post("/volunteers", function (req, res) {
+    const { userFirstName, userLastName, userEmail, userMessage, PhoneNumber, Age } = req.body;
+    const query = "INSERT INTO volunteers (first_name, last_name, email, phone_number, message, age) VALUES ($1, $2, $3, $4, $5, $6)";
+    const values = [userFirstName, userLastName, userEmail, PhoneNumber, userMessage, Age];
+
+    pool.query({
+        text: query,
+        values: values
+    })
+        .then(() => {
+            res.status(200).json({ success: true }); // Respond with JSON indicating success
+        })
+        .catch((e) => {
+            console.error(e);
+            res.status(500).json({ error: "Error querying the database" });
+        });
+});
 
 // Endpoint for obtain all the 'volunteering' information
 
@@ -234,34 +206,9 @@ app.get("/volunteering", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
-//test
 
-// Endpoint for obtain all the 'testimonials' information
-
-app.get("/testimonials", async (req, res) => {
-  try {
-    const { rows } = await pool.query("SELECT * FROM testimonials");
-    res.json(rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Internal Server Error" });
-  }
-});
-
-// Endpoint for obtain all the 'about us personell database' information
-
-app.get("/aboutus", function (req, res) {
-  pool.query("SELECT * FROM personnel", (error, result) => {
-    if (error) {
-      console.error(error);
-      res.status(500).json({ error: "Internal Server Error" });
-    } else {
-      res.json(result.rows);
-    }
-  });
-});
 
 const PORT = 5550;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
