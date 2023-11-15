@@ -5,7 +5,7 @@ import TextCards from "./Beneficiary-text-cards";
 import JobPosts from "./Job-posting";
 import JobHeading from "./Job-posting-h1";
 import TextCardHeading from "./Beneficiary-text-card-head";
-import ContactBeneficiaries from "./beneficiaries/contactBeneficiaries";
+import BeneficiryContactForm from "./beneficiaries/BeneficiryContactForm";
 
 function Beneficiaries() {
   return (
@@ -16,7 +16,7 @@ function Beneficiaries() {
       <TextCards />
       < JobHeading />
       <JobPosts />
-      <ContactBeneficiaries/>
+      <BeneficiryContactForm/>
       <Footer />
     </div>
   );
