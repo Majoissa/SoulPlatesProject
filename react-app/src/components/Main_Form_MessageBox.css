@@ -1,97 +1,89 @@
 
-.formTittle{
-  font-family: 'Cedarville Cursive', cursive;
-  text-shadow: none;
-  max-width: 50%;
-  text-align: center;
-  margin: auto;
-  transition: ease-in-out 1s;
-  font-size: 3rem;
-  margin-bottom: 6vw;
+.formTittle {
+    font-family: 'Cedarville Cursive', cursive;
+    text-shadow: none;
+    max-width: 50%;
+    text-align: center;
+    margin: auto;
+    transition: ease-in-out 1s;
+    font-size: 3rem;
+    margin-bottom: 6vw;
 }
 
 
-.main-form{
-
+.main-form {
     text-align: center;
     background-color: white;
     padding: 12vw;
-  
-    }
-  
-    .form-field{
-  
-      margin-bottom: 30px;
-  
-    }
-  
-    .inputForm,
-    select {
-    width: 30%; 
-    padding: 10px; 
-    border: 2px solid #ccc; 
-    border-radius: 5px; 
+}
+
+.form-field {
+    margin-bottom: 30px;
+}
+
+.inputForm,
+select {
+    width: 30%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
     font-size: 16px;
-    }
-  
-    .inputForm:focus,
-  select:focus {
-    border-color:  rgba(8, 2, 2, 0.524);
+}
+
+.inputForm:focus,
+select:focus {
+    border-color: rgba(8, 2, 2, 0.524);
     outline: none;
-  }
-  
-  
-  .labels-input{
-  
+}
+
+
+.labels-input {
     margin-top: 10px;
-  
-  }
-  
-  
-  label {
-   
+}
+
+label {
+
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-  
-  }
-  
-  .formBtn{
-     margin-bottom: 10px;
+
+}
+.formBtn {
+    margin-bottom: 10px;
     background-color: #E0AFA0 !important;
     color: white !important;
     font-weight: 600 !important;
     font-family: 'Montserrat', sans-serif;
-    padding: 10px; 
-    border: none; 
-    border-radius: 8px; 
-    font-size: 1rem; 
-    cursor: pointer; 
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
     transition: ease-in-out 0.5s;
-  }
-.formBtn:hover{
-  background-color:  #B08A7E !important;
 }
 
-  
-@media (max-width: 1000px) {
-  
-  .formTittle {
-  max-width: 60%;
-  margin: auto;
-  margin-top: 12vw;
-  transition: ease-in-out 1s;
-  font-size: 2rem !important;
-  margin-bottom: 6vw;
+.formBtn:hover {
+    background-color: #B08A7E !important;
 }
-.inputForm,
-    select {
-    width: 
-    70%; 
+
+
+@media (max-width: 1000px) {
+    .formTittle {
+        max-width: 60%;
+        margin: auto;
+        margin-top: 12vw;
+        transition: ease-in-out 1s;
+        font-size: 2rem !important;
+        margin-bottom: 6vw;
     }
 
-    
-  label {
-   font-size: 0.9rem;
-   width: 100px;
-  }
+    .inputForm,
+    select {
+        width: 70%;
+    }
+
+
+    label {
+        font-size: 0.9rem;
+        /* width: 100px;*/
+    }
 }

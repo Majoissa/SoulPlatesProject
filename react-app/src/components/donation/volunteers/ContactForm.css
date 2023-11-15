@@ -13,23 +13,22 @@
     align-items: center;
     background-color: #2b2b2b;
     margin: auto;
-    padding: 20px 50px
+    padding:50px
 }
 
 .form-box {
     border-radius: 25px;
-    border: 1px solid #dcdbd9;
-    margin: 20px auto;
-    max-width: 700px;
+    max-width: 100%;
 }
 
 
-.tarjeta:hover{
+.tarjeta:hover {
     cursor: pointer;
 }
+
 .contact-form-main {
     display: grid;
-    max-width: 750px;
+    max-width: 100%;
     max-height: 100%;
     padding: 40px;
     background-color: #2b2b2b;
@@ -49,8 +48,23 @@ label {
     color: white;
 }
 
+.contact-form-input-group {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 30px;
+}
 
-@media only screen and (max-width: 600px) {
+
+
+@media only screen and (max-width: 700px) {
+    label{
+        display: grid;
+        justify-content: space-evenly;
+        margin: 20px;
+    }
     .form-box {
         border-radius: 25px;
         border: 1px solid #dcdbd9;
@@ -78,15 +92,17 @@ label {
         align-items: start;
 
     }
-    .donor-detail{
-        flex-direction:  column;
+
+    .donor-detail {
+        flex-direction: column;
     }
-    .contact-form-control{
+
+    .contact-form-control {
         align-items: center;
     }
 }
 
-
+/*
 @media only screen and (max-width: 400px) {
     .form-box {
         border-radius: 25px;
@@ -105,23 +121,23 @@ label {
         align-items: center;
     }
 
-}
+    .textarea.form-control {
+        height: 120px;
+    }
 
+    .textarea {
+        margin-bottom: 20px;
+    }
 
-.textarea.form-control {
-    height: 120px;
-}
-.textarea {
-    margin-bottom: 20px;
-}
+    .textarea.form-control {
+        min-height: calc(1.5em + (0.75rem + 2px));
+    }
 
-.textarea.form-control {
-    min-height: calc(1.5em + (0.75rem + 2px));
-}
+    .contact-form-message {
+        margin: 30px 0;
+    }
 
-.contact-form-message{
-    margin: 30px 0;
-}
-.contact-input{
-    margin:20px 0;
-}
+    .contact-input {
+        margin: 20px 0;
+    }
+}*/
