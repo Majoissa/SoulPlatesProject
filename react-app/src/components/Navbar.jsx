@@ -2,7 +2,6 @@ import React from "react";
 import NavBrand from "./Navbrand";
 import NavLinks from "./Navlinks";
 import logoimg from "./Logoo.png";
-import Search from "./Search";
 import "./Navbar.css";
 
 function Navbar() {
@@ -24,7 +23,6 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <NavLinks link1="home" link2="about us" link3="beneficiaries" link4="volunteers" link5="donors"/>
         </div>
-        <Search text="Search" />
       </div>
     </nav>
   );
