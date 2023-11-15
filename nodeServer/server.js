@@ -104,65 +104,79 @@ app.post("/admin/login", async (req, res) => {
 /// LOGOUT
 
 app.post("/admin/logout", (req, res) => {
-  res.clearCookie("token");
-  res.status(200).json({ message: "You have successfuly logged out" });
+    res.clearCookie("token");
+    res.status(200).json({message: "You have successfuly logged out"});
 });
+
+
+
+
 
 //beneficiaries insertion
-app.post("/contact/beneficiaries", async (req, res) => {
-  const { full_name, email, address, phone, message } = req.body;
+app.post("/contact/beneficiaries",
+    async (req, res) => {
 
-  // no empty fields
-  if (!full_name || !email || !address || !phone || !message) {
-    return res.status(400).json({ error: "All fields are required." });
-  }
+        const {userFirstName, userLastName, Age, Gender, userEmail, PhoneNumber, Address, userMessage} = req.body;
 
-  // email only once in database
-  let client;
-  try {
-    client = await pool.connect();
-    const emailResult = await client.query(
-      "SELECT * FROM beneficiaries WHERE email = $1",
-      [email]
-    );
-    if (emailResult.rows.length > 0) {
-      return res.status(400).json({ error: "Email already exists." });
-    }
-  } catch (err) {
-    console.error(err);
-    if (client) client.release();
-    return res.status(500).json({ error: "Error checking email." });
-  }
+        // no empty fields
+        if (!userFirstName || !userLastName || !Age || !Gender || !userEmail || !PhoneNumber || !Address || !userMessage) {
+            return res.status(400).json({error: "All fields are required."});
+        }
 
-  //phone only once in database
-  try {
-    const phoneResult = await client.query(
-      "SELECT * FROM beneficiaries WHERE phone = $1",
-      [phone]
-    );
-    if (phoneResult.rows.length > 0) {
-      return res.status(400).json({ error: "Phone number already exists." });
-    }
-  } catch (err) {
-    console.error(err);
-    if (client) client.release();
-    return res.status(500).json({ error: "Error checking phone number." });
-  }
+        // email only once in database
+        let client;
+        try {
+            client = await pool.connect();
+            const emailResult = await client.query(
+                "SELECT * FROM beneficiaries WHERE email = $1",
+                [userEmail]
+            );
+            if (emailResult.rows.length > 0) {
+                return res.status(400).json({error: "Email already exists."});
+            }
+        } catch (err) {
+            console.error(err);
+            if (client) client.release();
+            return res.status(500).json({error: "Error checking email."});
+        }
 
-  // insertion in database
-  try {
-    await client.query(
-      "INSERT INTO beneficiaries (full_name, email, address, phone, message) VALUES ($1, $2, $3, $4, $5)",
-      [full_name, email, address, phone, message]
-    );
-    client.release();
-    res.json({ success: true, message: "Data inserted successfully." });
-  } catch (err) {
-    console.error(err);
-    if (client) client.release();
-    res.status(500).json({ error: "Error inserting data." });
-  }
-});
+        //phone only once in database
+        try {
+            const phoneResult = await client.query(
+                "SELECT * FROM beneficiaries WHERE phone_number = $1",
+                [PhoneNumber]
+
+            );
+            console.log(phoneResult)
+            if (phoneResult.rows.length > 0) {
+                return res.status(400).json({error: "Phone number already exists."});
+            }
+        } catch (err) {
+            console.error(err);
+            if (client) client.release();
+            return res.status(500).json({error: "Error checking phone number."});
+        }
+
+        // insertion in database
+        try {
+            await client.query(
+                "INSERT INTO beneficiaries (first_name, last_name, age, gender, email, phone_number, address, message)" +
+                " VALUES ($1, $2, $3, $4, $5, $6, $7, $8)",
+                [userFirstName, userLastName, Age, Gender, userEmail, PhoneNumber, Address, userMessage]
+            );
+            ;
+            client.release();
+            res.json({success: true, message: "Data inserted successfully."});
+        } catch (err) {
+            console.error(err);
+            if (client) client.release();
+            res.status(500).json({error: "Error inserting data."});
+        }
+    });
+
+
+
+
 
 //get information from beneficiaries table
 app.get("/beneficiaries", (req, res) => {
@@ -176,10 +190,10 @@ app.get("/beneficiaries", (req, res) => {
 });
 
 
-
 app.post("/volunteers", function (req, res) {
-    const { userFirstName, userLastName, userEmail, userMessage, PhoneNumber, Age } = req.body;
-    const query = "INSERT INTO volunteers (first_name, last_name, email, phone_number, message, age) VALUES ($1, $2, $3, $4, $5, $6)";
+    const {userFirstName, userLastName, userEmail, userMessage, PhoneNumber, Age} = req.body;
+    const query = "INSERT INTO volunteers (first_name, last_name, email, phone_number, message, age)" +
+        " VALUES ($1, $2, $3, $4, $5, $6)";
     const values = [userFirstName, userLastName, userEmail, PhoneNumber, userMessage, Age];
 
     pool.query({
@@ -187,17 +201,18 @@ app.post("/volunteers", function (req, res) {
         values: values
     })
         .then(() => {
-            res.status(200).json({ success: true }); // Respond with JSON indicating success
+            res.status(200).json({success: true}); // Respond with JSON indicating success
         })
         .catch((e) => {
             console.error(e);
-            res.status(500).json({ error: "Error querying the database" });
+            res.status(500).json({error: "Error querying the database"});
         });
 });
 
+
 //donors end-point for donors table
 app.post("/donors", function (req, res) {
-    const { full_name, email, message } = req.body;
+    const {full_name, email, message} = req.body;
     const query =
         "INSERT INTO donors (full_name, email,  message) VALUES ($1, $2, $3)";
     const values = [full_name, email, message];
@@ -207,11 +222,11 @@ app.post("/donors", function (req, res) {
             values: values,
         })
         .then(() => {
-            res.status(200).json({ success: true }); // Respond with JSON indicating success
+            res.status(200).json({success: true}); // Respond with JSON indicating success
         })
         .catch((e) => {
             console.error(e);
-            res.status(500).json({ error: "Error querying the database" });
+            res.status(500).json({error: "Error querying the database"});
         });
 });
 
@@ -219,13 +234,13 @@ app.post("/donors", function (req, res) {
 // Endpoint for obtain all the 'volunteering' information
 
 app.get("/volunteering", async (req, res) => {
-  try {
-    const { rows } = await pool.query("SELECT * FROM volunteering");
-    res.json(rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Internal Server Error" });
-  }
+    try {
+        const {rows} = await pool.query("SELECT * FROM volunteering");
+        res.json(rows);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({error: "Internal Server Error"});
+    }
 });
 
 
