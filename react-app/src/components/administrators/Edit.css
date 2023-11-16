@@ -1,0 +1,16 @@
+.deleteIcon, .penIcon{
+    color: #E0AFA0;
+    font-size: 30px;
+    margin: 7px;
+}
+
+.editBtn{
+    border: none;
+    background-color: transparent;
+}
+
+.btnDisplay{
+    display: flex;
+    border: none;
+    justify-content: center;
+}

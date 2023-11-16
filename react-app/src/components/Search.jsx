@@ -3,16 +3,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import "./Search.css";
 
-function Search(props) {
+function Search({ text, onInputChange, onButtonClick }) {
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
+    onInputChange(e); // Llama a la función pasada desde UsersData
   };
 
-  const handleButtonClick = (props) => {
-    //in a future we can add functionalities to the button here
-    console.log(inputValue);
+  const handleButtonClick = () => {
+    onButtonClick(); // Llama a la función pasada desde UsersData
   };
 
   return (
@@ -20,7 +20,7 @@ function Search(props) {
       <input
         type="text"
         className="form-control searching"
-        placeholder={props.text}
+        placeholder={text}
         aria-label="Recipient's username"
         aria-describedby="button-addon2"
         value={inputValue}
@@ -37,5 +37,6 @@ function Search(props) {
     </div>
   );
 }
+
 
 export default Search;
