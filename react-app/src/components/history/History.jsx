@@ -29,46 +29,12 @@ function OurHistory() {
         >
           <div>
             <p>
-              <h3>Lorem Ipsum:</h3> 2015
+              <h3>Lorem Ipsum:</h3>
               <br />
-              <strong>PlaceHolder Text:</strong> To empower and assist migrants
-              throughout Barcelona by providing essential support services,
-              fostering community integration and mutual understanding. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              SoulPlates started with a simple yet powerful idea: no individual should go hungry or feel abandoned. Our founders, Nurcan, Maria Jose, Samuel, Rucci and Amine, driven by personal experiences and a shared vision of a more caring world, began by preparing and distributing meals in Barcelona. What began as a modest effort soon resonated with the community, drawing volunteers and supporters from all walks of life.
             </p>
           </div>
-          <p>
-            <h3>Lorem Ipsum:</h3> 2015
-            <br />
-            <strong>Place Holder Text:</strong> To empower and assist migrants
-            throughout Barcelona by providing essential support services,
-            fostering community integration and mutual understanding. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
-          </p>
-          <h2>Founding Story</h2>
-          <p>
-            Soul Plates was founded in 2015 by a group of passionate individuals
-            in Barcelona, including social workers, lawyers, and community
-            leaders... Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          
         </div>
       </div>
     </>
