@@ -7,7 +7,6 @@ import HomeCards from "./components/Home-cards";
 import Goals from "./components/Goals";
 //import NgoStory from "./components/NgoStory";
 import DinamicText from "./components/DinamicText";
-import AnimatedCountUp from "./components/animatedCountComponent/AnimatedCountUp";
 
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
             <Mission/>
             <Goals/>
             <HomeCards/>
-            < AnimatedCountUp/>
             <Footer/>
         </div>
     );
