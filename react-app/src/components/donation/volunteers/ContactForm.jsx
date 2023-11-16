@@ -131,7 +131,7 @@ function ContactForm() {
                         <InputFiled className="form-control"
                                     id="PhoneNumber"
                                     name="PhoneNumber"
-                                    type="number"
+                                    type="tel"
                                     placeholder="Phone Number"
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
