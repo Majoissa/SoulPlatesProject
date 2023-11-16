@@ -11,6 +11,7 @@ import Donation from "./components/Donation";
 import AdminPage from "./components/administrators/AdminPage";
 import Volunteers from "./components/Volunteers";
 import AboutUs from "./components/about-us/AboutUs";
+import Contact from "./Contact";
 import AuthProvider from "./components/administrators/AuthContext";
 import PrivateRoute from "./components/administrators/PrivateRoute";
 
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "/aboutus",
     element: <AboutUs />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
   },
   //here goes the other routes
 ]);

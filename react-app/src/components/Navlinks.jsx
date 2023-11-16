@@ -16,7 +16,7 @@ function NavLinks(props) {
       </li>
       <li className="nav-item">
         <Link to="/beneficiaries" className="nav-link">
-         {props.link3}
+          {props.link3}
         </Link>
       </li>
       <li className="nav-item">
@@ -29,7 +29,11 @@ function NavLinks(props) {
           {props.link5}
         </Link>
       </li>
-     
+      <li className="nav-item">
+        <Link to="/contact" className="nav-link">
+          {props.link6}
+        </Link>
+      </li>
     </ul>
   );
 }
