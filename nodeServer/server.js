@@ -20,8 +20,8 @@ app.use(
 // Configuración de pg-pool
 const pool = new Pool({
   host: "localhost",
-  user: "postgres",
-  password: "150396+Majo",
+  user: "",
+  password: "",
   database: "soul_plates",
   max: 10, // número máximo de clientes en el pool
   idleTimeoutMillis: 30000, // tiempo máximo de inactividad antes de cerrar el cliente

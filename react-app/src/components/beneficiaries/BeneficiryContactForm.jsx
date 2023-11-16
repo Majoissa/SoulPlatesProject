@@ -202,7 +202,6 @@ function BeneficiryContactForm() {
                     </div>
 
                     <Button type="submit" text='Submit' className="form-control donationsBtn"/>
-
                 </div>
             </form>
 
