@@ -21,7 +21,14 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <NavLinks link1="home" link2="about us" link3="beneficiaries" link4="volunteers" link5="donors"/>
+          <NavLinks
+            link1="home"
+            link2="about us"
+            link3="beneficiaries"
+            link4="volunteers"
+            link5="donors"
+            link6="contact"
+          />
         </div>
       </div>
     </nav>
