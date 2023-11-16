@@ -8,20 +8,18 @@ import Goals from "./components/Goals";
 //import NgoStory from "./components/NgoStory";
 import DinamicText from "./components/DinamicText";
 
-
 function App() {
-    return (
-        <div>
-            <Navbar/>
-            <Info/>
-            <DinamicText
-                text="Welcome to Soul Plates: an NGO in contact with people who want to help and people who need help"/>
-            <Mission/>
-            <Goals/>
-            <HomeCards/>
-            <Footer/>
-        </div>
-    );
+  return (
+    <div>
+      <Navbar />
+      <Info />
+      <DinamicText text="Welcome to Soul Plates: an NGO in contact with people who want to help and people who need help" />
+      <Mission />
+      <Goals />
+      <HomeCards />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
