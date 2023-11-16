@@ -10,10 +10,10 @@ function ContactForm() {
         initialValues: {
             userFirstName: "",
             userLastName: "",
-            userEmail: "",
-            userMessage: "",
             PhoneNumber: "",
             Age: "",
+            userEmail: "",
+            userMessage: "",
         },
 
         validationSchema: Yup.object({
@@ -60,101 +60,105 @@ function ContactForm() {
     })
 
 
-
     return (
         <div className="form-box">
             <form className="contact-form-control" onSubmit={formik.handleSubmit}>
-                <h1 style={{ color:"white", textAlign: "center"}}>Contact Us</h1>
                 <div className="form-body">
-                    <label htmlFor="userFirstName">
-                        First Name:
-                        <InputFiled className="form-control"
-                                    id="userFirstName"
-                                    name="userFirstName"
-                                    type="text"
-                                    placeholder="First Name"
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    value={formik.values.userFirstName}
-                        />
-                        {formik.touched.userFirstName && formik.errors.userFirstName ?
-                            <p className="error"> {formik.errors.userFirstName} </p> : null}
-                    </label>
+                    <div className="contact-form-input-group">
+                        <label htmlFor="userFirstName">
+                            First Name:
+                            <InputFiled className="form-control"
+                                        id="userFirstName"
+                                        name="userFirstName"
+                                        type="text"
+                                        placeholder="First Name"
+                                        onChange={formik.handleChange}
+                                        onBlur={formik.handleBlur}
+                                        value={formik.values.userFirstName}
+                            />
+                            {formik.touched.userFirstName && formik.errors.userFirstName ?
+                                <p className="error"> {formik.errors.userFirstName} </p> : null}
+                        </label>
 
-                    <label htmlFor="userLastName">
-                        Last Name:
-                        <InputFiled className="form-control"
-                                    id="userLastName"
-                                    name="userLastName"
-                                    type="text"
-                                    placeholder="Last Name"
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    value={formik.values.userLastName}
-                        />
-                        {formik.touched.userLastName && formik.errors.userLastName ?
-                            <p className="error"> {formik.errors.userLastName} </p> : null}
-                    </label>
+                        <label htmlFor="userLastName">
+                            Last Name:
+                            <InputFiled className="form-control"
+                                        id="userLastName"
+                                        name="userLastName"
+                                        type="text"
+                                        placeholder="Last Name"
+                                        onChange={formik.handleChange}
+                                        onBlur={formik.handleBlur}
+                                        value={formik.values.userLastName}
+                            />
+                            {formik.touched.userLastName && formik.errors.userLastName ?
+                                <p className="error"> {formik.errors.userLastName} </p> : null}
+                        </label>
+                    </div>
 
-                    <label htmlFor="Age">
-                        Age:
-                        <InputFiled className="form-control"
-                                    id="Age"
-                                    name="Age"
-                                    type="number"
-                                    placeholder="Age"
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    value={formik.values.Age}
-                        />
-                        {formik.touched.Age && formik.errors.Age ?
-                            <p className="error"> {formik.errors.Age} </p> : null}
-                    </label>
+                    <div className="contact-form-input-group">
+                        <label htmlFor="Age">
+                            Age:
+                            <InputFiled className="form-control"
+                                        id="Age"
+                                        name="Age"
+                                        type="number"
+                                        placeholder="Age"
+                                        onChange={formik.handleChange}
+                                        onBlur={formik.handleBlur}
+                                        value={formik.values.Age}
+                            />
+                            {formik.touched.Age && formik.errors.Age ?
+                                <p className="error"> {formik.errors.Age} </p> : null}
+                        </label>
 
-                    <label htmlFor="userEmail">
-                        Email:
-                        <InputFiled className="form-control"
-                                    id="userEmail"
-                                    name="userEmail"
-                                    type="email"
-                                    placeholder="Email"
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    value={formik.values.userEmail}
-                        />
-                        {formik.touched.userEmail && formik.errors.userEmail ?
-                            <p className="error"> {formik.errors.userEmail} </p> : null}
-                    </label>
+                        <label htmlFor="userEmail">
+                            Email:
+                            <InputFiled className="form-control"
+                                        id="userEmail"
+                                        name="userEmail"
+                                        type="email"
+                                        placeholder="Email"
+                                        onChange={formik.handleChange}
+                                        onBlur={formik.handleBlur}
+                                        value={formik.values.userEmail}
+                            />
+                            {formik.touched.userEmail && formik.errors.userEmail ?
+                                <p className="error"> {formik.errors.userEmail} </p> : null}
+                        </label>
+                    </div>
 
-                    <label htmlFor="PhoneNumber">
-                        Phone Number:
-                        <InputFiled className="form-control"
-                                    id="PhoneNumber"
-                                    name="PhoneNumber"
-                                    type="tel"
-                                    placeholder="Phone Number"
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    value={formik.values.PhoneNumber}
-                        />
-                        {formik.touched.PhoneNumber && formik.errors.PhoneNumber ?
-                            <p className="error"> {formik.errors.PhoneNumber} </p> : null}
-                    </label>
+                    <div className="contact-form-input-group">
+                        <label htmlFor="PhoneNumber">
+                            Phone Number:
+                            <InputFiled className="form-control"
+                                        id="PhoneNumber"
+                                        name="PhoneNumber"
+                                        type="tel"
+                                        placeholder="Phone Number"
+                                        onChange={formik.handleChange}
+                                        onBlur={formik.handleBlur}
+                                        value={formik.values.PhoneNumber}
+                            />
+                            {formik.touched.PhoneNumber && formik.errors.PhoneNumber ?
+                                <p className="error"> {formik.errors.PhoneNumber} </p> : null}
+                        </label>
 
-                    <label htmlFor="userMessage">
-                        Message:
-                        <InputFiled className="form-control"
-                                    id="userMessage"
-                                    name="userMessage"
-                                    type="message"
-                                    placeholder="Type your Message"
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    value={formik.values.userMessage}
-                        />
-                        {formik.touched.userMessage && formik.errors.userMessage ?
-                            <p className="error"> {formik.errors.userMessage} </p> : null}
-                    </label>
+                        <label htmlFor="userMessage">
+                            Message:
+                            <InputFiled className="form-control"
+                                        id="userMessage"
+                                        name="userMessage"
+                                        type="message"
+                                        placeholder="Type your Message"
+                                        onChange={formik.handleChange}
+                                        onBlur={formik.handleBlur}
+                                        value={formik.values.userMessage}
+                            />
+                            {formik.touched.userMessage && formik.errors.userMessage ?
+                                <p className="error"> {formik.errors.userMessage} </p> : null}
+                        </label>
+                    </div>
 
                     <Button type="submit" text='Submit' className="form-control donationsBtn"/>
 

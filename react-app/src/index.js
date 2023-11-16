@@ -11,7 +11,7 @@ import Donation from "./components/Donation";
 import AdminPage from "./components/administrators/AdminPage";
 import Volunteers from "./components/Volunteers";
 import AboutUs from "./components/about-us/AboutUs";
-import Contact from "./components/Contact";
+import ContactPage from "./components/ContactPage";
 import AuthProvider from "./components/administrators/AuthContext";
 import PrivateRoute from "./components/administrators/PrivateRoute";
 
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/contact",
-    element: <Contact />,
+    element: <ContactPage />,
   },
 
   //here goes the other routes
