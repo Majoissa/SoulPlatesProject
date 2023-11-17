@@ -2,13 +2,17 @@ import React, {createContext, useContext, useState} from 'react';
 const AuthContext = createContext(null);
 
 function AuthProvider({children}){
-    const[isAuthenticated, setIsAuthenticated] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(
+        localStorage.getItem("isLoggedIn") === "true"
+    );
 
     const login = () => {
+        localStorage.setItem("isLoggedIn", "true");
         setIsAuthenticated(true);
     };
 
     const logout = () => {
+        localStorage.removeItem("isLoggedIn");
         setIsAuthenticated(false);
     };
 

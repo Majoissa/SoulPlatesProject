@@ -20,8 +20,8 @@ app.use(
 // Configuración de pg-pool
 const pool = new Pool({
   host: "localhost",
-  user: "",
-  password: "",
+  user: "postgres",
+  password: "150396+Majo",
   database: "soul_plates",
   max: 10, // número máximo de clientes en el pool
   idleTimeoutMillis: 30000, // tiempo máximo de inactividad antes de cerrar el cliente
@@ -235,6 +235,17 @@ app.post("/volunteers", function (req, res) {
       console.error(e);
       res.status(500).json({ error: "Error querying the database" });
     });
+});
+
+//get information from volunteers table
+app.get("/volunteers/info", (req, res) => {
+  pool.query("SELECT * FROM volunteers", (error, result) => {
+    if (error) {
+      console.error("Error querying the database:", error);
+      return res.status(500).json({ error: "Error querying the database" });
+    }
+    res.json(result.rows);
+  });
 });
 
 //donors end-point for donors table
