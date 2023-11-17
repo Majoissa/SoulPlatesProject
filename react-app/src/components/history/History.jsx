@@ -28,8 +28,7 @@ function OurHistory() {
           }}
         >
           <div>
-            <p>
-              <h3>Lorem Ipsum:</h3>
+            <p style={{fontFamily:'Montserrat'}}>
               <br />
               SoulPlates started with a simple yet powerful idea: no individual should go hungry or feel abandoned. Our founders, Nurcan, Maria Jose, Samuel, Rucci and Amine, driven by personal experiences and a shared vision of a more caring world, began by preparing and distributing meals in Barcelona. What began as a modest effort soon resonated with the community, drawing volunteers and supporters from all walks of life.
             </p>

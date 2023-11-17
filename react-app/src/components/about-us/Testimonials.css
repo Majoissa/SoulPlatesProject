@@ -22,3 +22,10 @@
   .carousel-inner::before {
     background: none;
 }
+
+#testimonialsCarousel, 
+#testimonialsCarousel .carousel-item, 
+#testimonialsCarousel .carousel-item ::after, 
+#testimonialsCarousel .carousel-item ::before {
+    box-shadow: none !important;
+}
