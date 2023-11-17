@@ -13,8 +13,8 @@ function AboutUs(){
         <HistoryPage/>
         <Personell />
         <AboutUsGrid />
-        <Testimonials/>
         <AnimatedCountUp/>
+        <Testimonials/>
         <Footer/>
        
     </div>

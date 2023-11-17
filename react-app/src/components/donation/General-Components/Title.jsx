@@ -1,7 +1,7 @@
 function Title({title, subtitle}) {
     return (
         <>
-            <div className='sectionTitle'>
+            <div className='sectionTitle' >
                 <h4 className='title'>{title}</h4>
                 {subtitle ? <p className={'subtitle'}>{subtitle}</p> : null}
             </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Testimonials.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
+import Title from '../donation/General-Components/Title';
 
 function Testimonials() {
   const [carouselItems, setCarouselItems] = useState([]);
@@ -30,6 +31,7 @@ function Testimonials() {
   return (
     <div id="testimonialsCarousel" className="carousel slide" data-bs-ride="carousel">
       <div className="carousel-inner">
+      <Title title="Some testimonies"/>
         {testimonialChunks.map((chunk, chunkIndex) => (
           <div key={chunkIndex} className={`carousel-item ${chunkIndex === 0 ? "active" : ""}`}>
             <div className="d-flex justify-content-center">
