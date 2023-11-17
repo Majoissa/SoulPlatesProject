@@ -5,8 +5,10 @@ import Navbar from "./Navbar"
 import {useFormik} from "formik";
 import * as Yup from "yup"
 import Footer from "./footer";
+import Description from "./Description";
 
 function ContactPage() {
+
 
     const formik = useFormik({
         initialValues: {
@@ -74,6 +76,7 @@ function ContactPage() {
     return (
         <>
             <Navbar/>
+            <Description title="Contact us!" text="If you are interested in work with us, don't hesitate to give us your information!" imagen="https://coedupia.com/wp-content/uploads/2020/10/pacto-educativo-global.jpg" descriptImg="contactate con nosotros"/>
             <div className="form-box">
                 <form className="contact-form-control" onSubmit={formik.handleSubmit}>
                     <div className="form-body">

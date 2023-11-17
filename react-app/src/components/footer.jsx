@@ -1,9 +1,13 @@
 import React from "react";
 import "./footer.component.css";
-import facebook from "./img/Facebook Pink 1.png";
+/*import facebook from "./img/Facebook Pink 1.png";
 import instagram from "./img/Instagram Pink 1.png";
 import linkedin from "./img/Social Pink 1.png";
-import twitter from "./img/Twitter Pink 1.png";
+import twitter from "./img/Twitter Pink 1.png";*/
+import facebook from "./img/Facebook Black&Yellow.png";
+import instagram from "./img/Instagram Black&Yellow.png";
+import linkedin from "./img/Linkdn Black&Yellow.png";
+import twitter from "./img/Twitter Black&Yellow.png";
 
 const Footer = () => {
   return (
