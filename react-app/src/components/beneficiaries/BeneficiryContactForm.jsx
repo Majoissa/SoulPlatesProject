@@ -57,14 +57,28 @@ function BeneficiryContactForm() {
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify(values)
-                })
-                alert("Form created successfully")
-                return await response.json()
+                });
+        
+                const data = await response.json();
+        
+                if (response.ok) {
+                    // If for is created
+                    alert("Form created successfully");
+                } else {
+                    // manage wrong answers
+                    if (data.error) {
+                        // show the error
+                        alert(data.error);
+                    } else {
+                        alert("There was an error processing your request.");
+                    }
+                }
             } catch (error) {
                 console.error(error);
-                alert('request could not created');
+                alert('Request could not be created due to a network or server error.');
             }
         }
+        
 
     })
 

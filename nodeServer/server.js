@@ -5,6 +5,16 @@ const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 require("dotenv").config();
+const nodemailer = require("nodemailer");
+
+//for mail
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "soul.plates23@gmail.com",
+    pass: "soulplates2023",
+  },
+});
 
 const app = express();
 
@@ -378,6 +388,115 @@ app.delete("/beneficiaries/:id", async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Error al eliminar al beneficiario." });
+  }
+});
+
+//contact page end point
+app.post("/contact-page/contact", async (req, res) => {
+  const {
+    userFirstName,
+    userLastName,
+    Age,
+    Gender,
+    userEmail,
+    PhoneNumber,
+    Address,
+    userMessage,
+  } = req.body;
+
+  // Configuración de mailOptions
+  const mailOptions = {
+    from: userEmail,
+    replyTo: userEmail,
+    to: "soul.plates@gmail.com",
+    subject: `New message from ${userFirstName} ${userLastName}`,
+    text: `
+    Name: ${userFirstName} ${userLastName}
+    Age: ${Age}
+    Gender: ${Gender}
+    Email: ${userEmail}
+    Phone number: ${PhoneNumber}
+    Address: ${Address}
+    Message: ${userMessage}
+  `,
+  };
+
+  // try to send the email
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error("Error sending the email:", error);
+      return res.status(500).json({ error: "Error sending email." });
+    } else {
+      console.log("Email sent: " + info.response);
+    }
+  });
+
+  // no empty fields
+  if (
+    !userFirstName ||
+    !userLastName ||
+    !Age ||
+    !Gender ||
+    !userEmail ||
+    !PhoneNumber ||
+    !Address ||
+    !userMessage
+  ) {
+    return res.status(400).json({ error: "All fields are required." });
+  }
+  // email only once in database
+  let client;
+  try {
+    client = await pool.connect();
+    const emailResult = await client.query(
+      "SELECT * FROM contact WHERE email = $1",
+      [userEmail]
+    );
+    if (emailResult.rows.length > 0) {
+      return res.status(400).json({ error: "Email already exists." });
+    }
+  } catch (err) {
+    console.error(err);
+    if (client) client.release();
+    return res.status(500).json({ error: "Error checking email." });
+  }
+  //phone only once in database
+  try {
+    const phoneResult = await client.query(
+      "SELECT * FROM contact WHERE phone_number = $1",
+      [PhoneNumber]
+    );
+    console.log(phoneResult);
+    if (phoneResult.rows.length > 0) {
+      return res.status(400).json({ error: "Phone number already exists." });
+    }
+  } catch (err) {
+    console.error(err);
+    if (client) client.release();
+    return res.status(500).json({ error: "Error checking phone number." });
+  }
+  // insertion in database
+  try {
+    await client.query(
+      "INSERT INTO contact (first_name, last_name, age, gender, email, phone_number, address, message)" +
+        " VALUES ($1, $2, $3, $4, $5, $6, $7, $8)",
+      [
+        userFirstName,
+        userLastName,
+        Age,
+        Gender,
+        userEmail,
+        PhoneNumber,
+        Address,
+        userMessage,
+      ]
+    );
+    client.release();
+    res.json({ success: true, message: "Data inserted successfully." });
+  } catch (err) {
+    console.error(err);
+    if (client) client.release();
+    res.status(500).json({ error: "Error inserting data." });
   }
 });
 
