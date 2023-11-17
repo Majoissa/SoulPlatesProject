@@ -141,7 +141,6 @@ function ContactPage() {
                             </label>
 
                         </div>
-
                         <div className="contact-form-input-group">
                             <label htmlFor="userEmail">
                                 Email:
