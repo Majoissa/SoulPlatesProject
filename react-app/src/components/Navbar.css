@@ -17,6 +17,9 @@
     font-size: 1.2rem;
     text-transform: capitalize;
 }
+.navbar-toggler {
+    background-color: #B08A7E;
+}
 
 .nav-link:hover{
     color:#E0AFA0;
