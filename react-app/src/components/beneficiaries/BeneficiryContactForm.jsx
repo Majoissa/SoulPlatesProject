@@ -51,7 +51,7 @@ function BeneficiryContactForm() {
 
         onSubmit: async (values) => {
             try {
-                const response = await fetch("node-server-iota-six.vercel.app/contact/beneficiaries", {
+                const response = await fetch("https://node-server-iota-six.vercel.app/contact/beneficiaries", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

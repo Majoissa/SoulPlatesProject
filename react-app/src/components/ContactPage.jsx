@@ -54,7 +54,7 @@ function ContactPage() {
 
         onSubmit: async (values) => {
             try {
-                const response = await fetch("node-server-iota-six.vercel.app/contact-page/contact", {
+                const response = await fetch("https://node-server-iota-six.vercel.app/contact-page/contact", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

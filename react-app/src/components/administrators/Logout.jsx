@@ -11,7 +11,7 @@ function LogOut () {
 
     function handleLogout() {
         
-        fetch('node-server-iota-six.vercel.app/admin/logout', {
+        fetch('https://node-server-iota-six.vercel.app/admin/logout', {
           method: 'POST',
           credentials: 'include',
           headers: {

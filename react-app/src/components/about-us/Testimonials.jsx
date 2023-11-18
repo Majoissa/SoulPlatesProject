@@ -15,7 +15,7 @@ function Testimonials() {
   
 
   useEffect(() => {
-    fetch('node-server-iota-six.vercel.app/testimonials', {
+    fetch('https://node-server-iota-six.vercel.app/testimonials', {
       credentials: 'include'
     })
     .then(response => response.json())

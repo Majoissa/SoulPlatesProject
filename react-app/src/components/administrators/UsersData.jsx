@@ -80,7 +80,7 @@ function UsersData(){
     const [editingBeneficiary, setEditingBeneficiary] = useState(null);
 
     useEffect(()=> {
-        fetch('node-server-iota-six.vercel.app/beneficiaries').then(response => response.json()).then(data => setBeneficiaries(data)).catch(error => console.error('Error fetching beneficiaries', error));
+        fetch('https://node-server-iota-six.vercel.app/beneficiaries').then(response => response.json()).then(data => setBeneficiaries(data)).catch(error => console.error('Error fetching beneficiaries', error));
     }, []);
 
     const handleEdit = (beneficiary) => {
@@ -98,7 +98,7 @@ function UsersData(){
           newAddress: updatedBeneficiary.address,
           newMessage: updatedBeneficiary.message,
         }
-        fetch(`node-server-iota-six.vercel.app/beneficiaries/${updatedBeneficiary.id}`, {
+        fetch(`https://node-server-iota-six.vercel.app/beneficiaries/${updatedBeneficiary.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -116,7 +116,7 @@ function UsersData(){
       //Function to delete user
       const handleDelete = (id) => {
         if (window.confirm("Sure that you want to delete the user?")) {
-          fetch(`node-server-iota-six.vercel.app/beneficiaries/${id}`, {
+          fetch(`https://node-server-iota-six.vercel.app/beneficiaries/${id}`, {
             method: 'DELETE',
           })
           .then(response => {
