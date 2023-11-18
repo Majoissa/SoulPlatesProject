@@ -15,7 +15,7 @@ function DonationForm() {
     async function createNewDonor(formData) {
         /*console.log(formData)*/
         try {
-            const response = await fetch("http://localhost:5550/donors", {
+            const response = await fetch("node-server-iota-six.vercel.app/donors", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

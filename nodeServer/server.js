@@ -201,64 +201,6 @@ app.post("/contact/beneficiaries", async (req, res) => {
   }
 });
 
-//contact page end point
-app.post("/contact-page/contact", async (req, res) => {
-  const {userFirstName, userLastName, Age, Gender, userEmail, PhoneNumber, Address, userMessage} = req.body;
-  // no empty fields
-  if (!userFirstName || !userLastName || !Age || !Gender || !userEmail || !PhoneNumber || !Address || !userMessage) {
-    return res.status(400).json({error: "All fields are required."});
-  }
-  // email only once in database
-  let client;
-  try {
-    client = await pool.connect();
-    const emailResult = await client.query(
-        "SELECT * FROM contact WHERE email = $1",
-        [userEmail]
-    );
-    if (emailResult.rows.length > 0) {
-      return res.status(400).json({error: "Email already exists."});
-    }
-  } catch (err) {
-    console.error(err);
-    if (client) client.release();
-    return res.status(500).json({error: "Error checking email."});
-  }
-  //phone only once in database
-  try{
-    const phoneResult = await client.query(
-        "SELECT * FROM contact WHERE phone_number = $1",
-        [PhoneNumber]
-    );
-    console.log(phoneResult);
-    if (phoneResult.rows.length > 0) {
-      return res.status(400).json({error: "Phone number already exists."});
-    }
-  } catch (err) {
-    console.error(err);
-    if (client) client.release();
-    return res.status(500).json({error: "Error checking phone number."});
-  }
-  // insertion in database
-  try {
-    await client.query(
-        "INSERT INTO contact (first_name, last_name, age, gender, email, phone_number, address, message)" +
-        " VALUES ($1, $2, $3, $4, $5, $6, $7, $8)",
-        [userFirstName, userLastName, Age, Gender, userEmail, PhoneNumber, Address, userMessage]
-    );
-    client.release();
-    res.json({success: true, message: "Data inserted successfully."});
-  } catch (err) {
-    console.error(err);
-    if (client) client.release();
-    res.status(500).json({error: "Error inserting data."});
-  }
-});
-
-
-
-
-
 //get information from beneficiaries table
 app.get("/beneficiaries", (req, res) => {
   pool.query("SELECT * FROM beneficiaries", (error, result) => {
@@ -462,6 +404,20 @@ app.post("/contact-page/contact", async (req, res) => {
     userMessage,
   } = req.body;
 
+  // no empty fields
+  if (
+    !userFirstName ||
+    !userLastName ||
+    !Age ||
+    !Gender ||
+    !userEmail ||
+    !PhoneNumber ||
+    !Address ||
+    !userMessage
+  ) {
+    return res.status(400).json({ error: "All fields are required." });
+  }
+
   // Configuración de mailOptions
   const mailOptions = {
     from: userEmail,
@@ -479,29 +435,6 @@ app.post("/contact-page/contact", async (req, res) => {
   `,
   };
 
-  // try to send the email
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error("Error sending the email:", error);
-      return res.status(500).json({ error: "Error sending email." });
-    } else {
-      console.log("Email sent: " + info.response);
-    }
-  });
-
-  // no empty fields
-  if (
-    !userFirstName ||
-    !userLastName ||
-    !Age ||
-    !Gender ||
-    !userEmail ||
-    !PhoneNumber ||
-    !Address ||
-    !userMessage
-  ) {
-    return res.status(400).json({ error: "All fields are required." });
-  }
   // email only once in database
   let client;
   try {
@@ -533,6 +466,16 @@ app.post("/contact-page/contact", async (req, res) => {
     if (client) client.release();
     return res.status(500).json({ error: "Error checking phone number." });
   }
+
+  // Intento de enviar el email de forma asíncrona
+  try {
+    await transporter.sendMail(mailOptions);
+    console.log("Email sent successfully");
+  } catch (error) {
+    console.error("Error sending the email:", error);
+    return res.status(500).json({ error: "Error sending email." });
+  }
+
   // insertion in database
   try {
     await client.query(

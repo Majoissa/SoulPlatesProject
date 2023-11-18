@@ -54,15 +54,26 @@ function ContactPage() {
 
         onSubmit: async (values) => {
             try {
-                const response = await fetch("http://localhost:5550/contact-page/contact", {
+                const response = await fetch("node-server-iota-six.vercel.app/contact-page/contact", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify(values)
                 })
-                alert("Form created successfully")
-                return await response.json()
+                const data = await response.json();
+                if (response.ok) {
+                    // If for is created
+                    alert("Form created successfully");
+                } else {
+                    // manage wrong answers
+                    if (data.error) {
+                        // show the error
+                        alert(data.error);
+                    } else {
+                        alert("There was an error processing your request.");
+                    }
+                }
             } catch (error) {
                 console.error(error);
                 alert('request could not created');

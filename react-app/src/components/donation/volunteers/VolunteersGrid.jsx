@@ -4,7 +4,7 @@ function VolunteersGrid() {
   const [volunteerings, setVolunteerings] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5550/volunteering', {
+    fetch('node-server-iota-six.vercel.app/volunteering', {
       credentials: 'include' 
     })
     .then((response) => {

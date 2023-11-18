@@ -7,7 +7,7 @@ function VolunteersData(){
     const [volunteers, setVolunteers] = useState([]);
 
     useEffect(()=> {
-        fetch('http://localhost:5550/volunteers/info').then(response => response.json()).then(data => setVolunteers(data)).catch(error => console.error('Error fetching volunteers', error));
+        fetch('node-server-iota-six.vercel.app/volunteers/info').then(response => response.json()).then(data => setVolunteers(data)).catch(error => console.error('Error fetching volunteers', error));
     }, []);
       
     
