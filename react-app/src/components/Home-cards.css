@@ -5,7 +5,7 @@
   }
 
   .cardsTitle{
-    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Montserrat', sans-serif;
     text-transform: capitalize;
     text-shadow: none;
     margin: auto;
@@ -26,9 +26,7 @@
       gap:40px;
     }
     
-    
-    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
-    @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
     .snip1567 {
       background-color: #000000;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);

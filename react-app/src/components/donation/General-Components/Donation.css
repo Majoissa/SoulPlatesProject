@@ -10,12 +10,14 @@
 
 .title {
     text-align: center;
-    font-family:'Cedarville Cursive', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
-.subtitle{
+
+.subtitle {
     text-align: center;
-    font-family:'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
+
 .title {
     text-align: center;
     font-size: 3rem;
@@ -68,27 +70,28 @@
     letter-spacing: 0.1px;
     font-size: 14px;
     appearance: auto;
-    
+
 }
 
-.donationsBtn{
+.donationsBtn {
     margin-bottom: 10px;
-    background-color: #E0AFA0 !important;
-    color: white !important;
+    background-color: #6babb7;
+    color: white;
     font-weight: 600 !important;
     font-family: 'Montserrat', sans-serif;
-    padding: 10px; 
-    border: none; 
-    border-radius: 8px; 
-    font-size: 1rem; 
-    cursor: pointer; 
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
     transition: ease-in-out 0.5s;
     width: 20%;
-  }
-
-  .donationsBtn:hover{
-    background-color: #eae8c8
+    margin-right: 370px;
 }
+
+/*  .donationsBtn:hover{
+    background-color: #eae8c8
+}*/
 .payment-method-align-items-center {
     /*display: grid;*/
     /*width: 50%;*/
@@ -150,6 +153,7 @@
     justify-content: space-between;
     /*text-align: center;*/
 }
+
 .donation-option-title {
     text-align: center;
 }
@@ -202,4 +206,13 @@
     border: 1px solid #F7F5D2;
     background-color: #F7F5D2;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .donor-input {
+        flex-wrap: wrap;
+        gap: 30px;
+
+    }
 }

@@ -159,8 +159,9 @@ function ContactForm() {
                                 <p className="error"> {formik.errors.userMessage} </p> : null}
                         </label>
                     </div>
-
-                    <Button type="submit" text='Submit' className="form-control donationsBtn"/>
+                    <div>
+                        <Button type="submit" text='Submit' className="form-control donationsBtn"/>
+                    </div>
 
                 </div>
             </form>

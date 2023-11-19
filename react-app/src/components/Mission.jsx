@@ -10,7 +10,8 @@ function Mission() {
           to thrive and build a better future. We are dedicated to providing
           shelter, food, and education to all people who are in vulnerable
           situations, offering them a safe heaven where they can rebuild their
-          lives. " imagen="https://www.score.org/sites/default/files/styles/responsive_16_9_1000w/public/GettyImages-621904294_1.jpg" descripImg="description component img"/>
+          lives. " imagen="https://www.score.org/sites/default/files/styles/responsive_16_9_1000w/public/GettyImages-621904294_1.jpg"
+          descripImg="description component img"/>
     </div>
   );
 }
