@@ -8,40 +8,40 @@
     align-items: center;
     justify-content: center;
     color: black;
-    padding:15vw;
+    padding: 15vw;
     padding-top: 0;
-    
+
 }
 
 .Mission {
-     background-color :white;
-     padding:43px;
-     max-width: 70%;
+    background-color: white;
+    padding: 43px;
+    max-width: 70%;
 }
 
-.Mission p{
+.Mission p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
 
-.mission-image img{
-   width: 400px;
-   height: 400px;
+.mission-image img {
+    width: 400px;
+    height: 400px;
     border-radius: 100%;
     object-fit: cover;
     transition: transform 0.3s;
     box-shadow: black 2px 2px 5px;
 }
 
-.mission-image img:hover{
+.mission-image img:hover {
 
-    transform: scale(1.1); 
+    transform: scale(1.1);
 
 }
 
 
 .missionTitle {
-    font-family: 'Cedarville Cursive', cursive !important;
+    font-family: 'Montserrat', sans-serif;
     text-transform: capitalize;
     text-shadow: none;
     max-width: 50%;
@@ -52,7 +52,7 @@
     font-size: 3rem;
 }
 
-.missionTitle:hover{
+.missionTitle:hover {
     transform: scale(1.1);
 }
 
@@ -73,22 +73,23 @@
     padding: 3vw;
 }
 
-.Goals p{
+.Goals p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     text-align: right;
 }
 
-.Goals img{
+.Goals img {
     width: 400px;
     height: 400px;
-     border-radius: 100%;
-     object-fit: cover;
-     transition: transform 0.3s;
-     box-shadow: black 2px 2px 5px;
+    border-radius: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+    box-shadow: black 2px 2px 5px;
 }
-.goalsTitle{
-    font-family: 'Cedarville Cursive', cursive !important;
+
+.goalsTitle {
+    font-family: 'Montserrat', sans-serif;
     text-transform: capitalize;
     text-shadow: none;
     max-width: 50%;
@@ -99,7 +100,7 @@
     font-size: 3rem;
 }
 
-.goalsTitle:hover{
+.goalsTitle:hover {
     transform: scale(1.1);
 }
 
@@ -108,44 +109,49 @@
         flex-direction: column;
         padding: 0vw;
     }
+
     .Mission {
-        background-color :white;
-        padding:0;
+        background-color: white;
+        padding: 0;
         max-width: 80%;
         text-align: justify;
-}
-.missionTitle {
-    max-width: 50%;
-    margin: auto;
-    margin-top: 12vw;
-    transition: ease-in-out 1s;
-    font-size: 2rem !important;
-    margin-bottom: 6vw;
-}
-.mission-image img{
-    width: 250px;
-    height: 250px;
-     margin-bottom: 12vw;
- }
+    }
 
- .Goals img{
-    width: 250px;
-    height: 250px;
-}
+    .missionTitle {
+        max-width: 50%;
+        margin: auto;
+        margin-top: 12vw;
+        transition: ease-in-out 1s;
+        font-size: 2rem !important;
+        margin-bottom: 6vw;
+    }
 
-.Goals {
-    display: flex;
-    flex-direction: column;
-}
-.goalsTitle{
-    max-width: 50%;
-    margin: auto;
-    margin-top: 12vw;
-    transition: ease-in-out 1s;
-    font-size: 2rem !important;
-    margin-bottom: 6vw;
-}
-.Goals p{
-text-align: center;
-}
+    .mission-image img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 12vw;
+    }
+
+    .Goals img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .Goals {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .goalsTitle {
+        max-width: 50%;
+        margin: auto;
+        margin-top: 12vw;
+        transition: ease-in-out 1s;
+        font-size: 2rem !important;
+        margin-bottom: 6vw;
+    }
+
+    .Goals p {
+        text-align: center;
+    }
 }

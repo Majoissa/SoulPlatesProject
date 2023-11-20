@@ -4,7 +4,7 @@ import "./donation/General-Components/Donation.css";
 import Navbar from "./Navbar";
 import Footer from "./footer";
 import DonationHeroSectionImg from "./donation/components/DonationHeroSectionImg";
-import Card from "./donation/components/Card";
+import UpcomingProject from "./donation/components/UpcomingProject";
 
 
 function Donation() {
@@ -19,7 +19,7 @@ function Donation() {
                 <Title title="Make a donation to help us!" subtitle="DONATE TO HELP"/>
                 <DonationForm/>
             </div>
-            <Card/>
+            <UpcomingProject/>
             <Footer/>
         </>
     )

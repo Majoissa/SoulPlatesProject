@@ -13,7 +13,7 @@
     align-items: center;
     background-color: #2b2b2b;
     margin: auto;
-    padding:50px
+    padding: 50px;
 }
 
 .form-box {
@@ -45,7 +45,7 @@
 }
 
 label {
-    color: white;
+    color: gray;
 }
 
 .contact-form-input-group {
@@ -55,6 +55,7 @@ label {
     flex-wrap: wrap;
     padding: 10px;
     gap: 30px;
+    margin: auto;
 }
 
 
