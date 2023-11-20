@@ -4,7 +4,6 @@ import './Beneficiary-text-card-head.css';
 
 function TextCardHeading()  {
 
-
     window.addEventListener('scroll', reveal) ;
 
     function reveal (){

@@ -12,7 +12,7 @@ function Testimonials() {
     }
     return chunked_arr;
   }
-  
+
 
   useEffect(() => {
     fetch('https://node-server-iota-six.vercel.app/testimonials', {

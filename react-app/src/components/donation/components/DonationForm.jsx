@@ -66,7 +66,7 @@ function DonationForm() {
             <form className='donation-form' aria-required="true">
                 <div className='donation-form-body'>
                     <DonationSelection donationAmount={donationAmount} setDonationAmount={setDonationAmount}/>
-                    <div className='donor-details'>
+                     <div className='donor-details'>
                         <h5>Donor Details</h5>
                         <div className="donor-input">
                             <InputFiled type="text" placeholder='Full name' value={userFullName}

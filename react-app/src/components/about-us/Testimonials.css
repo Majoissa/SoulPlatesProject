@@ -21,8 +21,8 @@
   }
   
   .carousel-inner::before {
-    background: none;
-}
+      background: none;
+  }
 
 #testimonialsCarousel, 
 #testimonialsCarousel .carousel-item, 
