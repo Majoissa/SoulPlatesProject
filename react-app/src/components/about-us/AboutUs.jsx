@@ -5,6 +5,7 @@ import Personell from "./PersonellHeading";
 import AnimatedCountUp from "../animatedCountComponent/AnimatedCountUp";
 import Testimonials from "./Testimonials";
 import HistoryPage from "../history/HistoryPage";
+//test
 
 function AboutUs(){
     return(
