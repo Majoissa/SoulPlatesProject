@@ -63,7 +63,7 @@ function LoginAdmin(){
           <label htmlFor="username" style={{ marginRight: "355px" }}>
             Username{" "}
           </label>
-          <div className="labels-input">
+          <div className="labels-input loginInput">
             <input className="inputForm"
               type="text"
               id="username"
@@ -79,7 +79,7 @@ function LoginAdmin(){
             {" "}
             Password{" "}
           </label>
-          <div className="labels-input">
+          <div className="labels-input" style={{color: 'black'}}>
             <input className="inputForm"
               type="password"
               id="password"

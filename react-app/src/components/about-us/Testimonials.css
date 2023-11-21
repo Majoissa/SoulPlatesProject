@@ -20,9 +20,6 @@
     padding: 12vw;
   }
   
-  .carousel-inner::before {
-      background: none;
-  }
 
 #testimonialsCarousel, 
 #testimonialsCarousel .carousel-item, 

@@ -1,4 +1,6 @@
-
+.loginInput{
+    color: black !important;
+}
 .formTittle {
     font-family: 'Cedarville Cursive', cursive;
     text-shadow: none;
