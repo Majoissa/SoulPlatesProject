@@ -143,6 +143,7 @@ hr{
         line-height: 34px;
     }
 
+
     .sb__footer-below-links p{
         margin-left: 5rem;/*aqui cambie margins para centrar*/
         margin-top: 1rem;
@@ -174,3 +175,6 @@ hr{
         justify-content: left;
     }
 }
+
+
+
