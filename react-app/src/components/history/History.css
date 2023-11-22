@@ -17,4 +17,12 @@
      padding:43px;
      max-width: 70%;
 }
-/*test*/
+
+
+.soulplates-title-sr{
+  text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    color: black;
+    padding: 2vw;
+}
