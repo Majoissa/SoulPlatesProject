@@ -15,7 +15,7 @@
     justify-content: center;
 }
 
-.deleteBtn, .deleteIcon{
+.deleteIcon{
     color: green;
     font-size: 30px;
     margin: 7px;
