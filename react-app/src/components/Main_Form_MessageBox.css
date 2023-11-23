@@ -2,7 +2,7 @@
     color: black !important;
 }
 .formTittle {
-    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Montserrat', sans-serif;
     text-shadow: none;
     max-width: 50%;
     text-align: center;
@@ -51,7 +51,7 @@ label {
 }
 .formBtn {
     margin-bottom: 10px;
-    background-color: #E0AFA0 !important;
+    background-color: #6babb7!important;
     color: white !important;
     font-weight: 600 !important;
     font-family: 'Montserrat', sans-serif;
@@ -64,7 +64,7 @@ label {
 }
 
 .formBtn:hover {
-    background-color: #B08A7E !important;
+    background-color: #80C9D6 !important;
 }
 
 

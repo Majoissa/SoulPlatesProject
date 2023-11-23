@@ -5,7 +5,7 @@
     width: 80px;
     height: 40px;
     border-radius: 8px;
-    background-color:  #E0AFA0;
+    background-color:   #6babb7;
     color: white;
     border: none;
 }
@@ -22,11 +22,11 @@
 }
 
 th{
-    background-color: #E0AFA0 !important;
+    background-color: #eae8c8 !important;
 }
 
 .tableTitle{
-        font-family: 'Cedarville Cursive', cursive;
+        font-family: 'Montserrat', sans-serif;
         text-shadow: none;
         max-width: 50%;
         text-align: center;

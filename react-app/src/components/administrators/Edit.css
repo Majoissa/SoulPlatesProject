@@ -1,10 +1,10 @@
 .deleteIcon, .penIcon{
-    color: #E0AFA0;
+    color: red;
     font-size: 30px;
     margin: 7px;
 }
 
-.editBtn{
+.editBtn, .deleteBtn{
     border: none;
     background-color: transparent;
 }
@@ -13,4 +13,10 @@
     display: flex;
     border: none;
     justify-content: center;
+}
+
+.deleteBtn, .deleteIcon{
+    color: green;
+    font-size: 30px;
+    margin: 7px;
 }

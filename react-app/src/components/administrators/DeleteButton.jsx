@@ -5,7 +5,7 @@ import "./Edit.css";
 function DeleteButton({ onClick, id }){
     return (
         <div>
-            <button className="editBtn" title="Delete user" onClick={() => onClick(id)}>
+            <button className="deleteBtn" title="Delete user" onClick={() => onClick(id)}>
             <FontAwesomeIcon className="deleteIcon" icon={faTrash}/>
             </button>
         </div>
