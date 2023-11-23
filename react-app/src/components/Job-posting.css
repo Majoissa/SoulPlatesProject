@@ -4,6 +4,7 @@
     background-color:  white ;
     height: 1900px;
     padding-top:100px;
+    margin-bottom: 130px;
     
 }
 
@@ -106,20 +107,54 @@
   }
 
   .job-box-1, .job-box-2, .job-box-3, .job-box-4 {
-    padding-left: 200px; 
-    padding-right: 50px; 
+    padding-left: 150px; 
+    padding-right: 80px; 
     padding-top: 20px;
     padding-bottom: 50px; 
   }
 
   .job-post {
-    width: 400px; 
+    width: 450px; 
     height: auto; 
     padding: 20px; 
     margin: 0; 
   }
 
-  .job-box-1, .job-box-3 {
-    text-align: center; /* Center-align text on odd job boxes */
+  .job-box-1, .job-box-2 h1 ,.job-box-3 , .job-box-4 {
+    text-align: center;
+     /* Center-align text on odd job boxes */
+  }
+  
+}
+
+
+/* Media query for screens with a maximum width of 425px */
+@media (max-width: 425px) {
+  .main-job-box {
+    padding-top: 20px;
+  }
+
+  .job-box-1,
+  .job-box-2,
+  .job-box-3,
+  .job-box-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px; /* Adjust as needed for spacing */
+    padding-bottom: 30px;
+    margin: 0px; /* Adjust as needed for spacing */
+  }
+
+  .job-post {
+    width: 100%;
+    margin-left: 0;
+    padding: 15px; /* Adjust as needed for spacing */
+  }
+
+  .job-box-1,
+  .job-box-2 h1,
+  .job-box-3,
+  .job-box-4 {
+    text-align: center;
   }
 }

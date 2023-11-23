@@ -150,3 +150,41 @@
        padding-right:180px;
      }
    }
+
+
+   /* Media query for screens with a maximum width of 425px */
+@media (max-width: 425px) {
+  .job-post-pic {
+    display: block;
+  }
+
+  .image-slider {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    position: relative;
+  }
+
+  .image-slider img {
+    width: 100%;
+    padding-left: 10px; /* Adjust as needed for spacing */
+    padding-right: 10px; /* Adjust as needed for spacing */
+  }
+
+  .hiring {
+    width: 100%;
+    margin: 0;
+    padding-left: 10px; /* Adjust as needed for spacing */
+    padding-right: 10px; /* Adjust as needed for spacing */
+  }
+
+  .heading-careers {
+    margin-top: 5vw; /* Adjust as needed */
+    font-size: 2rem; /* Adjust as needed */
+  }
+
+  .scrolling-text {
+    padding-right: 10px; /* Adjust as needed for spacing */
+    padding-left: 10px; /* Adjust as needed for spacing */
+  }
+}

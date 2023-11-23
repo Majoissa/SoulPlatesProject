@@ -1,3 +1,13 @@
+.main-text-box {
+
+padding-bottom: 50px;
+padding-left: 250px;
+padding-right: 80px;
+background-color: white;
+
+}
+
+
 .card-with-transition {
     transition: all 0.3s ease-in-out;
 
@@ -8,6 +18,11 @@
     box-shadow: 0px 0px 10px rgba(31, 18, 18, 0.3);
 
   }
+  .card {
+    width: 100%; /* Allow cards to take up full width */
+    max-width: none; /* Remove fixed maximum width */
+  }
+  
   
   .card {
     transition: box-shadow 0.5s ease-in-out; /* Add a transition or smooth effect */
@@ -59,11 +74,12 @@
    
     .row-cols-1 {
       flex-direction: column;
+      /* padding-right: 100px; */
      
       }
   
     .row-cols-1 .col {
-      width: 350px;
+      width: 100%;
       margin: auto; 
       
     }
@@ -73,8 +89,72 @@
       margin-top:20px;
     }
 
+}
 
-  
+@media (max-width: 425px) {
+  .main-text-box {
+    text-align: center;
+    padding-left: 0px; 
+    margin-left:0;
+   
   }
 
-   
+  .row-cols-1 {
+    flex-direction: column;
+    flex-wrap: wrap; /* Add this property to make cards stack vertically */
+  }
+
+  .row-cols-1 .col {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .card {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .reveal {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  .card-body {
+    box-shadow: none; /* Remove box-shadow on small screens */
+  }
+}
+
+
+@media (min-width: 426px) and (max-width: 480px) {
+  .main-text-box {
+    text-align: center;
+    padding-left: 10px; /* Adjust as needed for spacing */
+    padding-right: 10px; /* Adjust as needed for spacing */
+  }
+
+  .row-cols-1 .col {
+    margin: auto;
+  }
+
+  .card {
+    max-width: 100%;
+    margin-top: 20px; /* Adjust as needed for spacing */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 580px) {
+  .main-text-box {
+    text-align: center;
+    padding-left: 20px; /* Adjust as needed for spacing */
+    padding-right: 20px; /* Adjust as needed for spacing */
+  }
+
+  .row-cols-1 .col {
+    margin: auto;
+  }
+
+  .card {
+    max-width: 100%;
+    margin-top: 30px; /* Adjust as needed for spacing */
+  }
+}

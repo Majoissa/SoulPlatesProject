@@ -67,3 +67,19 @@
         font-size: 1.5rem; /* Adjust the font size for mobile screens */
     }
 }
+
+
+@media (max-width: 425px) {
+
+  .inner {
+    margin-top: 70px; 
+  }
+
+  .inner h1 {
+    font-size: 1.8rem;
+  }
+
+  .inner p {
+    font-size: 1.2rem; 
+}
+}
