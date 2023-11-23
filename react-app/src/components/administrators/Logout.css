@@ -1,17 +1,19 @@
 .logout-button {
-
     margin-left: 650px;
     margin-top: 0px;
     margin-bottom: 12vw;
-    background-color: #E0AFA0 !important;
+    background-color: #6babb7!important;
     color: white !important;
     font-weight: 600 !important;
     font-family: 'Montserrat', sans-serif;
-    padding: 10px; 
-    border: none; 
-    border-radius: 8px; 
-    font-size: 1rem; 
-    cursor: pointer; 
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
     transition: ease-in-out 0.5s;
-    width: 20%;
+}
+
+.logout-button:hover {
+    background-color: #80C9D6 !important;
 }
