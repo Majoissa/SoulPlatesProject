@@ -1,4 +1,4 @@
-.deleteIcon, .penIcon{
+.deleteIcon{
     color: red;
     font-size: 30px;
     margin: 7px;
@@ -15,7 +15,7 @@
     justify-content: center;
 }
 
-.deleteIcon{
+.penIcon{
     color: green;
     font-size: 30px;
     margin: 7px;
