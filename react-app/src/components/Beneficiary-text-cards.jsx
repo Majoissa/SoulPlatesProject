@@ -34,7 +34,7 @@ function  TextCards() {
 
 
 
-      <div className='main-text-box' style={{backgroundColor: '  white ', paddingBottom:'50px', paddingLeft:'250px', paddingRight:'80px'}}>
+      <div className='main-text-box'>
 
      {/* FIRST COLUM */}
 
@@ -83,7 +83,7 @@ function  TextCards() {
   
     </div>
 
-    {/* SECOD COLUM */}
+    {/* SECOND COLUM */}
 
     <div className="row row-cols-1 row-cols-md-2 g-4"
  
@@ -107,7 +107,7 @@ function  TextCards() {
         Providing Clothes
       </h5>
      
-      <p className="card-text" style={{ fontSize: '1rem', color: '#3A3A45', textAlign: 'left', fontWeight: 'bold' }}>
+      <p className="card-text" style={{ fontSize: '1rem', color: '#3A3A45', textAlign: 'left', fontWeight: 'bold', paddingBottom:'40px' }}>
         Our organization is dedicated to providing clothing and essentials to those in need. We believe that everyone deserves to have warm, clean clothes and access to basic necessities. 
       </p>
     </div>
@@ -163,7 +163,7 @@ function  TextCards() {
         style={{backgroundColor: ' #F4F3EE '}}
        >
         <h5 className="card-title"  style={{fontSize:'1.8rem', paddingTop:'2px', textAlign:'center', color:'#3A3A45'}} >Provide Shelter</h5>
-         <p className="card-text"  style={{fontSize:'1rem', color:'#3A3A45', textAlign:'left' , fontWeight:'bold'}}  >We are dedicated to offering a helping hand to those experiencing homelessness or struggling to find a secure place to live. Our mission is to provide a place of comfortad dignity. </p>
+         <p className="card-text"  style={{fontSize:'1rem', color:'#3A3A45', textAlign:'left' , fontWeight:'bold', paddingBottom:'40px'}}  >We are dedicated to offering a helping hand to those experiencing homelessness or struggling to find a secure place to live. Our mission is to provide a place of comfortad dignity. </p>
       
           </div>
       
