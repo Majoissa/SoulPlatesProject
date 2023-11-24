@@ -61,7 +61,7 @@ label {
 
 
 
-/*@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 750px) {
     label{
         display: grid;
         justify-content: space-evenly;
@@ -100,6 +100,51 @@ label {
     .contact-form-control {
         align-items: center;
     }
-}*/
+}
+
+
+
+@media only screen and (max-width: 850px) {
+    label{
+        display: grid;
+        justify-content: space-evenly;
+        margin: 20px;
+    }
+    .form-box {
+        border: 1px solid #dcdbd9;
+        margin: auto;
+        max-width: 600px;
+        max-height: 100%;
+        padding: 40px;
+        background-color: #2b2b2b;
+        align-items: center;
+    }
+
+    .form-body {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        align-items: start;
+        background-color: #2b2b2b;
+        margin: auto;
+        padding: 20px 50px
+    }
+
+    .form-control {
+        width: 350px;
+        height: 60px;
+        align-items: start;
+    }
+
+    .donor-detail {
+        flex-direction: column;
+    }
+
+    .contact-form-control {
+        align-items: center;
+    }
+}
+
+
 
 
