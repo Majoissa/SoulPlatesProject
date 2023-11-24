@@ -35,6 +35,10 @@
     }
 }
 
-
+/*@media only screen and (max-width: 750px) {
+    nav  ::after, ::before {
+        box-sizing: unset;
+    }
+}*/
 
 

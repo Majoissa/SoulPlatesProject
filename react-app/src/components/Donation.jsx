@@ -4,8 +4,7 @@ import "./donation/General-Components/Donation.css";
 import Navbar from "./Navbar";
 import Footer from "./footer";
 import DonationHeroSectionImg from "./donation/components/DonationHeroSectionImg";
-import UpcomingProject from "./donation/components/UpcomingProject";
-
+import UpcomingProjectStories from "./donation/components/UpcomingProjectStories";
 
 function Donation() {
     return (
@@ -19,7 +18,8 @@ function Donation() {
                 <Title title="Make a donation to help us!" subtitle="DONATE TO HELP"/>
                 <DonationForm/>
             </div>
-            <UpcomingProject/>
+
+            <UpcomingProjectStories/>
             <Footer/>
         </>
     )

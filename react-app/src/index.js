@@ -15,6 +15,7 @@ import ContactPage from "./components/ContactPage";
 import AuthProvider from "./components/administrators/AuthContext";
 import PrivateRoute from "./components/administrators/PrivateRoute";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -57,7 +58,6 @@ const router = createBrowserRouter([
     path: "/contact",
     element: <ContactPage />,
   },
-
   //here goes the other routes
 ]);
 

@@ -217,7 +217,7 @@ function ContactPage() {
                             </label>
                         </div>
 
-                        <Button type="submit" text='Submit' className="form-control donationsBtn"/>
+                        <Button type="submit" text='Submit' className="form-control donationsBtn" />
                     </div>
                 </form>
 
