@@ -1,7 +1,7 @@
-function Button({ text, type }) {
+function Button({ text, type, onClick}) {
     return (
         <div>
-            <button type={type} className='form-control donationsBtn'>{text}</button>
+            <button type={type} className='form-control donationsBtn' onClick={onClick} >{text}</button>
         </div>
     );
 }
