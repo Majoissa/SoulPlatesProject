@@ -129,7 +129,6 @@ function DonationForm() {
 
     const handleOnClick = (event) => {
         event.preventDefault();
-        console.log("You clicked submit.");
 
         let validationErrors = [];
 
@@ -158,7 +157,7 @@ function DonationForm() {
             full_name: userFullName,
             email: userEmail,
             message: userMessage,
-            //donation_amount: donationAmount,
+            donation_amount: donationAmount,
         };
 
         return createNewDonor(formData);
@@ -175,7 +174,7 @@ function DonationForm() {
             });
 
             const reply = await response.json();
-            alert("success");
+            alert("Thank you for your donation");
             return reply;
         } catch (error) {
             console.error(error);

@@ -32,7 +32,7 @@ function ContactForm() {
             PhoneNumber: Yup.string()
                 .required()
                 .matches(/^[0-9]+$/, "must be at leas 8 Character")
-                .min(8)
+                .min(9)
                 .max(12, "Invalid Phone Number!"),
 
             userMessage: Yup.string()

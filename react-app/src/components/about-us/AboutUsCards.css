@@ -80,12 +80,10 @@
 }
 
 @media (max-width: 768px) {
-
     .aboutus-card {
         height: 300px;
         width: 240px;
         background-color: #fff;
-
     }
 
     .background-img-about {
