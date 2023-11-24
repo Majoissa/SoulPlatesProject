@@ -153,8 +153,8 @@ const UpcomingProject = ({item}) => {
                 <Card.Body >
 
                         <h2>{item.heading}</h2>
-                        <p>{item.shortText}</p>
-                        <p {...getCollapseProps()}>{item.longText}</p>
+                        <p className="card-text">{item.shortText}</p>
+                        <p className="card-text" {...getCollapseProps()}>{item.longText}</p>
                         <Button {...getToggleProps({
                             onClick: () => setExpanded((prevExpanded) =>
                                 !prevExpanded)

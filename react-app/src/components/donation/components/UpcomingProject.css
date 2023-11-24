@@ -1,57 +1,3 @@
-/*
-.card-container {
-    max-width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: auto;
-}
-
-.card-list{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 50px auto;
-    padding: 20px;
-    gap: 30px;
-}
-
-.cards {
-    max-width: 500px;
-    margin: auto;
-    padding: 30px;
-    align-items: start;
-    overflow: hidden;
-}
-
-
-
-.card-body-text {
-    max-width: 100%;
-    box-sizing: border-box;
-    font-size: 16px;
-    text-align: start;
-    margin: 0 auto;
-    float: start;
-    line-height: 1.6;
-
-}
-
-.card-body-title {
-    padding: 10px;
-    font-weight: 800;
-
-}
-
-.cards-img {
-    width: 500px;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-}
-*/
-
 .upcoming-project {
     display: flex;
     justify-content: space-evenly;
@@ -70,4 +16,7 @@
     align-items: center;
     gap: 50px;
     justify-content: space-evenly;
+}
+.card-text{
+   flex-grow:1;
 }
