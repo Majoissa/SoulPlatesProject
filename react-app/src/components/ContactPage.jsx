@@ -41,7 +41,7 @@ function ContactPage() {
             PhoneNumber: Yup.string()
                 .required(" * Required")
                 .matches(/^[0-9]+$/, "must be at leas 8 Character")
-                .min(8)
+                .min(9)
                 .max(12, "Invalid Phone Number!"),
             Address: Yup.string()
                 .min(10, "10character")
