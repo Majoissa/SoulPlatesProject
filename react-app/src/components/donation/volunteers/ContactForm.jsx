@@ -143,7 +143,6 @@ function ContactForm() {
                             {formik.touched.PhoneNumber && formik.errors.PhoneNumber ?
                                 <p className="error"> {formik.errors.PhoneNumber} </p> : null}
                         </label>
-
                         <label htmlFor="userMessage">
                             Message:
                             <InputFiled className="form-control"

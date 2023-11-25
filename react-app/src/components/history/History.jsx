@@ -38,7 +38,7 @@ function OurHistory() {
               <br />
               SoulPlates started with a simple yet powerful idea: no individual
               should go hungry or feel abandoned. Our founders, Nurcan, Maria
-              Jose, Samuel, Rucci and Amine, driven by personal experiences and
+              Jose, Samuel, Rucci and Amina, driven by personal experiences and
               a shared vision of a more caring world, began by preparing and
               distributing meals in Barcelona. What began as a modest effort
               soon resonated with the community, drawing volunteers and
