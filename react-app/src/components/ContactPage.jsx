@@ -7,6 +7,7 @@ import * as Yup from "yup"
 import Footer from "./footer";
 import Description from "./Description";
 
+
 function ContactPage() {
 
     const formik = useFormik({
@@ -94,7 +95,7 @@ function ContactPage() {
                 <form className="contact-form-control" onSubmit={formik.handleSubmit}>
                     <div className="form-body">
                         <div className="contact-form-input-group">
-                            <div lassName="col-lg-1-6">
+                            <div className="col-lg-1-6">
                                 <label htmlFor="userFirstName">
                                     First Name:
                                     <InputFiled className="form-control"
@@ -111,7 +112,7 @@ function ContactPage() {
                                 </label>
                             </div>
 
-                            <div lassName="col-lg-1-6">
+                            <div className="col-lg-1-6">
                                 <label htmlFor="userLastName">
                                     Last Name:
                                     <InputFiled className="form-control"
@@ -130,7 +131,7 @@ function ContactPage() {
                         </div>
 
                         <div className="contact-form-input-group">
-                            <div lassName="col-lg-1-6">
+                            <div className="col-lg-1-6">
                                 <label htmlFor="Age">
                                     Age:
                                     <InputFiled className="form-control"
@@ -147,7 +148,7 @@ function ContactPage() {
                                 </label>
                             </div>
 
-                            <div lassName="col-lg-1-6">
+                            <div className="col-lg-1-6">
                                 <label htmlFor="Gender">
                                     Gender:
                                     <InputFiled className="form-control"
@@ -166,7 +167,7 @@ function ContactPage() {
 
                         </div>
                         <div className="contact-form-input-group">
-                            <div lassName="col-lg-1-6">
+                            <div className="col-lg-1-6">
                                 <label htmlFor="userEmail">
                                     Email:
                                     <InputFiled className="form-control"
@@ -183,7 +184,7 @@ function ContactPage() {
                                 </label>
                             </div>
 
-                            <div lassName="col-lg-1-6">
+                            <div className="col-lg-1-6">
                                 <label htmlFor="PhoneNumber">
                                     Phone Number:
                                     <InputFiled className="form-control"
@@ -218,7 +219,7 @@ function ContactPage() {
                                         <p className="error"> {formik.errors.Address} </p> : null}
                                 </label>
                             </div>
-                            <div lassName="col-lg-1-6">
+                            <div className="col-lg-1-6">
                                 <label htmlFor="userMessage">
                                     Message:
                                     <InputFiled className="form-control"
@@ -241,6 +242,7 @@ function ContactPage() {
                 </form>
 
             </div>
+
 
             <Footer/>;
         </>

@@ -2,6 +2,7 @@ import React from "react";
 import "./Home-cards.css";
 import { Fade } from "react-awesome-reveal";
 
+
 function HomeCards() {
   return (
     <div className="main-cards-box">
@@ -14,7 +15,6 @@ function HomeCards() {
             alt="soulplates"
             style={{ width: "400px" }}
           />
-
           <figcaption>
             <h3>Beneficiaries</h3>
             <p>
@@ -86,6 +86,8 @@ function HomeCards() {
         </figure>
       </div>
       </Fade>
+
+
     </div>
   );
 }

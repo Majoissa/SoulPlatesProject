@@ -4,6 +4,7 @@ import AboutUsGrid from "./AboutUsGrid";
 import Personell from "./PersonellHeading";
 import AnimatedCountUp from "../animatedCountComponent/AnimatedCountUp";
 import HistoryPage from "../history/HistoryPage";
+
 //test
 
 function AboutUs(){

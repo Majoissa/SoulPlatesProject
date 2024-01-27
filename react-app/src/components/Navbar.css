@@ -9,6 +9,14 @@
     z-index: 9999;
     width: 100%;
 }
+/*my changes while creating multi language*/
+.nav-item > a{
+    color:#F4F3EE;
+}
+.nav-item > a:hover{
+    color:#eae8c8;;
+}
+
 
 .nav-link{
     color:#F4F3EE;
@@ -27,6 +35,14 @@
     border-bottom:#eae8c8 solid 2px;
     border-radius: 1px;
 }
+
+#dropdown-basic {
+    background-color: #eae8c8;
+    border: none;
+    color: #2b2b2b;
+}
+
+
 
 
 @media only screen and (max-width: 400px) {
